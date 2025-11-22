@@ -341,7 +341,7 @@ const CombinedDigitalMarketingPartners = () => {
                 <motion.img
                   src={logo.src}
                   alt={logo.alt}
-                  className="h-28 mb-4 group-hover:scale-110 transition-transform duration-700"
+                  className="h-36 mb-2  group-hover:scale-110 transition-transform duration-700"
                 />
 
                 <p className="text-gray-800 font-semibold text-lg">

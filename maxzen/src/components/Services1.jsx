@@ -430,7 +430,7 @@ export default function DigitalMarketingServices() {
 <section
   className="relative w-full h-[95vh] bg-cover bg-center flex items-center justify-center"
   style={{
-    backgroundImage: `url(${require("../assests/logo2.png")})`,
+    backgroundImage: `url(${require("../assests/logo3.png")})`,
   }}
 >
   {/* Dark Overlay */}

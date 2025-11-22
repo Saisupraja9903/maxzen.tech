@@ -17,7 +17,7 @@ const Home5 = () => {
   className="text-center mb-20 relative z-10"
 >
   <h2 className="text-4xl md:text-5xl font-extrabold text-gray-900 mb-4">
-    Empowering Digital Growth ✨
+    Empowering Digital Growth 
   </h2>
   <p className="text-gray-600 text-lg max-w-2xl mx-auto leading-relaxed">
     At Maxzen.tech, we blend creativity and strategy to transform brands into digital success

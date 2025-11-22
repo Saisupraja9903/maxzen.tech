@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from "react";
 import { motion, useAnimation } from "framer-motion";
-import logo2 from "../assests/logo2.png"; // replace with your actual image path
+import logo2 from "../assests/logo3.png"; // replace with your actual image path
 import { useNavigate } from "react-router-dom";
 
 

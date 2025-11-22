@@ -126,7 +126,8 @@ const Header = () => {
   };
 
   return (
-    <header className="bg-[#F2F5D1] sticky top-0 z-50 shadow-md">
+<header className="bg-[#F2F5D1] sticky top-0 left-0 w-full z-50 shadow-md">
+
       <div className="max-w-7xl mx-auto flex items-center justify-between px-6 py-4">
 
         {/* Left Section - Logo */}
@@ -349,10 +350,7 @@ const Header = () => {
 >
   Software Development
 </li>
-
-
-     
-  </ul>
+</ul>
 </li>
 
             <li className="hover:text-yellow-400 transition-colors" onClick={() => handleNavigation("/team")}>

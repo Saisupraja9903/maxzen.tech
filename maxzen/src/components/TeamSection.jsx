@@ -204,7 +204,7 @@ const teamMembers = [
   { name: "Nayomi", role: "Sales department", desc: "Focuses on achieving targets by identifying opportunities and delivering effective sales solutions.", image: Team10},
   { name: "Yaswanth", role: "Full Stack Developer", desc: "Builds scalable front-end and back-end applications using modern web technologies.", image: Team11 },
   { name: "Vamsi", role: "Digital Marketing Executive", desc: "Creates, optimizes, and analyzes digital marketing campaigns for improved performance and reach.", image: Team12 },
-  { name: "Sudheer", role: "Digital Marketing Executive", desc: "Transforms designs into interactive, high-quality web interfaces for smooth user experiences..", image: Team13 },
+  { name: "Sudheer", role: "Digital Marketing Executive", desc: "Creates, optimizes, and analyzes digital marketing campaigns for improved performance and reach.", image: Team13 },
   { name: "Lokesh", role: " Frontend Developer", desc: "Transforms designs into interactive, high-quality web interfaces for smooth user experiences.", image: Team14 },
 
   

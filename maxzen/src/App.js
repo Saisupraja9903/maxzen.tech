@@ -70,6 +70,9 @@ import Serviceswd from './components/Serviceswd.jsx';
 import Privacypolicy from './components/Privacypolicy.jsx';
 import TermsAndConditions from './components/Termsandconditions.jsx';
 
+import ThreeD from './components/ThreeD.jsx';
+
+
 
 
 
@@ -107,6 +110,7 @@ function App() {
         <Route path="/blog1" element={<Blog1 />} />
         <Route path="/blog2" element={<Blog2 />} />
         <Route path="/blog3" element={<Blog3 />} />
+
       
       </Routes>
 
@@ -200,6 +204,7 @@ function App() {
        {/* <Serviceswd/> */}
        {/* <Privacypolicy/> */}
        {/* <TermsAndConditions/> */}
+       {/* <ThreeD/> */}
     
       </div>
    );

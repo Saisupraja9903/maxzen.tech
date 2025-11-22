@@ -40,13 +40,13 @@ const Home1AndSolutions = () => {
             transition={{ duration: 1.2, ease: "easeOut" }}
             className="flex-1 flex justify-center md:justify-start relative"
           >
-            <motion.img
-              src={heroImg}
-              alt="Hero"
-              className="w-[300px] md:w-[350px] drop-shadow-[0_15px_30px_rgba(0,0,0,0.2)] rounded-xl"
-              animate={{ y: [0, -15, 0] }}
-              transition={{ duration: 4, repeat: Infinity, ease: "easeInOut" }}
-            />
+         <motion.img
+  src={heroImg}
+  alt="Hero"
+  className="w-[380px] md:w-[450px] h-auto mt-14 mb-14 drop-shadow-[0_15px_30px_rgba(0,0,0,0.2)] rounded-xl"
+  animate={{ y: [0, -20, 0] }}
+  transition={{ duration: 4, repeat: Infinity, ease: "easeInOut" }}
+/>
 
             {/* Subtle circular gradient accent behind hero */}
             <div className="absolute -z-10 top-10 left-5 w-80 h-80 bg-gradient-to-br from-[#d73b3e]/20 to-transparent rounded-full blur-3xl"></div>

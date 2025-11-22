@@ -16,7 +16,11 @@ import sm5 from "../assests/sm5.jpg";
 import Header from "./Header";
 import Footer from "./Footer";
 import { useNavigate } from "react-router-dom";
-
+import { PiChartLineUpFill } from "react-icons/pi";
+import { TbDeviceMobileShare } from "react-icons/tb";
+import { BsLightbulb } from "react-icons/bs"; 
+import { IoRocket } from "react-icons/io5";
+import { FaFire } from "react-icons/fa6";
 
 
 
@@ -271,14 +275,14 @@ const SocialMediaMarketing = () => {
  
  
       <div className="flex items-start gap-3">
-        <span className="text-green-500 text-2xl">🤝</span>
+        <span className="text-green-500 text-2xl"><FaHandshake /></span>
         <p className="text-gray-800 text-lg">
           Strengthens customer trust and loyalty.
         </p>
       </div>
 
       <div className="flex items-start gap-3">
-        <span className="text-pink-500 text-2xl">📈</span>
+        <span className="text-pink-500 text-2xl"><PiChartLineUpFill /></span>
         <p className="text-gray-800 text-lg">
           Drives consistent traffic to your website.
         </p>
@@ -554,7 +558,7 @@ const SocialMediaMarketing = () => {
         transition={{ duration: 0.5 }}
         className="flex items-start gap-4"
       >
-        <div className="text-3xl">📲</div>
+        <div className="text-3xl"><TbDeviceMobileShare /></div>
         <p className="text-gray-700 text-lg">
           Your customers spend hours daily on Instagram, Facebook, and LinkedIn.
         </p>
@@ -566,7 +570,7 @@ const SocialMediaMarketing = () => {
         transition={{ duration: 0.6, delay: 0.1 }}
         className="flex items-start gap-4"
       >
-        <div className="text-3xl">💡</div>
+        <div className="text-3xl"><BsLightbulb /></div>
         <p className="text-gray-700 text-lg">
           Each like, comment, or share is a moment to grow your audience and trust.
         </p>
@@ -578,7 +582,7 @@ const SocialMediaMarketing = () => {
         transition={{ duration: 0.6, delay: 0.2 }}
         className="flex items-start gap-4"
       >
-        <div className="text-3xl">🚀</div>
+        <div className="text-3xl"><IoRocket /></div>
         <p className="text-gray-700 text-lg">
           Partner with <span className="font-semibold text-blue-600">Maxzen.Tech</span> —
           your social media marketing agency in Hyderabad that turns engagement into growth.
@@ -591,7 +595,7 @@ const SocialMediaMarketing = () => {
         transition={{ duration: 0.6, delay: 0.3 }}
         className="flex items-start gap-4"
       >
-        <div className="text-3xl">🔥</div>
+        <div className="text-3xl"><FaFire /></div>
         <p className="text-gray-700 text-lg">
           We build tailored strategies to convert followers into paying customers.
         </p>

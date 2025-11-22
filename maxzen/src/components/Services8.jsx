@@ -142,11 +142,18 @@ import img9 from "../assests/img9.jpg";
 import img12 from "../assests/img12.jpg";
 import img13 from "../assests/img13.jpg";
 import { useNavigate } from "react-router-dom";
-
+import { FaLightbulb,FaPhone,FaRobot} from "react-icons/fa";
+import { VscTools } from "react-icons/vsc";
+import { SiReact } from "react-icons/si";
+import { LuApple } from "react-icons/lu";
+import { MdOutlineAppShortcut } from "react-icons/md";
+import { BsStars } from "react-icons/bs";
+// import { FaPhone } from "react-icons/fa6";
 
 import  {  useState } from "react";
 import Header from "./Header";
 import Footer from "./Footer";
+import { AiOutlineGlobal } from "react-icons/ai";
 
 
 
@@ -219,7 +226,7 @@ const MobileAppHero = () => {
           <div className="flex justify-center md:justify-start gap-10 mt-12 flex-wrap text-white text-lg">
             <div className="flex items-center gap-4 hover:scale-105 transition-transform duration-300">
               <div className="bg-white/20 p-3 rounded-full text-2xl hover:bg-cyan-400/40 transition-all duration-300">
-                💡
+               <FaLightbulb />
               </div>
               <div>
                 <p className="font-semibold">UI/UX Creative</p>
@@ -240,7 +247,7 @@ const MobileAppHero = () => {
            <div className="flex justify-center md:justify-start gap-10 mt-12 flex-wrap text-white text-lg">
             <div className="flex items-center gap-4 hover:scale-105 transition-transform duration-300">
               <div className="bg-white/20 p-3 rounded-full text-2xl hover:bg-cyan-400/40 transition-all duration-300">
-                📞
+                <FaPhone />
               </div>
               <div>
                 <p className="font-semibold">+91 90599 91807</p>
@@ -250,7 +257,7 @@ const MobileAppHero = () => {
 
             <div className="flex items-center gap-4 hover:scale-105 transition-transform duration-300">
               <div className="bg-white/20 p-3 rounded-full text-2xl hover:bg-purple-400/40 transition-all duration-300">
-                🌐
+               <AiOutlineGlobal />
               </div>
               <div>
                 <p className="font-semibold">www.maxzen.tech</p>
@@ -340,27 +347,27 @@ const MobileAppHero = () => {
             {
               title: "Android App Development",
               desc: "Robust and secure apps using Kotlin and Java.",
-              icon: "🤖",
+              icon: <FaRobot />,
             },
             {
               title: "iOS App Development",
               desc: "Smooth and high-performance apps for Apple devices.",
-              icon: "🍎",
+              icon: <LuApple />,
             },
             {
               title: "Hybrid App Development",
               desc: "Cost-effective solutions with Flutter and React Native.",
-              icon: "⚛️",
+              icon: <SiReact />,
             },
             {
               title: "Custom App Development",
               desc: "Tailored mobile apps for healthcare, real estate, retail, and more.",
-              icon: "🛠️",
+              icon: <VscTools />,
             },
             {
               title: "App UI/UX Design",
               desc: "Engaging, user-friendly interfaces designed to boost conversions.",
-              icon: "🎨",
+              icon: <MdOutlineAppShortcut />,
             },
           ].map((service, i) => (
             <motion.div
@@ -424,7 +431,7 @@ const MobileAppHero = () => {
                    py-3 px-4 border-b border-white/15 hover:border-cyan-400/50 
                    hover:bg-white/5 transition-all duration-300"
       >
-        <span className="text-2xl">✨</span>
+        <span ><BsStars  className="text-2xl"/></span>
         <p className="text-lg text-white/85 leading-relaxed">{text}</p>
       </motion.div>
     ))}

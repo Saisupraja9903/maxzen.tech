@@ -110,8 +110,8 @@ const HomeCombined = () => {
       {/* =====================================================
             🔥 HOME 1 SECTION  
       ===================================================== */}
-      <section className="relative py-16 md:py-24 px-6 md:px-20 overflow-hidden">
-        <div className="flex flex-col md:flex-row items-start justify-between gap-16 relative z-10">
+      <section className="relative py-16 md:py-24 px-6 md:px-32 overflow-hidden">
+        <div className="flex flex-col md:flex-row items-start justify-between gap-4 relative z-10">
 
           {/* LEFT IMAGE */}
           <motion.div
@@ -120,18 +120,19 @@ const HomeCombined = () => {
             transition={{ duration: 1.2, ease: "easeOut" }}
             className="flex-1 flex justify-center md:justify-start relative"
           >
-            <motion.img
-              src={heroImg}
-              alt="Hero"
-              className="w-[300px] md:w-[350px] drop-shadow-[0_15px_30px_rgba(0,0,0,0.2)] rounded-xl"
-              animate={{ y: [0, -15, 0] }}
-              transition={{ duration: 4, repeat: Infinity, ease: "easeInOut" }}
-            />
+           <motion.img
+  src={heroImg}
+  alt="Hero"
+  className="w-[300px] md:w-[350px] translate-x-12 md:translate-x-6 drop-shadow-[0_15px_30px_rgba(0,0,0,0.2)] rounded-xl"
+  animate={{ y: [0, -15, 0] }}
+  transition={{ duration: 4, repeat: Infinity, ease: "easeInOut" }}
+/>
+
             <div className="absolute -z-10 top-10 left-5 w-80 h-80 bg-gradient-to-br from-[#d73b3e]/20 to-transparent rounded-full blur-3xl"></div>
           </motion.div>
 
           {/* RIGHT CONTENT */}
-          <div className="flex-1 md:pl-12 text-center md:text-left relative">
+          <div className="flex-1 md:pl-2 text-center md:text-left relative">
 
             <motion.div
               initial={{ width: 0 }}
@@ -156,7 +157,7 @@ const HomeCombined = () => {
               </span>
             </motion.h1>
 
-            <p className="text-gray-600 mt-4 text-sm md:text-base leading-relaxed">
+            <p className="text-gray-600 mt-4 text-sm md:text-lg leading-relaxed">
               We craft data-driven digital experiences that help your brand
               stand out and connect with the right audience — blending strategy,
               creativity, and technology.
@@ -215,7 +216,7 @@ const HomeCombined = () => {
               </p>
             </div>
 
-            <p className="text-gray-700 text-sm md:text-base leading-relaxed max-w-md mx-auto md:mx-0">
+            <p className="text-gray-700 text-sm md:text-lg leading-relaxed max-w-md mx-auto md:mx-0">
               Maxzen.Tech empowers businesses with innovative, measurable
               digital growth strategies — from building strong online presence
               to achieving real conversions.
@@ -314,19 +315,22 @@ const HomeCombined = () => {
             </div>
 
             <div
-              ref={scrollRef}
-              onWheel={onWheelSnap}
-              className="
-                h-64 md:h-72 overflow-y-auto pr-2 snap-y snap-mandatory
-                rounded-2xl bg-white/70 backdrop-blur border border-orange-300
-                shadow-[0_10px_30px_rgba(0,0,0,0.06)] scroll-smooth
-                transition-all duration-500
-                hover:shadow-[0_0_45px_-8px_rgba(255,140,40,0.55)]
-                relative
-                hover:bg-gradient-to-br hover:from-[#fff2e5] hover:via-[#ffe0cc] hover:to-[#ffd1b3]
-              "
-              style={{ scrollbarWidth: "none", overscrollBehavior: "contain" }}
-            >
+  ref={scrollRef}
+  onWheel={onWheelSnap}
+  className="
+    h-64 md:h-72 
+    overflow-hidden md:overflow-y-auto 
+    pr-2 snap-y snap-mandatory
+    rounded-2xl bg-white/70 backdrop-blur border border-orange-300
+    shadow-[0_10px_30px_rgba(0,0,0,0.06)] scroll-smooth
+    transition-all duration-500
+    hover:shadow-[0_0_45px_-8px_rgba(255,140,40,0.55)]
+    relative
+    hover:bg-gradient-to-br hover:from-[#fff2e5] hover:via-[#ffe0cc] hover:to-[#ffd1b3]
+  "
+  style={{ scrollbarWidth: "none", overscrollBehavior: "contain" }}
+>
+
               {bullets.map((b, i) => (
                 <motion.div
                   key={i}
