@@ -130,6 +130,7 @@ import swacchLogo from "../assests/img10.jpg";
 import partner1 from "../assests/img13.jpg";
 import partner2 from "../assests/img12.jpg";
 import partner3 from "../assests/logoo8.jpg";
+import client from "../assests/client.webp";
 
 const images = [Img1, Img2, Img3, Img4, Img5, Img6];
 
@@ -140,6 +141,7 @@ const CombinedDigitalMarketingPartners = () => {
     { src: swacchLogo, alt: "Swacch" },
     { src: partner1, alt: "Car Buddy" },
     { src: partner2, alt: "Swetha Cars and Travels" },
+    { src: client, alt:" pickndrives" },
     // { src: partner3, alt: "SkyReach" },
   ];
 
@@ -281,7 +283,7 @@ const CombinedDigitalMarketingPartners = () => {
       {/* =========================================================
           🔥 PARTNERS SECTION (Home4)
       ========================================================= */}
-      <div className="relative bg-gradient-to-br from-white via-orange-50/40 to-white py-2 px-6 md:px-20 overflow-hidden ">
+      <div className="relative bg-gradient-to-b from-gray-50 to-blue-50 py-24 px-6 md:px-20 overflow-hidden">
 
         {/* 🔶 Animated Blobs */}
         <motion.div

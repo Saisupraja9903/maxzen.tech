@@ -89,20 +89,22 @@ const AboutAndServices = () => {
           {services.map((service, index) => (
             <motion.div
               key={index}
-              className="flex flex-col border rounded-xl p-8 shadow-sm bg-white/70 backdrop-blur-sm hover:bg-white transition-all duration-300"
+              className="flex flex-row items-center gap-6 border rounded-xl p-6 shadow-sm bg-white/70 backdrop-blur-sm hover:bg-white transition-all duration-300"
               initial={{ opacity: 0, scale: 0.9 }}
               whileInView={{ opacity: 1, scale: 1 }}
               viewport={{ once: true }}
-              whileHover={{ scale: 1.06, y: -8, boxShadow: "0px 15px 35px rgba(0,0,0,0.12)" }}
+              whileHover={{ scale: 1.03, y: -5, boxShadow: "0px 10px 25px rgba(0,0,0,0.1)" }}
               transition={{ duration: 0.4 }}
             >
-              <div className="bg-gradient-to-br from-[#ff9c9c] to-[#f76c6c] w-28 h-28 flex items-center justify-center rounded-xl mb-6">
+              <div className="bg-gradient-to-br from-[#ff9c9c] to-[#f76c6c] w-20 h-20 flex-shrink-0 flex items-center justify-center rounded-xl">
                 {service.icon}
               </div>
-              <h3 className="text-2xl font-bold mb-3 text-gray-900">
-                {service.title}
-              </h3>
-              <p className="text-gray-600 leading-relaxed">{service.desc}</p>
+              <div>
+                <h3 className="text-xl font-bold mb-2 text-gray-900">
+                  {service.title}
+                </h3>
+                <p className="text-gray-600 leading-relaxed text-sm">{service.desc}</p>
+              </div>
             </motion.div>
           ))}
         </div>

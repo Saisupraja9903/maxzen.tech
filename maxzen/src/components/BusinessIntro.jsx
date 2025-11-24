@@ -21,11 +21,11 @@ const BusinessIntro = () => {
           <p className="uppercase text-sm tracking-wider text-orange-600 font-semibold mb-3 hover:text-white transition-all duration-300">
             Get Started
           </p>
-          <h2 className="text-5xl font-bold text-gray-900 mb-6 leading-tight hover:text-white transition-all duration-300">
+          <h2 className="text-5xl font-bold text-gray-400 mb-6 leading-tight hover:text-white transition-all duration-300">
             Hello Everyone, <br /> Be A Part Of Us
           </h2>
 
-          <div className="flex flex-wrap gap-x-5 gap-y-3 text-gray-700 text-base hover:text-white transition-all duration-300">
+          <div className="flex flex-wrap gap-x-5 gap-y-3 text-black-700 text-base hover:text-white font-bold transition-all duration-300">
             <span className="before:content-['•'] before:mr-2">Web Design</span>
             <span className="before:content-['•'] before:mr-2">SEO Optimizing</span>
             <span className="before:content-['•'] before:mr-2">Digital Marketing</span>
