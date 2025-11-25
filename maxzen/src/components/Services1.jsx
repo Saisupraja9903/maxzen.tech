@@ -58,7 +58,7 @@ const services = [
   {
     img: s2,
     title: "Web Designing",
-    issuer: "Maxzen Tech Solutions",
+    issuer: "Maxzen.Tech",
     description:
       "We design modern, responsive, and user-friendly websites that enhance your brand’s digital presence and engagement.Our team uses the latest UI/UX principles to create layouts that are clean, intuitive, and engaging. From visually appealing designs to easy-to-use structures, every element is thoughtfully planned to enhance user experience and encourage meaningful interactions.",
       link:"/serviceswd"
@@ -478,7 +478,7 @@ export default function DigitalMarketingServices() {
     {/* Stat 1 */}
     <div className="py-8 border-r border-b md:border-b-0 border-gray-300">
       <h2 className="text-4xl font-bold text-red-600">
-        <CountUp end={8} />+
+        <CountUp end={4} />+
       </h2>
       <p className="text-gray-700 font-semibold mt-2">Years Experience</p>
     </div>
@@ -493,19 +493,19 @@ export default function DigitalMarketingServices() {
 
     {/* Stat 3 */}
     <div className="py-8 border-r border-gray-300">
-      <h2 className="text-4xl font-bold text-red-600">
-        <CountUp end={150} />
-      </h2>
-      <p className="text-gray-700 font-semibold mt-2">Customers Satisfied</p>
-    </div>
+  <h2 className="text-4xl font-bold text-red-600">
+    10K+
+  </h2>
+  <p className="text-gray-700 font-semibold mt-2">Customers Satisfied</p>
+</div>
 
-    {/* Stat 4 */}
-    <div className="py-8">
-      <h2 className="text-4xl font-bold text-red-600">
-        <CountUp end={158} />
-      </h2>
-      <p className="text-gray-700 font-semibold mt-2">Projects Completed</p>
-    </div>
+<div className="py-8">
+  <h2 className="text-4xl font-bold text-red-600">
+    10K+
+  </h2>
+  <p className="text-gray-700 font-semibold mt-2">Projects Completed</p>
+</div>
+
 
   </div>
 </section>

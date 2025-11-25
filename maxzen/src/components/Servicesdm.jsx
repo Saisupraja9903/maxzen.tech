@@ -111,7 +111,9 @@ const Timeline = () => {
               whileInView={{ opacity: 1, x: 0 }}
               viewport={{ once: true }}
               transition={{ duration: 0.7 }}
-              className={`w-[45%] p-6 rounded-2xl shadow-xl bg-white border-l-8 ${step.color}`}
+              className={`w-[45%] p-6 rounded-2xl shadow-xl bg-white border-l-8 ${
+                step.color
+              } ${index === 1 ? "ml-auto" : ""}`}
             >
               <img
                 src={step.img}
@@ -132,9 +134,11 @@ const Timeline = () => {
           </div>
         ))}
       </div>
+      
     </section>
   );
 };
+
 
 // ------------------ COUNTDOWN COMPONENT ------------------
 // ------------------ COUNTDOWN COMPONENT ------------------
@@ -210,7 +214,7 @@ const Countdown = () => {
       {/* Paragraph */}
       <p className="max-w-4xl mx-auto mt-10 text-lg leading-relaxed text-gray-700">
         At Maxzen Tech, we’re more than just a{" "}
-        <strong>digital marketing agency in Hyderabad</strong> — we’re your
+        <strong>digital marketing agency</strong> — we’re your
         growth partner. With proven strategies in SEO, paid ads, social
         media marketing, and local SEO, we help startups and businesses
         generate real, measurable results. Whether you want more traffic,
@@ -268,7 +272,7 @@ export default function DigitalMarketingNew() {
           variants={fadeUp}
           className="text-center text-[42px] md:text-[55px] font-extrabold text-purple-700"
         >
-          Best Digital Marketing Agency In Hyderabad
+          Best Digital Marketing Agency
         </motion.h1>
 
         <motion.p

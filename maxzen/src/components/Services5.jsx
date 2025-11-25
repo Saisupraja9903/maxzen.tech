@@ -88,16 +88,16 @@ const SocialMediaMarketing = () => {
     <section className="relative w-full overflow-hidden py-20 bg-gradient-to-b from-[#f9fbff] to-[#f1f4ff] text-gray-800">
       {/* 🌈 FLOATING COLORFUL ICONS */}
       {/* 🌈 FLOATING COLORFUL ICONS */}
-<FloatingIcon icon={FaFacebookF} color="blue-600" top="10%" left="5%" duration={6} />
+<FloatingIcon icon={FaFacebookF} color="blue-600" top="10%" left="90%" duration={6} />
 <FloatingIcon icon={FaFacebookF} color="blue-600" top="40%" left="15%" duration={7} />
 {/* <FloatingIcon icon={FaFacebookF} color="blue-600" top="7%" left="22%" duration={7} /> */}
 <FloatingIcon icon={FaInstagram} color="pink-500" top="1%" left="85%" duration={8} />
 <FloatingIcon icon={FaInstagram} color="pink-500" top="78%" left="70%" duration={9} />
 
-<FloatingIcon icon={FaLinkedinIn} color="blue-500" top="80%" left="90%" duration={7} />
+<FloatingIcon icon={FaLinkedinIn} color="blue-500" top="10%" left="5%" duration={7} />
 <FloatingIcon icon={FaLinkedinIn} color="blue-500" top="40%" left="60%" duration={8} />
 
-<FloatingIcon icon={FaYoutube} color="red-500" top="7%" left="22%" duration={5} />
+<FloatingIcon icon={FaYoutube} color="red-500" top="2%" left="70%" duration={5} />
 <FloatingIcon icon={FaYoutube} color="red-500" top="80%" left="25%" duration={6} />
 
 <FloatingIcon icon={FaTwitter} color="sky-400" top="10%" left="50%" duration={9} />

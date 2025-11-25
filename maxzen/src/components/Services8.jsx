@@ -338,7 +338,7 @@ const MobileAppHero = () => {
           transition={{ duration: 0.8 }}
           className="text-3xl font-bold text-center mb-12 bg-gradient-to-r from-purple-400 to-cyan-400 text-transparent bg-clip-text"
         >
-          Mobile App Development Services in Hyderabad
+          Mobile App Development Services
         </motion.h3>
 
         {/* Services Grid */}
@@ -555,7 +555,7 @@ const MobileAppHero = () => {
   <div className="grid md:grid-cols-3 gap-10">
     {/* Travels */}
     <div className="bg-white/10 backdrop-blur-xl border border-white/20 rounded-2xl p-6 hover:shadow-[0_0_35px_rgba(0,255,255,0.3)] transition-all duration-300 text-center">
-      <img src={img9} className="w-full h-56 object-cover rounded-xl mb-5" />
+      <img src={img12} className="w-full h-56 object-cover rounded-xl mb-5" />
       <p className="text-lg text-white/85 leading-relaxed mb-4">
         “Maxzen.Tech built our travel booking app with great features and smooth performance.
         Highly satisfied with their work.”
@@ -570,7 +570,11 @@ const MobileAppHero = () => {
 
     {/* Bus */}
     <div className="bg-white/10 backdrop-blur-xl border border-white/20 rounded-2xl p-6 hover:shadow-[0_0_35px_rgba(0,255,255,0.3)] transition-all duration-300 text-center">
-      <img src={img12} className="w-full h-56 object-cover rounded-xl mb-5" />
+      <img 
+  src={img9} 
+  className="w-full h-56 object-contain rounded-xl mb-5 bg-black/10 p-2"
+/>
+
       <p className="text-lg text-white/85 leading-relaxed mb-4">
         “Maxzen.Tech provided the best mobile app development services for our bus business.
         Very satisfied.”

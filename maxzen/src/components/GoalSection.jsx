@@ -8,19 +8,24 @@ const GoalsSection = () => {
 
   // Animate the count-up from 0 → 150
   useEffect(() => {
-    let start = 0;
-    const end = 150;
-    const duration = 2000; // 2 seconds
-    const stepTime = Math.abs(Math.floor(duration / end));
+  let start = 0;
+  const end = 10000;
+  const duration = 2000; // 2 seconds
+  const increment = 50;  // 🚀 increase number faster
+  const stepTime = Math.abs(Math.floor(duration / (end / increment)));
 
-    const timer = setInterval(() => {
-      start += 1;
-      setCount(start);
-      if (start >= end) clearInterval(timer);
-    }, stepTime);
+  const timer = setInterval(() => {
+    start += increment;
+    if (start >= end) {
+      start = end;
+      clearInterval(timer);
+    }
+    setCount(start);
+  }, stepTime);
 
-    return () => clearInterval(timer);
-  }, []);
+  return () => clearInterval(timer);
+}, []);
+
    useEffect(() => {
     window.scrollTo(0, 0);
   }, [])
@@ -70,9 +75,10 @@ const GoalsSection = () => {
               animate={controls}
               className="text-lg font-semibold"
             >
-              <span className="text-red-500 text-2xl font-bold">
-                {count}+
-              </span>{" "}
+             <span className="text-red-500 text-2xl font-bold">
+  {count >= 1000 ? `${Math.floor(count / 1000)}K+` : `${count}+`}
+</span>
+{" "}
               Projects
             </motion.p>
           </div>

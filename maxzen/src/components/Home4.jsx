@@ -138,7 +138,7 @@ const CombinedDigitalMarketingPartners = () => {
   const logos = [
     { src: webtechLogo, alt: "Web Technologies" },
     { src: busesLogo, alt: "M.R. Buses" },
-    { src: swacchLogo, alt: "Swacch" },
+    { src: swacchLogo, alt: "Swacchh" },
     { src: partner1, alt: "Car Buddy" },
     { src: partner2, alt: "Swetha Cars and Travels" },
     { src: client, alt:" pickndrives" },
@@ -322,33 +322,27 @@ const CombinedDigitalMarketingPartners = () => {
         {/* 🔹 Partner Cards Grid */}
         <div className="mt-16 relative z-10">
           <motion.div
-            initial={{ opacity: 0, y: 60 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 1.2 }}
-            className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-10 justify-items-center"
+            className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-8"
           >
             {logos.map((logo, index) => (
               <motion.div
                 key={index}
-                whileHover={{
-                  scale: 1.08,
-                  rotate: 1,
-                  boxShadow: "0 12px 30px rgba(255, 165, 0, 0.2)",
-                }}
-                transition={{ type: "spring", stiffness: 200, damping: 15 }}
-                className="relative bg-white/80 backdrop-blur-md rounded-3xl shadow-lg border border-orange-100 w-80 h-80 flex flex-col items-center justify-center overflow-hidden group"
+                initial={{ opacity: 0, y: 50 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.5, delay: index * 0.1 }}
+                className="group relative bg-white rounded-2xl shadow-lg p-8 text-center overflow-hidden border-t-4 border-transparent hover:border-orange-500 transition-all duration-300"
               >
-                <motion.div className="absolute inset-0 bg-gradient-to-br from-orange-400/10 via-transparent to-yellow-400/10 opacity-0 group-hover:opacity-100 transition-all duration-700" />
-
-                <motion.img
-                  src={logo.src}
-                  alt={logo.alt}
-                  className="h-36 mb-2  group-hover:scale-110 transition-transform duration-700"
-                />
-
-                <p className="text-gray-800 font-semibold text-lg">
-                  {logo.alt}
-                </p>
+                <motion.div
+                  whileHover={{ y: -10 }}
+                  className="transition-transform duration-300"
+                >
+                  <img
+                    src={logo.src}
+                    alt={logo.alt}
+                    className="h-36 rounded-xl w-auto mx-auto object-contain mb-2"
+                  />
+                  <h3 className="text-lg font-semibold text-gray-800">{logo.alt}</h3>
+                </motion.div>
               </motion.div>
             ))}
           </motion.div>

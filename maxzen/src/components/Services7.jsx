@@ -57,7 +57,7 @@ const CloudPage = () => {
               ))}
             </div>
             <div className="bg-gradient-to-r from-purple-500 via-blue-400 to-cyan-400 bg-clip-text text-transparent drop-shadow-lg mt-2">
-              {"Services in Hyderabad".split("").map((char, i) => (
+              {"Services".split("").map((char, i) => (
                 <motion.span key={i} initial={{ opacity: 0, y: 10 }} animate={{ opacity: 1, y: 0 }} transition={{ delay: 1.5 + i * 0.05 }} className="inline-block">
                   {char}
                 </motion.span>
@@ -90,7 +90,7 @@ const CloudPage = () => {
             transition={{ duration: 1 }}
             className="text-4xl md:text-5xl font-extrabold text-center mb-10 text-transparent bg-clip-text bg-gradient-to-r from-cyan-400 via-blue-500 to-purple-500"
           >
-            Cloud Computing Services in Hyderabad – Maxzen.Tech
+            Cloud Computing Services – Maxzen.Tech
           </motion.h2>
 
           <div className="text-lg leading-relaxed space-y-6 text-gray-300">

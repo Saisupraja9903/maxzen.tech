@@ -60,13 +60,16 @@ const LogoDesigning = () => {
             className="md:w-1/2 text-center md:text-left"
           >
             <motion.h1
-              className="text-4xl md:text-5xl font-extrabold mb-6 bg-gradient-to-r from-cyan-600 via-blue-500 to-purple-500 text-transparent bg-clip-text"
-            >
-              Logo Designing in Hyderabad
-            </motion.h1>
+  className="text-4xl md:text-5xl font-extrabold mb-6 
+             bg-gradient-to-r from-cyan-600 via-blue-500 to-purple-500 
+             text-transparent bg-clip-text leading-tight md:leading-snug"
+>
+  Best Logo Designing
+</motion.h1>
+
 
             <motion.p
-              className="text-lg text-gray-700 leading-relaxed max-w-xl mx-auto md:mx-0"
+              className="text-lg text-gray-700 leading-relaxed max-w-xl mx-auto md:mx-0 "
             >
               Your logo is the face of your brand — the visual identity that speaks
               before words do. At{" "}
@@ -106,7 +109,7 @@ const LogoDesigning = () => {
                 transition={{ duration: 1 }}
                 src={logoDesignImg}
                 alt="Logo Design"
-                className="w-80 h-auto object-contain rounded-3xl shadow-2xl"
+                className="w-120 h-auto object-contain rounded-3xl shadow-2xl"
               />
             </motion.div>
           </motion.div>
@@ -157,7 +160,7 @@ const LogoDesigning = () => {
           className="mt-24"
         >
           <h3 className="text-3xl font-extrabold mb-6 text-center bg-gradient-to-r from-cyan-700 to-blue-500 text-transparent bg-clip-text">
-            Why Choose Maxzen.tech for Logo Designing in Hyderabad?
+            Why Choose Maxzen.tech for Logo Designing?
           </h3>
           <p className="text-lg text-gray-700 leading-relaxed text-center max-w-5xl mx-auto">
             We combine creativity, research, and strategy to create logos that stand
@@ -197,7 +200,7 @@ const LogoDesigning = () => {
           className="mt-24 text-center"
         >
           <h3 className="text-3xl md:text-4xl font-extrabold mb-6 bg-gradient-to-r from-cyan-700 via-blue-500 to-purple-500 text-transparent bg-clip-text">
-            Get the Best Logo Design in Hyderabad
+            Get the Best Logo Design for Your Brand Today!
           </h3>
           <p className="text-gray-700 max-w-3xl mx-auto mb-8 text-lg leading-relaxed">
             Looking for a professional logo that defines your brand perfectly?{" "}

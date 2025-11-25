@@ -69,6 +69,7 @@ import Serviceswd from './components/Serviceswd.jsx';
 // import Flip from './components/Flip.jsx';
 import Privacypolicy from './components/Privacypolicy.jsx';
 import TermsAndConditions from './components/Termsandconditions.jsx';
+import Timeline from './components/Timeline.jsx';
 
 import ThreeD from './components/ThreeD.jsx';
 
@@ -205,6 +206,7 @@ function App() {
        {/* <Privacypolicy/> */}
        {/* <TermsAndConditions/> */}
        {/* <ThreeD/> */}
+       {/* <Timeline/> */}
     
       </div>
    );

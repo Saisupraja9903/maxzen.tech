@@ -97,14 +97,14 @@ const WebDevelopment = () => {
     <div className="bg-gradient-to-b from-white via-[#fff5f5] to-[#fff1f8] text-gray-800 overflow-hidden">
       {/* ================= HERO SECTION ================= */}
       <section className="relative bg-orange-100 overflow-hidden text-white">
-        <h1 className="fixed mt-20 text-[6rem] md:text-[8rem] font-extrabold text-[#fcb971]/40 top-[-40px] left-1/2 -translate-x-1/2 select-none">
+        <h1 className="fixed mt-20 text-[6rem] md:text-[8rem] font-extrabold text-[#fc8d71]/40 top-[-40px] left-1/2 -translate-x-1/2 select-none">
           Web_Development
         </h1>
 
         <div className="relative z-10 max-w-7xl mx-auto px-6 md:px-12 py-16">
           <div className="flex flex-wrap justify-between items-center mb-8">
             <div className="bg-[#0d1b2a] text-white text-lg font-semibold px-6 py-2 rounded-tr-3xl rounded-bl-3xl shadow-md">
-              WEB DEVELOPMENT SERVICES IN HYDERABAD
+              WEB DEVELOPMENT SERVICES
             </div>
             <button
              onClick={() => navigate("/contact")}
@@ -120,8 +120,8 @@ const WebDevelopment = () => {
               transition={{ duration: 0.6 }}
               className="lg:w-1/2 w-full"
             >
-              <h2 className="text-4xl md:text-5xl font-extrabold leading-tight">
-                Visitor <span className="text-[#0d1b2a]">Benefits</span> with{" "}
+              <h2 className="text-4xl md:text-5xl text-black font-extrabold leading-tight">
+                Visitor <span className="text-orange-500">Benefits</span> with{" "}
                 <span className="text-[#0d1b2a]">Maxzen.Tech</span> Websites
               </h2>
               <button 
@@ -139,7 +139,7 @@ const WebDevelopment = () => {
             >
               <p className="text-black/90 mt-20 leading-relaxed text-justify bg-[#0d1b2a]/20 backdrop-blur-sm p-6 rounded-2xl shadow-md border border-white/20">
                 Web development services in Hyderabad by{" "}
-                <span className="font-semibold text-white">Maxzen.Tech</span> are designed to go beyond just great design — we craft websites that truly accelerate your business growth.Our approach focuses on creating mobile-friendly, SEO-optimized, and customer-focused solutions that not only attract visitors but also convert them into loyal clients. By combining creativity, modern technology, and smart strategies, we make sure your website becomes a powerful digital asset that drives long-term success for your brand.
+                <span className="font-semibold text-orange-500">Maxzen.Tech</span> are designed to go beyond just great design — we craft websites that truly accelerate your business growth.Our approach focuses on creating mobile-friendly, SEO-optimized, and customer-focused solutions that not only attract visitors but also convert them into loyal clients. By combining creativity, modern technology, and smart strategies, we make sure your website becomes a powerful digital asset that drives long-term success for your brand.
               </p>
             </motion.div>
           </div>
@@ -175,7 +175,7 @@ const WebDevelopment = () => {
           transition={{ duration: 0.6 }}
           className="text-3xl md:text-4xl font-extrabold text-center text-[#0d1b2a] mb-10"
         >
-          Why Choose Maxzen.Tech for Web Development Services in Hyderabad
+          Why Choose Maxzen.Tech for Web Development Services 
         </motion.h2>
 
         <div className="max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-3 gap-10 items-center">
@@ -287,63 +287,53 @@ const WebDevelopment = () => {
       </section>
      {/* ================= PORTFOLIO / PROJECTS SECTION ================= */}
 <section className="py-24 px-6 md:px-12 bg-gradient-to-b from-[#fff5f0] via-white to-[#fffaf7] overflow-hidden">
-  <motion.h2
-    initial={{ opacity: 0, y: 30 }}
-    whileInView={{ opacity: 1, y: 0 }}
-    transition={{ duration: 0.6 }}
-    className="text-4xl md:text-5xl font-extrabold text-center text-[#0d1b2a] mb-14"
-  >
+  <h2 className="text-4xl md:text-5xl font-extrabold text-center text-[#0d1b2a] mb-14">
     Portfolio / <span className="text-[#ff8c1a]">Projects</span>
-  </motion.h2>
+  </h2>
 
-  {/* ✅ Infinite scrolling image strip */}
-  <div className="relative max-w-7xl mx-auto overflow-hidden rounded-3xl shadow-2xl border border-[#ff8c1a]/20">
-    <motion.div
-      className="flex w-[200%]" // makes double width for seamless loop
-      animate={{
-        x: ["0%", "-50%"], // slide half-width continuously
-      }}
-      transition={{
-        duration: 20, // control scroll speed
-        repeat: Infinity,
-        ease: "linear",
-      }}
-    >
-      {/* Duplicate the image set for infinite scroll illusion */}
-      {[1, 2].map((setIndex) => (
-        <div key={setIndex} className="flex w-1/2">
-          {/* Replace these with your own project images */}
-          <img
-            src={require("../assests/webdev6.png")}
-            alt="Project 1"
-            className="w-1/3 h-96 object-cover"
-          />
-          <img
-            src={require("../assests/webdev7.png")}
-            alt="Project 2"
-            className="w-1/3 h-96 object-cover"
-          />
-          <img
-            src={require("../assests/webdev8.png")}
-            alt="Project 3"
-            className="w-1/3 h-96 object-cover"
-          />
-        </div>
-      ))}
-    </motion.div>
+  {/* ⭐ Horizontal Scroll + Hidden Scrollbar */}
+  <div className="relative max-w-7xl mx-auto overflow-x-auto overflow-y-hidden rounded-3xl shadow-2xl border border-[#ff8c1a]/20 scrollbar-hide">
+    
+    <div className="flex gap-6 py-4 px-4 w-max">
+      <img
+        src={require("../assests/webdev6.png")}
+        alt="Project 1"
+        className="h-80 w-auto object-cover rounded-xl"
+      />
+      <img
+        src={require("../assests/webdev7.png")}
+        alt="Project 2"
+        className="h-80 w-auto object-cover rounded-xl"
+      />
+      <img
+        src={require("../assests/webdev8.png")}
+        alt="Project 3"
+        className="h-80 w-auto object-cover rounded-xl"
+      />
+      <img
+        src={require("../assests/logoo21.PNG")}
+        alt="Project 4"
+        className="h-80 w-auto object-cover rounded-xl"
+      />
+      <img
+        src={require("../assests/logoo22.PNG")}
+        alt="Project 7"
+        className="h-80 w-auto object-cover rounded-xl"
+      />
+     
+      <img
+        src={require("../assests/logoo23.PNG")}
+        alt="Project 6"
+        className="h-80 w-auto object-cover rounded-xl"
+      />
+    </div>
   </div>
 
-  {/* Optional CTA button below */}
-  <div className="text-center mt-10">
-    {/* <motion.button
-      whileHover={{ scale: 1.05 }}
-      transition={{ duration: 0.3 }}
-      className="px-8 py-3 rounded-full bg-gradient-to-r from-[#ff8c1a] to-[#0d1b2a] text-white font-semibold shadow-lg hover:shadow-2xl transition"
-    >
-      View Full Portfolio 🚀
-    </motion.button> */}
-  </div>
+  <div className="text-center mt-10"></div>
 </section>
+
+
+
 
 
      {/* ================= INTRO SECTION: MAXZEN.TECH - TOP WEB DEVELOPMENT SERVICES ================= */}
@@ -354,8 +344,7 @@ const WebDevelopment = () => {
     animate={{ x: [0, 30, 0], y: [0, 20, 0] }}
     transition={{ duration: 10, repeat: Infinity, ease: "easeInOut" }}
   />
-  <motion.div
-    className="absolute bottom-[-100px] right-[-80px] w-80 h-80 bg-[#0d1b2a]/10 rounded-full blur-3xl"
+  <motion.div    className="absolute bottom-[-100px] right-[-80px] w-80 h-80 bg-[#0d1b2a]/10 rounded-full blur-3xl"
     animate={{ x: [0, -30, 0], y: [0, -20, 0] }}
     transition={{ duration: 12, repeat: Infinity, ease: "easeInOut" }}
   />
@@ -368,7 +357,7 @@ const WebDevelopment = () => {
       transition={{ duration: 0.8 }}
       className="text-4xl md:text-5xl font-extrabold text-[#0d1b2a] leading-tight mb-6"
     >
-      <span className="text-[#ff8c1a]">Maxzen.Tech</span> – Top Web Development Services in Hyderabad
+      <span className="text-[#ff8c1a]">Maxzen.Tech</span> – providing Top Web Development Services
     </motion.h2>
 
     {/* Glowing underline */}

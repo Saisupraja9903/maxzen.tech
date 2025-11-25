@@ -110,7 +110,7 @@ const HomeCombined = () => {
       {/* =====================================================
             🔥 HOME 1 SECTION  
       ===================================================== */}
-      <section className="relative py-16 md:py-24 px-6 md:px-32 overflow-hidden">
+      <section className="relative py-16 md:py-20 px-6 md:px-32 overflow-hidden">
         <div className="flex flex-col md:flex-row items-start justify-between gap-4 relative z-10">
 
           {/* LEFT IMAGE */}
@@ -123,7 +123,7 @@ const HomeCombined = () => {
            <motion.img
   src={heroImg}
   alt="Hero"
-  className="w-[300px] md:w-[350px] translate-x-12 md:translate-x-6 drop-shadow-[0_15px_30px_rgba(0,0,0,0.2)] rounded-xl"
+  className="w-[300px] md:w-[400px] translate-x-12 md:translate-x-6 drop-shadow-[0_15px_30px_rgba(0,0,0,0.2)] rounded-xl"
   animate={{ y: [0, -15, 0] }}
   transition={{ duration: 4, repeat: Infinity, ease: "easeInOut" }}
 />

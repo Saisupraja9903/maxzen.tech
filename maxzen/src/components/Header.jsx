@@ -113,17 +113,20 @@
 
 import React, { useState } from "react";
 import { FaInstagram, FaFacebookF, FaTwitter, FaBars, FaTimes } from "react-icons/fa";
-import { useNavigate } from "react-router-dom"; // ✅ Import navigation hook
+import { useNavigate, useLocation } from "react-router-dom";
 import logo from "../assests/maxzen logo.webp";
 
 const Header = () => {
   const [menuOpen, setMenuOpen] = useState(false);
-  const navigate = useNavigate(); // ✅ Initialize navigate
+  const navigate = useNavigate();
+  const location = useLocation();
 
   const handleNavigation = (path) => {
     navigate(path);
-    setMenuOpen(false); // ✅ Close menu on mobile after navigating
+    setMenuOpen(false);
   };
+
+  const isActive = (path) => location.pathname === path;
 
   return (
 <header className="bg-[#F2F5D1] sticky top-0 left-0 w-full z-50 shadow-md">
@@ -137,250 +140,132 @@ const Header = () => {
             alt="Maxzen Logo"
             className="h-14 w-14 rounded-full object-cover"
           />
-          <div className="flex flex-col justify-center leading-tight">
-            <span className="text-black font-semibold text-3xl font-sans">
-              Maxzen.Tech
-            </span>
-          </div>
+          <span className="text-black font-semibold text-3xl">
+            Maxzen.Tech
+          </span>
         </div>
 
-        {/* Center Section - Navigation */}
+        {/* Desktop Menu */}
         <nav className="hidden md:flex">
           <ul className="flex gap-10 text-black font-medium">
-            <li className="hover:text-yellow-400 transition-colors cursor-pointer" onClick={() => handleNavigation("/")}>
+
+            {/* HOME */}
+            <li
+              className={`cursor-pointer transition-colors ${
+                isActive("/") ? "text-yellow-500 font-bold" : "text-black"
+              } hover:text-yellow-400`}
+              onClick={() => handleNavigation("/")}>
               Home
             </li>
-            <li className="hover:text-yellow-400 transition-colors cursor-pointer" onClick={() => handleNavigation("/about")}>
+
+            {/* ABOUT */}
+            <li
+              className={`cursor-pointer transition-colors ${
+                isActive("/about") ? "text-yellow-500 font-bold" : "text-black"
+              } hover:text-yellow-400`}
+              onClick={() => handleNavigation("/about")}>
               About
             </li>
-             <li className="relative group transition-colors cursor-pointer">
-  <span  
-  onClick={() => handleNavigation("/services1")}
-  className="hover:text-yellow-400">Services</span>
 
-  {/* dropdown */}
-  {/* <li className="relative group transition-colors cursor-pointer">
-  <span className="hover:text-yellow-400">Services</span> */}
+            {/* SERVICES */}
+            <li
+              className={`relative group cursor-pointer transition-colors ${
+                isActive("/services1") ? "text-yellow-500 font-bold" : "text-black"
+              } hover:text-yellow-400`}
+            >
+              <span onClick={() => handleNavigation("/services1")}>Services</span>
 
-  {/* dropdown */}
-  <ul className="absolute left-0 mt-2 w-64 bg-[#F2F5D1] shadow-lg rounded-xl border border-gray-200 opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-300 z-50 text-black font-normal">
-    
-    <li
-      onClick={() => handleNavigation("/servicesdm")}
-      className="px-4 py-2 hover:bg-gradient-to-r hover:from-[#d73b3e] 
-            hover:to-[#f57c00] hover:text-black text-left rounded-lg transition"
-    >
-      Digital Marketing
-    </li>
-    <div className="w-full h-[1px] bg-gray-200 mb-2"></div>
-    <li
-      onClick={() => handleNavigation("/services5")}
-      className="px-4 py-2 hover:bg-gradient-to-r hover:from-[#d73b3e] 
-            hover:to-[#f57c00] hover:text-black text-left rounded-lg transition"
-    >
-      Social Media Marketing
-    </li>
-   <div className="w-full h-[1px] bg-gray-200 mb-2"></div>
-    <li
-      onClick={() => handleNavigation("/serviceswoo")}
-      className="px-4 py-2 hover:bg-gradient-to-r hover:from-[#d73b3e] 
-            hover:to-[#f57c00] hover:text-black text-left rounded-lg transition"
-    >
-       Woo-commerce Website
-    </li>
-    <div className="w-full h-[1px] bg-gray-200 mb-2"></div>
+              {/* Dropdown */}
+             <ul className="absolute left-0 mt-2 w-64 bg-[#F2F5D1] shadow-lg rounded-xl text-left border border-gray-200 opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-300 z-50">
 
-    <li
-      onClick={() => handleNavigation("/services3")}
-      className="px-4 py-2 hover:bg-gradient-to-r hover:from-[#d73b3e] 
-            hover:to-[#f57c00] hover:text-black  text-left rounded-lg transition"
-    >
-      Web Development
-    </li>
-    <div className="w-full h-[1px] bg-gray-200 mb-2"></div>
+  <li onClick={() => handleNavigation("/servicesdm")}
+      className="px-4 py-2 rounded-lg text-black transition hover:bg-gradient-to-r hover:from-[#ff8c1a] hover:to-[#0d1b2a] hover:text-white">
+    Digital Marketing
+  </li>
 
-    <li
-      onClick={() => handleNavigation("/services4")}
-      className="px-4 py-2 hover:bg-gradient-to-r hover:from-[#d73b3e] 
-            hover:to-[#f57c00] hover:text-black text-left rounded-lg transition"
-    >
-      SEO Services in Hyderabad
-    </li>
-<div className="w-full h-[1px] bg-gray-200 mb-2"></div>
-    <li
-      onClick={() => handleNavigation("/services6")}
-      className="px-4 py-2 hover:bg-gradient-to-r hover:from-[#d73b3e] 
-            hover:to-[#f57c00] hover:text-black text-left rounded-lg transition"
-    >
-     Logo Designing 
-    </li>
-    <div className="w-full h-[1px] bg-gray-200 mb-2"></div>
-    <li
-      onClick={() => handleNavigation("/services7")}
-      className="px-4 py-2 hover:bg-gradient-to-r hover:from-[#d73b3e] 
-            hover:to-[#f57c00] hover:text-black text-left text-leftrounded-lg transition"
-    >
-     Cloud Computing Services
-    </li>
-     <div className="w-full h-[1px] bg-gray-200 mb-2"></div>
-    <li
-      onClick={() => handleNavigation("/services8")}
-      className="px-4 py-2 hover:bg-gradient-to-r hover:from-[#d73b3e] 
-            hover:to-[#f57c00] hover:text-black text-left rounded-lg transition"
-    >
-      App Development
-    </li>
-     <div className="w-full h-[1px] bg-gray-200 mb-2"></div>
-    <li
-  onClick={() => handleNavigation("/services9")}
-  className="px-4 py-2 hover:bg-gradient-to-r hover:from-[#d73b3e] 
-            hover:to-[#f57c00] hover:text-black text-left rounded-lg transition"
->
-  Software Development
-</li>
+  <li onClick={() => handleNavigation("/services5")}
+      className="px-4 py-2 rounded-lg text-black transition hover:bg-gradient-to-r hover:from-[#ff8c1a] hover:to-[#0d1b2a] hover:text-white">
+    Social Media Marketing
+  </li>
 
+  <li onClick={() => handleNavigation("/serviceswoo")}
+      className="px-4 py-2 rounded-lg text-black transition hover:bg-gradient-to-r hover:from-[#ff8c1a] hover:to-[#0d1b2a] hover:text-white">
+    Woo-commerce Website
+  </li>
 
-  </ul>
-</li>
+  <li onClick={() => handleNavigation("/services3")}
+      className="px-4 py-2 rounded-lg text-black transition hover:bg-gradient-to-r hover:from-[#ff8c1a] hover:to-[#0d1b2a] hover:text-white">
+    Web Development
+  </li>
 
+  <li onClick={() => handleNavigation("/services4")}
+      className="px-4 py-2 rounded-lg text-black transition hover:bg-gradient-to-r hover:from-[#ff8c1a] hover:to-[#0d1b2a] hover:text-white">
+    SEO Services in Hyderabad
+  </li>
 
-            <li className="hover:text-yellow-400 transition-colors cursor-pointer" onClick={() => handleNavigation("/team")}>
+  <li onClick={() => handleNavigation("/services6")}
+      className="px-4 py-2 rounded-lg text-black transition hover:bg-gradient-to-r hover:from-[#ff8c1a] hover:to-[#0d1b2a] hover:text-white">
+    Logo Designing
+  </li>
+
+  <li onClick={() => handleNavigation("/services7")}
+      className="px-4 py-2 rounded-lg text-black transition hover:bg-gradient-to-r hover:from-[#ff8c1a] hover:to-[#0d1b2a] hover:text-white">
+    Cloud Computing
+  </li>
+
+  <li onClick={() => handleNavigation("/services8")}
+      className="px-4 py-2 rounded-lg text-black transition hover:bg-gradient-to-r hover:from-[#ff8c1a] hover:to-[#0d1b2a] hover:text-white">
+    App Development
+  </li>
+
+  <li onClick={() => handleNavigation("/services9")}
+      className="px-4 py-2 rounded-lg text-black transition hover:bg-gradient-to-r hover:from-[#ff8c1a] hover:to-[#0d1b2a] hover:text-white">
+    Software Development
+  </li>
+
+</ul>
+
+            </li>
+
+            {/* TEAM */}
+            <li
+              className={`cursor-pointer transition-colors ${
+                isActive("/team") ? "text-yellow-500 font-bold" : "text-black"
+              } hover:text-yellow-400`}
+              onClick={() => handleNavigation("/team")}>
               Team
             </li>
-            <li className="hover:text-yellow-400 transition-colors cursor-pointer" onClick={() => handleNavigation("/blog")}>
+
+            {/* BLOG */}
+            <li
+              className={`cursor-pointer transition-colors ${
+                isActive("/blog") ? "text-yellow-500 font-bold" : "text-black"
+              } hover:text-yellow-400`}
+              onClick={() => handleNavigation("/blog")}>
               Blog
             </li>
-            <li className="hover:text-yellow-400 transition-colors cursor-pointer" onClick={() => handleNavigation("/contact")}>
+
+            {/* CONTACT */}
+            <li
+              className={`cursor-pointer transition-colors ${
+                isActive("/contact") ? "text-yellow-500 font-bold" : "text-black"
+              } hover:text-yellow-400`}
+              onClick={() => handleNavigation("/contact")}>
               Contact
             </li>
+
           </ul>
         </nav>
 
         {/* Mobile Menu Button */}
-        <button
-          className="md:hidden text-black text-2xl"
-          onClick={() => setMenuOpen(!menuOpen)}
-        >
+        <button className="md:hidden text-black text-2xl" onClick={() => setMenuOpen(!menuOpen)}>
           {menuOpen ? <FaTimes /> : <FaBars />}
         </button>
+
       </div>
 
-      {/* Mobile Menu */}
-      {menuOpen && (
-        <div className="md:hidden bg-[#F2F5D1] px-6 pb-4">
-          <ul className="flex flex-col gap-4 text-black font-medium">
-            <li className="hover:text-yellow-400 transition-colors" onClick={() => handleNavigation("/")}>
-              Home
-            </li>
-            <li className="hover:text-yellow-400 transition-colors" onClick={() => handleNavigation("/about")}>
-              About
-            </li>
-            <li className="relative group transition-colors cursor-pointer">
-  <span 
-  onClick={() => handleNavigation("/services1")}
-  lassName="hover:text-yellow-400">Services</span>
-
-  {/* dropdown */}
-  {/* <li className="relative group transition-colors cursor-pointer">
-  <span className="hover:text-yellow-400">Services</span> */}
-
-  {/* dropdown */}
-  <ul className="absolute left-0 mt-2 w-64 bg-white shadow-lg rounded-xl border border-gray-200 opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-300 z-50 text-black font-normal">
-    
-    <li
-      onClick={() => handleNavigation("/servicesdm")}
-      className="px-4 py-2 hover:bg-yellow-300 hover:text-black rounded-lg transition"
-    >
-      Digital Marketing
-    </li>
-
-    <li
-      onClick={() => handleNavigation("/services5")}
-      className="px-4 py-2 hover:bg-yellow-300 hover:text-black rounded-lg transition"
-    >
-      Social Media Marketing
-    </li>
-
-    <li
-      onClick={() => handleNavigation("/serviceswoo")}
-      className="px-4 py-2 hover:bg-yellow-300 hover:text-black rounded-lg transition"
-    >
-       Woo-commerce Website
-    </li>
-
-    <li
-      onClick={() => handleNavigation("/services3")}
-      className="px-4 py-2 hover:bg-yellow-300 hover:text-black rounded-lg transition"
-    >
-      Web Development
-    </li>
-
-    <li
-      onClick={() => handleNavigation("/services4")}
-      className="px-4 py-2 hover:bg-yellow-300 hover:text-black rounded-lg transition"
-    >
-      SEO Services in Hyderabad
-    </li>
-
-    <li
-      onClick={() => handleNavigation("/blog2")}
-      className="px-4 py-2 hover:bg-yellow-300 hover:text-black rounded-lg transition"
-    >
-      Logo Designing 
-    </li>
-
-    <li
-      onClick={() => handleNavigation("/services7")}
-      className="px-4 py-2 hover:bg-yellow-300 hover:text-black rounded-lg transition"
-    >
-      Cloud Computing Services
-    </li>
-
-    <li
-      onClick={() => handleNavigation("/services8")}
-      className="px-4 py-2 hover:bg-yellow-300 hover:text-black rounded-lg transition"
-    >
-      App Development
-    </li>
-
-  
-    <li
-  onClick={() => handleNavigation("/services9")}
-  className="px-4 py-2 hover:bg-yellow-300 hover:text-black text-left rounded-lg transition"
->
-  Software Development
-</li>
-</ul>
-</li>
-
-            <li className="hover:text-yellow-400 transition-colors" onClick={() => handleNavigation("/team")}>
-              Team
-            </li>
-            <li className="hover:text-yellow-400 transition-colors" onClick={() => handleNavigation("/blog")}>
-              Blog
-            </li>
-            <li className="hover:text-yellow-400 transition-colors" onClick={() => handleNavigation("/contact")}>
-              Contact
-            </li>
-          </ul>
-
-          {/* Mobile Social Icons */}
-          <div className="flex gap-4 mt-4 text-xl">
-            <a href="#" className="text-[#E4405F] hover:scale-110 transition-transform">
-              <FaInstagram />
-            </a>
-            <a href="#" className="text-[#1877F2] hover:scale-110 transition-transform">
-              <FaFacebookF />
-            </a>
-            <a href="#" className="text-[#1DA1F2] hover:scale-110 transition-transform">
-              <FaTwitter />
-            </a>
-          </div>
-        </div>
-      )}
     </header>
   );
 };
 
 export default Header;
-

@@ -24,7 +24,7 @@ const services = [
 ];
 
 const AnimatedHeading = () => {
-  const fullText = "Software Development Company in Hyderabad | Maxzen .Tech";
+  const fullText = "Software Development | Maxzen .Tech";
   const words = fullText.split(" ");
   const [visibleWords, setVisibleWords] = useState([]);
 
@@ -168,7 +168,7 @@ const SoftwareServiceImages = () => {
       transition={{ duration: 0.8 }}
       className="text-4xl md:text-5xl font-bold text-gray-900 mb-8"
     >
-      Why Choose <span className="text-orange-500">Maxzen .Tech</span> for Software Development in Hyderabad?
+      Why Choose <span className="text-orange-500">Maxzen .Tech</span> for Software Development?
     </motion.h2>
 
     <motion.p

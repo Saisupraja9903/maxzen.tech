@@ -11,7 +11,7 @@ import {
 } from "react-icons/fa";
 import { motion } from "framer-motion";
 import logo2 from "../assests/maxzen logo.webp";
-import logoo1 from "../assests/logoo1.png";
+import logoo1 from "../assests/logoo19.png";
 import { useNavigate } from "react-router-dom";
 import { Link } from "react-router-dom";
 

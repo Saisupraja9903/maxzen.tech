@@ -5,15 +5,20 @@ import { useNavigate } from "react-router-dom";
 
 
 const stats = [
-  { number: 2, label: "Years Experience" },
+  { number: 4, label: "Years Experience" },
   { number: 63, label: "Advanced Tools" },
-  { number: 1000, label: "Customers Satisfied" },
-  { number: 100, label: "Projects Completed" },
+  { number: 10000, label: "Customers Satisfied" },
+  { number: 10000, label: "Projects Completed" },
 ];
+const formatNumber = (num) => {
+  if (num >= 1000) return `${num / 1000}k`;
+  return num;
+};
+
 
 const GlobalBrandSection = () => {
   const [counts, setCounts] = useState(stats.map(() => 0));
-  const controls = useAnimation();
+  const controls = useAnimation();  
 
   // Count-up animation on mount (refresh)
   useEffect(() => {
@@ -106,8 +111,9 @@ const GlobalBrandSection = () => {
 
               {/* Animated Number */}
               <h2 className="text-5xl font-bold text-red-500 mb-2">
-                {counts[index]}
-                {index !== 0 && index !== 2 && "+"}
+               {formatNumber(counts[index])}+
+
+
               </h2>
 
               {/* Bottom Line */}

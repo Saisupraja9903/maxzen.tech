@@ -20,6 +20,11 @@ import seo12 from "../assests/seo12.jpg";
 import seo13 from "../assests/seo13.avif";
 import Header from "./Header";
 import Footer from "./Footer";
+import { AiOutlineGlobal } from "react-icons/ai";
+import { FcComboChart } from "react-icons/fc";
+import { FaHandshake } from "react-icons/fa";
+import { TbTargetArrow } from "react-icons/tb";
+import { BsRocketTakeoff } from "react-icons/bs";
 
 const SeoServices = () => {
   // ---------- Bubble Section ----------
@@ -147,20 +152,30 @@ const SeoServices = () => {
     
     <>
     {/* ---------- TOP HERO SECTION ---------- */}
-      <section className="bg-blue-300 text-white py-6 px-8 flex items-center justify-between relative overflow-hidden">
-        <h1 className="text-3xl md:text-4xl font-extrabold tracking-wide">
-          SEO Services in Hyderabad - <span className="text-white">Maxzen.Tech</span>
-        </h1>
+<section className="bg-gradient-to-r from-purple-600 to-indigo-600 text-white py-10 px-6 md:px-12">
+  <div className="max-w-7xl mx-auto flex flex-col md:flex-row items-center justify-between">
+    
+    <h1 className="text-3xl md:text-4xl font-bold">
+      Top SEO Services — <span className="text-yellow-300">Maxzen.Tech</span>
+    </h1>
 
-        <button 
-        onClick={() => navigate("/contact")}
-        className="border-2 border-white px-5 py-2 rounded-full hover:bg-white hover:text-[#e63946] transition-all duration-300 text-sm font-semibold flex items-center gap-2">
-          <span>＋</span> REQUEST A QUOTE
-        </button>
+    <button
+      onClick={() => navigate("/contact")}
+      className="px-6 py-3 bg-white text-purple-700 font-semibold rounded-full hover:bg-yellow-300 hover:text-black transition"
+    >
+      Request a Quote
+    </button>
 
-        {/* Decorative network lines */}
-        <div className="absolute inset-0 bg-[url('https://www.transparenttextures.com/patterns/dots.png')] opacity-10"></div>
-      </section>
+  </div>
+</section>
+
+
+
+
+
+
+
+
 
       {/* ---------- MAIN HERO (Image + Text) ---------- */}
       <section className="py-20 px-6 md:px-16 bg-white flex flex-col md:flex-row items-center justify-center gap-10 md:gap-20">
@@ -251,79 +266,117 @@ const SeoServices = () => {
         </motion.div>
       </section>
 
-      {/* ---------- SERVICE CARDS SECTION ---------- */}
-      <section
-        ref={servicesRef}
-        className="min-h-screen bg-gradient-to-b from-[#fff8f4] via-[#fffdfb] to-[#fff3e8] flex flex-col justify-center items-center overflow-hidden"
-      >
-        <div className="text-center mb-10 select-none">
-          <h2 className="text-5xl md:text-6xl font-extrabold text-[#e63946]">
-            Our <span className="text-blue-300">SEO Services</span>
-          </h2>
-          <p className="text-gray-600 mt-3 text-base md:text-lg">
-            Scroll vertically here to move cards left/right
-          </p>
-        </div>
+      {/* ---------- SERVICE CARDS SECTION ----------
+      <section className="bg-blue-300 text-white py-6 px-8 flex items-center justify-between relative">
+        <h1 className="text-3xl md:text-4xl font-extrabold">
+          SEO Services in Hyderabad - <span className="text-white">Maxzen.Tech</span>
+        </h1>
+
+        <button
+          onClick={() => navigate("/contact")}
+          className="border-2 border-white px-5 py-2 rounded-full hover:bg-white hover:text-blue-500 transition-all"
+        >
+          ＋ REQUEST A QUOTE
+        </button>
+      </section>
+
+      {/* MAIN HERO SECTION */}
+      {/* <section className="py-20 px-6 md:px-16 bg-white flex flex-col md:flex-row items-center gap-20">
+        <motion.img
+          initial={{ opacity: 0, x: -50 }}
+          whileInView={{ opacity: 1, x: 0 }}
+          transition={{ duration: 0.8 }}
+          src={heroImg}
+          className="w-full md:w-1/2 max-w-lg rounded-3xl shadow-xl"
+        />
 
         <motion.div
-          animate={{ x: offset }}
-          transition={{ type: "spring", stiffness: 120, damping: 20 }}
-          className="flex gap-10 pl-[3200px] pr-[20px] items-stretch"
+          initial={{ opacity: 0, x: 50 }}
+          whileInView={{ opacity: 1, x: 0 }}
+          transition={{ duration: 0.8 }}
+          className="md:w-1/2"
+        >
+          <h2 className="text-4xl md:text-5xl font-extrabold text-gray-900">
+            Grow Your Business with <span className="text-purple-500">SEO</span>
+          </h2>
+          <p className="mt-6 text-gray-600 text-lg">
+            Boost your brand visibility and attract customers with powerful SEO strategies.
+          </p>
+        </motion.div>
+      </section>
+
+      {/* BUBBLE SECTION */}
+      {/* <section className="min-h-screen flex items-center justify-center bg-[#fffefc] px-6">
+        <motion.div
+          initial={{ opacity: 0, y: 40 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          className="relative max-w-7xl w-full border shadow-2xl rounded-[3rem] p-12 bg-cover bg-center"
+          style={{ backgroundImage: `url(${seoBg})` }}
+        >
+          <div className="absolute inset-0 bg-white/60 rounded-[3rem]" />
+
+          <div className="relative z-10">
+            <h2 className="text-5xl font-extrabold text-center text-red-500 mb-16">
+              What is <span className="text-black italic">SEO?</span>
+            </h2>
+
+            <div className="flex flex-wrap justify-center gap-14">
+              {circles.map((circle, i) => (
+                <motion.div
+                  key={i}
+                  className={`rounded-full bg-gradient-to-br from-[#fffaf2]/70 to-[#fff3e1]/70 text-center p-6 ${sizeMap[circle.size]}`}
+                  animate={{ y: [0, -15, 0] }}
+                  transition={{ duration: 4 + i, repeat: Infinity }}
+                >
+                  <h3 className="text-xl font-semibold text-red-500 mb-2">
+                    {circle.title}
+                  </h3>
+                  <p className="text-gray-700 text-sm">{circle.desc}</p>
+                </motion.div>
+              ))}
+            </div>
+          </div> */}
+        {/* </motion.div> */}
+      {/* </section> */} 
+
+      {/* ---------- SERVICES SECTION (Horizontal Scroll) ---------- */}
+      <section className="py-24 bg-gradient-to-b from-[#fff8f4] via-[#fffdfb] to-[#fff3e8]">
+        <div className="text-center mb-16">
+          <h2 className="text-5xl font-extrabold text-red-500">
+            Our <span className="text-blue-400">SEO Services</span>
+          </h2>
+          {/* <p className="text-gray-600 mt-3">Scroll vertically to move left/right</p> */}
+        </div>
+
+        <div
+          ref={servicesRef}
+          className="flex gap-12 overflow-x-scroll overflow-y-hidden px-10 scrollbar-hide w-full"
+          style={{ scrollBehavior: "smooth" }}
         >
           {services.map((service, i) => (
             <motion.div
               key={i}
-              whileHover={{ y: -6 }}
-              transition={{ type: "spring", stiffness: 260, damping: 18 }}
-              className="min-w-[360px] bg-white rounded-2xl border border-gray-100
-                         shadow-[0_6px_20px_rgba(0,0,0,0.08)]
-                         hover:shadow-[0_14px_40px_rgba(0,0,0,0.15)]
-                         transition-all duration-300 overflow-hidden group"
+              whileHover={{ y: -10 }}
+              className="min-w-[380px] bg-white rounded-2xl shadow-xl border overflow-hidden"
             >
-              <div className="relative h-48 overflow-hidden">
-                <img
-                  src={service.image}
-                  alt={service.title}
-                  className="object-cover w-full h-full transition-transform duration-700 group-hover:scale-110"
-                />
-                <div className="absolute inset-0 bg-gradient-to-t from-black/40 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
+              <div className="relative h-52">
+                <img src={service.image} className="w-full h-full object-cover" />
               </div>
 
-              <div className="p-6 flex flex-col flex-1">
-                <h3 className="text-lg font-semibold text-gray-900 mb-3 group-hover:text-[#fca311] transition-colors">
-                  {service.title}
-                </h3>
-                <p className="text-sm text-gray-600 leading-relaxed flex-1">
-                  {service.desc}
-                </p>
-                <div className="mt-6 flex items-center justify-between">
-                  <button 
-                   onClick={() => navigate("/contact")}
-                  className="inline-flex items-center gap-2 text-sm font-medium text-[#e63946] hover:text-[#fca311] transition-colors">
-                    Contact Us
-                    <svg
-                      xmlns="http://www.w3.org/2000/svg"
-                      fill="none"
-                      viewBox="0 0 24 24"
-                      strokeWidth={1.5}
-                      stroke="currentColor"
-                      className="w-4 h-4"
-                    >
-                      <path
-                        strokeLinecap="round"
-                        strokeLinejoin="round"
-                        d="M13.5 4.5L21 12l-7.5 7.5M21 12H3"
-                      />
-                    </svg>
-                  </button>
-                  <span className="text-xs text-gray-400 uppercase tracking-wide">
-                    SEO
-                  </span>
-                </div>
+              <div className="p-6">
+                <h3 className="text-xl font-bold mb-3">{service.title}</h3>
+                <p className="text-gray-600 text-sm">{service.desc}</p>
+
+                <button
+                  onClick={() => navigate("/contact")}
+                  className="mt-4 text-red-500 font-semibold"
+                >
+                  Contact Us →
+                </button>
               </div>
             </motion.div>
           ))}
-        </motion.div>
+        </div>
       </section>
       {/* ---------- WHY CHOOSE US SECTION (with intro content + 5 features) ---------- */}
 <section className="py-28 px-6 md:px-16 bg-gradient-to-b from-[#fff8f4] via-[#fffdfb] to-[#fff3e8] relative overflow-hidden">
@@ -370,15 +423,23 @@ const SeoServices = () => {
         <div className="absolute inset-0 bg-gradient-to-t from-black/40 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-700" />
       </div>
 
-      <div className="md:w-1/2 w-full text-center md:text-left">
-        <div className="text-5xl mb-4 text-[#fca311]">🌐</div>
-        <h3 className="text-3xl md:text-4xl font-bold text-[#e63946] mb-4">
-          Local Expertise with Global Vision
-        </h3>
-        <p className="text-gray-700 text-lg leading-relaxed mb-6">
-          We understand Hyderabad’s market behavior and combine it with international SEO practices to deliver the perfect strategy for your business.
-        </p>
-      </div>
+     <div className="md:w-1/2 w-full">
+  <div className="flex items-center gap-3 mb-4">
+    <p className="text-5xl text-[#11e1fc]">
+      <AiOutlineGlobal />
+    </p>
+
+    <span className="text-3xl md:text-4xl font-bold text-[#e63946]">
+      Local Expertise with Global Vision
+    </span>
+  </div>
+
+  <p className="text-gray-700 text-lg leading-relaxed mb-6">
+    We understand Hyderabad’s market behavior and combine it with
+    international SEO practices to deliver the perfect strategy for your business.
+  </p>
+</div>
+
     </div>
 
     {/* Feature 2 */}
@@ -392,15 +453,23 @@ const SeoServices = () => {
         <div className="absolute inset-0 bg-gradient-to-t from-black/40 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-700" />
       </div>
 
-      <div className="md:w-1/2 w-full text-center md:text-left">
-        <div className="text-5xl mb-4 text-[#fca311]">📈</div>
-        <h3 className="text-3xl md:text-4xl font-bold text-[#e63946] mb-4">
-          ROI-Focused Strategies
-        </h3>
-        <p className="text-gray-700 text-lg leading-relaxed mb-6">
-          Our SEO campaigns are designed for performance. From keyword targeting to content optimization — every step drives measurable ROI.
-        </p>
-      </div>
+      <div className="md:w-1/2 w-full">
+  <div className="flex items-center gap-3 mb-4">
+    <span className="text-5xl text-[#fca311]">
+      <FcComboChart />
+    </span>
+
+    <span className="text-3xl md:text-4xl font-bold text-[#e63946]">
+      ROI-Focused Strategies
+    </span>
+  </div>
+
+  <p className="text-gray-700 text-lg leading-relaxed mb-6">
+    Our SEO campaigns are designed for performance. From keyword targeting 
+    to content optimization — every step drives measurable ROI.
+  </p>
+</div>
+
     </div>
 
     {/* Feature 3 */}
@@ -414,15 +483,23 @@ const SeoServices = () => {
         <div className="absolute inset-0 bg-gradient-to-t from-black/40 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-700" />
       </div>
 
-      <div className="md:w-1/2 w-full text-center md:text-left">
-        <div className="text-5xl mb-4 text-[#fca311]">🤝</div>
-        <h3 className="text-3xl md:text-4xl font-bold text-[#e63946] mb-4">
-          Transparent & Ethical SEO
-        </h3>
-        <p className="text-gray-700 text-lg leading-relaxed mb-6">
-          No black-hat tricks, no hidden metrics — just honest, transparent results. You’ll always know what’s happening with your SEO growth.
-        </p>
-      </div>
+      <div className="md:w-1/2 w-full">
+  <div className="flex items-center gap-3 mb-4">
+    <span className="text-5xl text-black">
+      <FaHandshake />
+    </span>
+
+    <span className="text-3xl md:text-4xl font-bold text-[#e63946]">
+      Transparent & Ethical SEO
+    </span>
+  </div>
+
+  <p className="text-gray-700 text-lg leading-relaxed mb-6">
+    No black-hat tricks, no hidden metrics — just honest, transparent results.
+    You’ll always know what’s happening with your SEO growth.
+  </p>
+</div>
+
     </div>
 
     {/* Feature 4 */}
@@ -436,15 +513,23 @@ const SeoServices = () => {
         <div className="absolute inset-0 bg-gradient-to-t from-black/40 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-700" />
       </div>
 
-      <div className="md:w-1/2 w-full text-center md:text-left">
-        <div className="text-5xl mb-4 text-[#fca311]">🎯</div>
-        <h3 className="text-3xl md:text-4xl font-bold text-[#e63946] mb-4">
-          Tailored Solutions
-        </h3>
-        <p className="text-gray-700 text-lg leading-relaxed mb-6">
-          Every business is unique, so we design custom SEO strategies that perfectly align with your goals, ensuring measurable outcomes that matter.
-        </p>
-      </div>
+     <div className="md:w-1/2 w-full">
+  <div className="flex items-center gap-3 mb-4">
+    <span className="text-5xl text-red-500">
+      <TbTargetArrow />
+    </span>
+
+    <span className="text-3xl md:text-4xl font-bold text-[#e63946]">
+      Tailored Solutions
+    </span>
+  </div>
+
+  <p className="text-gray-700 text-lg leading-relaxed mb-6">
+    Every business is unique, so we design custom SEO strategies that perfectly 
+    align with your goals, ensuring measurable outcomes that matter.
+  </p>
+</div>
+
     </div>
 
     {/* Feature 5 */}
@@ -458,15 +543,23 @@ const SeoServices = () => {
         <div className="absolute inset-0 bg-gradient-to-t from-black/40 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-700" />
       </div>
 
-      <div className="md:w-1/2 w-full text-center md:text-left">
-        <div className="text-5xl mb-4 text-[#fca311]">🚀</div>
-        <h3 className="text-3xl md:text-4xl font-bold text-[#e63946] mb-4">
-          Long-Term Growth
-        </h3>
-        <p className="text-gray-700 text-lg leading-relaxed mb-6">
-          We focus on building sustainable, white-hat SEO strategies that ensure lasting growth and keep your brand ahead of competitors.
-        </p>
-      </div>
+      <div className="md:w-1/2 w-full">
+  <div className="flex items-center gap-3 mb-4">
+    <span className="text-5xl text-blue-600">
+      <BsRocketTakeoff />
+    </span>
+
+    <span className="text-3xl md:text-4xl font-bold text-[#e63946]">
+      Long-Term Growth
+    </span>
+  </div>
+
+  <p className="text-gray-700 text-lg leading-relaxed mb-6">
+    We focus on building sustainable, white-hat SEO strategies that ensure 
+    lasting growth and keep your brand ahead of competitors.
+  </p>
+</div>
+
     </div>
   </div>
 
