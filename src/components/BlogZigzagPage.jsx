@@ -1,5 +1,6 @@
 import React from "react";
 import { ArrowRight, MessageCircleQuestion, BookOpen, TrendingUp } from "lucide-react";
+import { FaFacebookF, FaInstagram, FaTwitter, FaYoutube } from "react-icons/fa";
 import { motion } from "framer-motion";
 import img1 from "../assests/logoo3.jpg";
 import img2 from "../assests/logoo4.jpg";
@@ -325,6 +326,21 @@ const BlogZigzagPage = () => {
 
             <hr className="border-gray-300" />
 
+            {/* WHY CHOOSE US */}
+<div className="bg-white rounded-xl p-5 shadow-md border border-gray-200">
+  <h3 className="text-xl font-semibold mb-3">Why Choose Maxzen.Tech?</h3>
+  <ul className="space-y-2 text-gray-700 text-sm leading-relaxed text-left">
+    <li>• 100% result-driven SEO strategies</li>
+    <li>• Modern, high-performance website development</li>
+    <li>• ROI-based digital marketing campaigns</li>
+    <li>• Expert team with 7+ years of experience</li>
+    <li>• Trusted by startups & enterprises across India</li>
+  </ul>
+</div>
+
+<hr className="border-gray-300" />
+
+
             {/* Recent Posts */}
             <div>
               <h3 className="text-xl font-semibold mb-3 text-left">Recent Posts</h3>
@@ -345,6 +361,26 @@ const BlogZigzagPage = () => {
                 ))}
               </ul>
             </div>
+            <hr className="border-gray-300" />
+
+    {/* ⭐ NEW SECTION → SOCIAL MEDIA */}
+    <div className="mt-6">
+      <h3 className="text-xl font-semibold mb-3">Follow Us</h3>
+      <div className="flex gap-3">
+        <a className="p-3 bg-gray-200 rounded-full hover:bg-orange-500 hover:text-white transition">
+          <FaFacebookF size={20} />
+        </a>
+        <a className="p-3 bg-gray-200 rounded-full hover:bg-orange-500 hover:text-white transition">
+          <FaInstagram size={20} />
+        </a>
+        <a className="p-3 bg-gray-200 rounded-full hover:bg-orange-500 hover:text-white transition">
+          <FaTwitter size={20} />
+        </a>
+        <a className="p-3 bg-gray-200 rounded-full hover:bg-orange-500 hover:text-white transition">
+          <FaYoutube size={20} />
+        </a>
+      </div>
+    </div>
 
             <hr className="border-gray-300" />
 
@@ -364,6 +400,21 @@ const BlogZigzagPage = () => {
             </div>
 
             <hr className="border-gray-300" />
+            {/* USEFUL RESOURCES */}
+<div className="bg-white p-5 rounded-xl border border-gray-200 shadow ">
+  <h3 className="text-xl font-semibold mb-3">Useful Resources</h3>
+
+  <ul className="text-sm text-gray-700 space-y-2 text-left">
+    <li>• How to Improve Website Speed</li>
+    <li>• SEO Basics: Beginner Guide</li>
+    <li>• Social Media Growth Plan 2025</li>
+    <li>• On-Page SEO Checklist</li>
+    <li>• Content Strategy Framework</li>
+  </ul>
+</div>
+
+<hr className="border-gray-300 my-6" />
+
 
             {/* Marketing Agency */}
             <div>
