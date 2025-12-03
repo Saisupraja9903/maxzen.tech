@@ -45,7 +45,7 @@ const Testimonials = () => {
     <section className="bg-gray-200 py-16">
       <div className="max-w-6xl mx-auto text-center px-6">
         {/* Header */}
-        <h3 className="text-red-600 uppercase tracking-wider mb-2 font-medium">
+        <h3 className="text-red-600 uppercase tracking-wider text-xl mb-2 font-medium">
           Client Says
         </h3>
         <h2 className="text-4xl font-bold mb-10">What They Say</h2>

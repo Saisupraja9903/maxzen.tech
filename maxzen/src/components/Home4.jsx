@@ -305,7 +305,7 @@ const CombinedDigitalMarketingPartners = () => {
           transition={{ duration: 1 }}
           className="text-center relative z-10"
         >
-          <p className="text-red-500 font-semibold uppercase text-sm mb-3 tracking-widest">
+          <p className="text-red-500 font-semibold uppercase text-xl mb-3 tracking-widest">
             Partners
           </p>
 

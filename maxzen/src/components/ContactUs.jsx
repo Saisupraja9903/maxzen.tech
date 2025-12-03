@@ -167,7 +167,7 @@ const Contactwithus = () => {
               <FaLocationDot className="text-orange-500 text-2xl mt-1" />
               <div>
                 <strong>Address</strong><br />
-                4th Floor, Manjeera Trinity Corporate, 3rd Phase, Kukatpally...
+               408,4th Floor, Manjeera Trinity Corporate, 3rd Phase, Kukatpally...
               </div>
             </div>
 
@@ -236,7 +236,7 @@ const Contactwithus = () => {
                 type="submit"
                 className="bg-orange-500 hover:bg-orange-600 text-white font-semibold py-3 rounded transition"
               >
-                Submit via WhatsApp
+                Submit
               </button>
             </form>
           </div>

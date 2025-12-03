@@ -129,7 +129,7 @@ const Header = () => {
   const isActive = (path) => location.pathname === path;
 
   return (
-<header className="bg-[#F2F5D1] sticky top-0 left-0 w-full z-50 shadow-md">
+<header className="bg-[#F2F5D1] fixed top-0 left-0 w-full z-50 shadow-md">
 
       <div className="max-w-7xl mx-auto flex items-center justify-between px-6 py-4">
 
@@ -152,7 +152,7 @@ const Header = () => {
             {/* HOME */}
             <li
               className={`cursor-pointer transition-colors ${
-                isActive("/") ? "text-yellow-500 font-bold" : "text-black"
+                isActive("/") ? "text-red-500 font-bold" : "text-black"
               } hover:text-yellow-400`}
               onClick={() => handleNavigation("/")}>
               Home
@@ -161,7 +161,7 @@ const Header = () => {
             {/* ABOUT */}
             <li
               className={`cursor-pointer transition-colors ${
-                isActive("/about") ? "text-yellow-500 font-bold" : "text-black"
+                isActive("/about") ? "text-red-500 font-bold" : "text-black"
               } hover:text-yellow-400`}
               onClick={() => handleNavigation("/about")}>
               About
@@ -170,7 +170,7 @@ const Header = () => {
             {/* SERVICES */}
             <li
               className={`relative group cursor-pointer transition-colors ${
-                isActive("/services1") ? "text-yellow-500 font-bold" : "text-black"
+                isActive("/services1") ? "text-red-500 font-bold" : "text-black"
               } hover:text-yellow-400`}
             >
               <span onClick={() => handleNavigation("/services1")}>Services</span>
@@ -230,7 +230,7 @@ const Header = () => {
             {/* TEAM */}
             <li
               className={`cursor-pointer transition-colors ${
-                isActive("/team") ? "text-yellow-500 font-bold" : "text-black"
+                isActive("/team") ? "text-red-500 font-bold" : "text-black"
               } hover:text-yellow-400`}
               onClick={() => handleNavigation("/team")}>
               Team
@@ -239,7 +239,7 @@ const Header = () => {
             {/* BLOG */}
             <li
               className={`cursor-pointer transition-colors ${
-                isActive("/blog") ? "text-yellow-500 font-bold" : "text-black"
+                isActive("/blog") ? "text-red-500 font-bold" : "text-black"
               } hover:text-yellow-400`}
               onClick={() => handleNavigation("/blog")}>
               Blog
@@ -248,7 +248,7 @@ const Header = () => {
             {/* CONTACT */}
             <li
               className={`cursor-pointer transition-colors ${
-                isActive("/contact") ? "text-yellow-500 font-bold" : "text-black"
+                isActive("/contact") ? "text-red-500 font-bold" : "text-black"
               } hover:text-yellow-400`}
               onClick={() => handleNavigation("/contact")}>
               Contact

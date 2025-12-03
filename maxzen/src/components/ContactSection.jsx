@@ -60,7 +60,7 @@ const ContactSection = () => {
   <FaMapMarkerAlt className="text-gray-600 text-5xl mb-4" />
   <h3 className="text-xl font-semibold text-gray-800 mb-2">Our Office</h3>
   <p className="text-gray-600 text-lg leading-relaxed">
-    4th floor-408,<br/> Manjeera Trinity Corporate,<br/> KPHB, Hyderabad
+    408,4th floor,<br/> Manjeera Trinity Corporate,<br/> KPHB, Hyderabad
   </p>
 </motion.div>
 

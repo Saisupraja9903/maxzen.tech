@@ -206,7 +206,7 @@ const HomeCombined = () => {
         <div className="max-w-6xl mx-auto flex flex-col md:flex-row items-center justify-between gap-16">
 
           <div className="flex-1 relative">
-            <div className="flex items-center justify-center md:justify-start space-x-3 mb-6">
+            <div className="flex items-center justify-center md:justify-start space-x-3 mt-1 mb-6">
               <img src={team} alt="team" className="w-10 h-10 rounded-full" />
               <p className="font-semibold text-[#d73b3e] text-lg">
                 9.50K+{" "}
@@ -217,9 +217,8 @@ const HomeCombined = () => {
             </div>
 
             <p className="text-gray-700 text-sm md:text-lg leading-relaxed max-w-md mx-auto md:mx-0">
-              Maxzen.Tech empowers businesses with innovative, measurable
-              digital growth strategies — from building strong online presence
-              to achieving real conversions.
+             Maxzen.Tech empowers businesses with innovative, ROI-focused digital growth strategies.
+We help brands establish a powerful online presence, streamline customer acquisition, and drive meaningful conversions through data-backed methods. From website development and branding to SEO, social media, and paid advertising, we ensure every step of your digital journey leads to measurable success and long-term business growth.
             </p>
 
             <motion.button
@@ -240,7 +239,7 @@ const HomeCombined = () => {
             <img
               src={person}
               alt="Decorative Person"
-              className="w-[260px] md:w-[350px] drop-shadow-[0_15px_25px_rgba(0,0,0,0.25)] rounded-xl"
+              className="w-[600px] md:w-[600px] drop-shadow-[0_15px_25px_rgba(0,0,0,0.25)] rounded-xl"
             />
           </motion.div>
         </div>
@@ -260,7 +259,7 @@ const HomeCombined = () => {
                     d="M 50, 50 m -37, 0 a 37,37 0 1,1 74,0 a 37,37 0 1,1 -74,0"
                   />
                 </defs>
-                <text fontSize="7" fontWeight="500">
+                <text fontSize="8" fontWeight="900">
                   <textPath href="#circlePath">• LEARN ABOUT US • EXPLORE MORE • SCROLL DOWN •</textPath>
                 </text>
               </svg>
@@ -269,7 +268,7 @@ const HomeCombined = () => {
             <motion.div
               whileHover={{ scale: 1.1 }}
               onClick={() => navigate("/services1")}
-              className="absolute flex items-center justify-center w-12 h-12 rounded-full bg-gradient-to-r from-[#d73b3e] to-[#f57c00] text-white text-sm font-semibold shadow-md cursor-pointer"
+              className="absolute flex items-center justify-center w-20 h-20 rounded-full bg-gradient-to-r from-[#d73b3e] to-[#f57c00] text-white text-sm font-semibold shadow-md cursor-pointer"
             >
               Start
             </motion.div>

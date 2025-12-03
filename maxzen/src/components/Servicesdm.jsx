@@ -34,6 +34,10 @@ const steps = [
     img: img1,
     color: "border-indigo-500",
     icon: <FaFlag className="text-indigo-600 text-2xl" />,
+    extraContent: {
+      title: "Key Activities",
+      points: ["Market & Competitor Analysis", "Audience Research", "Goal Setting & KPI Definition", "Strategy & Roadmap Creation"]
+    }
   },
   {
     year: "2025",
@@ -42,6 +46,10 @@ const steps = [
     img: img2,
     color: "border-yellow-400",
     icon: <FaRocket className="text-yellow-500 text-2xl" />,
+    extraContent: {
+      title: "Our Channels",
+      points: ["Search Engine Optimization (SEO)", "Paid Advertising (PPC)", "Social Media Marketing", "Content Creation & Marketing"]
+    }
   },
   {
     year: "2025",
@@ -50,6 +58,10 @@ const steps = [
     img: img3,
     color: "border-green-500",
     icon: <FaChartLine className="text-green-600 text-2xl" />,
+    extraContent: {
+      title: "Continuous Improvement",
+      points: ["Performance Tracking & Analytics", "A/B Testing & Experimentation", "Budget & Bid Management", "Monthly Reporting & Insights"]
+    }
   },
 ];
 
@@ -101,28 +113,21 @@ const Timeline = () => {
         {steps.map((step, index) => (
           <div
             key={index}
-            className={`flex items-center ${
-              index % 2 === 0 ? "justify-start" : "justify-end"
-            } w-full my-4 relative`}
+            className={`flex items-center justify-between w-full my-4 relative`}
           >
-            {/* CARD */}
-            <motion.div
-              initial={{ opacity: 0, x: index % 2 === 0 ? -120 : 120 }}
-              whileInView={{ opacity: 1, x: 0 }}
-              viewport={{ once: true }}
-              transition={{ duration: 0.7 }}
-              className={`w-[45%] p-6 rounded-2xl shadow-xl bg-white border-l-8 ${
-                step.color
-              } ${index === 1 ? "ml-auto" : ""}`}
-            >
-              <img
-                src={step.img}
-                alt={step.title}
-                className="rounded-xl mb-4 w-full h-56 object-cover"
-              />
-              <h3 className="text-2xl font-bold text-gray-800">{step.title}</h3>
-              <p className="text-gray-600 mt-2">{step.desc}</p>
-            </motion.div>
+            {/* Left Side */}
+            {index % 2 === 0 ? (
+              <Card step={step} index={index} />
+            ) : (
+              <ExtraContent step={step} index={index} />
+            )}
+
+            {/* Right Side */}
+            {index % 2 === 0 ? (
+              <ExtraContent step={step} index={index} />
+            ) : (
+              <Card step={step} index={index} />
+            )}
 
             {/* ICON CIRCLE (exactly on line) */}
             <div
@@ -139,6 +144,41 @@ const Timeline = () => {
   );
 };
 
+const Card = ({ step, index }) => (
+  <motion.div
+    initial={{ opacity: 0, x: index % 2 === 0 ? -120 : 120 }}
+    whileInView={{ opacity: 1, x: 0 }}
+    viewport={{ once: true }}
+    transition={{ duration: 0.7 }}
+    className={`w-[45%] p-6 rounded-2xl shadow-xl bg-white border-l-8 ${step.color}`}
+  >
+    <img src={step.img} alt={step.title} className="rounded-xl mb-4 w-full h-56 object-cover" />
+    <h3 className="text-2xl font-bold text-gray-800">{step.title}</h3>
+    <p className="text-gray-600 mt-2">{step.desc}</p>
+  </motion.div>
+);
+
+const ExtraContent = ({ step, index }) => (
+  <motion.div
+    initial={{ opacity: 0, x: index % 2 === 0 ? 120 : -120 }}
+    whileInView={{ opacity: 1, x: 0 }}
+    viewport={{ once: true }}
+    transition={{ duration: 0.7 }}
+    className="w-[45%] p-6 rounded-2xl shadow-lg bg-gray-50 border-r-8 border-gray-300"
+  >
+    <h4 className="text-xl font-bold text-gray-700 mb-3">{step.extraContent.title}</h4>
+    <ul className="space-y-2">
+      {step.extraContent.points.map((point, i) => (
+        <li key={i} className="flex items-center text-gray-600">
+          <svg className="w-4 h-4 mr-2 text-green-500" fill="currentColor" viewBox="0 0 20 20">
+            <path fillRule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clipRule="evenodd"></path>
+          </svg>
+          {point}
+        </li>
+      ))}
+    </ul>
+  </motion.div>
+);
 
 // ------------------ COUNTDOWN COMPONENT ------------------
 // ------------------ COUNTDOWN COMPONENT ------------------

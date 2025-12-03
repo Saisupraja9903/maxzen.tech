@@ -18,7 +18,7 @@ const BusinessIntro = () => {
           hover:bg-gradient-to-r hover:from-orange-400 hover:via-yellow-300 hover:to-orange-200
           hover:text-white"
         >
-          <p className="uppercase text-sm tracking-wider text-orange-600 font-semibold mb-3 hover:text-white transition-all duration-300">
+          <p className="uppercase text-lg tracking-wider text-orange-600 font-bold mb-3 hover:text-white transition-all duration-300">
             Get Started
           </p>
           <h2 className="text-5xl font-bold text-gray-400 mb-6 leading-tight hover:text-white transition-all duration-300">

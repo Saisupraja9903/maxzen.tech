@@ -1,7 +1,7 @@
 import React from "react";
 import { motion } from "framer-motion";
 import heroImg from "../assests/hero.gif"; // 👈 Hero image
-import person from "../assests/person.gif"; // 👈 Person image
+import person from "../assests/person1.gif"; // 👈 Person image
 import team from "../assests/hc.jpg"; // 👈 Team image
 import { useNavigate } from "react-router-dom";
 
@@ -129,47 +129,51 @@ const Home1AndSolutions = () => {
           BOTTOM SECTION (TEXT + STATS + BUTTON)
       =========================== */}
       <section className="relative py-16 px-6 md:px-20 text-center md:text-left">
-        <div className="max-w-6xl mx-auto flex flex-col md:flex-row items-center justify-between gap-16">
-          {/* Left - Stats and Text */}
-          <div className="flex-1 relative">
-            <div className="flex items-center justify-center md:justify-start space-x-3 mb-6">
-              <img src={team} alt="team" className="w-10 h-10 rounded-full" />
-              <p className="font-semibold text-[#d73b3e] text-lg">
-                9.50K+{" "}
-                <span className="text-gray-600 font-normal text-sm">
-                  Happy Clients
-                </span>
-              </p>
-            </div>
-
-            <p className="text-gray-700 text-sm md:text-base leading-relaxed max-w-md mx-auto md:mx-0">
-              Maxzen.Tech empowers businesses with innovative, measurable
-              digital growth strategies — from building strong online presence
-              to achieving real conversions. Let’s grow your brand with purpose
-              and precision.
-            </p>
-
-            <motion.button
-              whileHover={{ scale: 1.05 }}
-               onClick={() => navigate("/contact")}
-              className="mt-8 px-8 py-3 bg-gradient-to-r from-[#d73b3e] to-[#f57c00] text-white font-semibold rounded-full shadow-md hover:shadow-lg transition"
-            >
-              Get a Free Quote
-            </motion.button>
-          </div>
-
-          {/* Right - Decorative Person */}
+        <div className="max-w-6xl mx-auto flex items-center justify-center min-h-[500px] relative">
+          {/* Right Side: Decorative Person GIF (as background element) */}
           <motion.div
-            initial={{ opacity: 0, scale: 0.9 }}
-            whileInView={{ opacity: 1, scale: 1 }}
+            initial={{ opacity: 0, x: 100 }}
+            whileInView={{ opacity: 1, x: 0 }}
             transition={{ duration: 1 }}
-            className="flex-1 flex justify-center relative"
+            className="absolute right-0 top-1/2 -translate-y-1/2 w-full md:w-3/5"
           >
             <img
               src={person}
               alt="Decorative Person"
-              className="w-[260px] md:w-[350px] drop-shadow-[0_15px_25px_rgba(0,0,0,0.25)] rounded-xl"
+              className="w-full h-auto drop-shadow-[0_15px_25px_rgba(0,0,0,0.25)]"
             />
+          </motion.div>
+
+          {/* Left Side: Overlapping Content Card */}
+          <motion.div
+            initial={{ opacity: 0, x: -80 }}
+            whileInView={{ opacity: 1, x: 0 }}
+            transition={{ duration: 0.8, ease: "easeOut" }}
+            className="relative z-10 w-full md:w-3/5 md:mr-auto bg-white/80 backdrop-blur-lg p-8 rounded-2xl shadow-xl border border-gray-200"
+          >
+            <div className="flex items-center justify-center md:justify-start space-x-3 mb-4">
+              <img src={team} alt="team" className="w-10 h-10 rounded-full" />
+              <p className="font-semibold text-[#d73b3e] text-lg">
+                9.50K+ <span className="text-gray-600 font-normal text-sm">Happy Clients</span>
+              </p>
+            </div>
+
+            <p className="text-gray-700 text-base leading-relaxed max-w-md mx-auto md:mx-0">
+              Maxzen.Tech empowers businesses with innovative, measurable digital growth strategies, from building a strong online presence to achieving real conversions.
+            </p>
+
+            <div className="mt-5 space-y-2 text-left max-w-md mx-auto md:mx-0">
+              <p className="flex items-center gap-2 text-gray-700"><span className="text-[#d73b3e] font-bold">✓</span> Data-driven strategies for measurable ROI</p>
+              <p className="flex items-center gap-2 text-gray-700"><span className="text-[#d73b3e] font-bold">✓</span> Creative solutions that captivate audiences</p>
+            </div>
+
+            <motion.button
+              whileHover={{ scale: 1.05 }}
+              onClick={() => navigate("/contact")}
+              className="mt-6 px-8 py-3 bg-gradient-to-r from-[#d73b3e] to-[#f57c00] text-white font-semibold rounded-full shadow-md hover:shadow-lg transition-all"
+            >
+              Get a Free Quote
+            </motion.button>
           </motion.div>
         </div>
 

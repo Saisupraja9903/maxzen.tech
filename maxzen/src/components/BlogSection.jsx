@@ -144,7 +144,7 @@ const BlogSection = () => {
   return (
     <section className="py-16 bg-white text-center">
       {/* Section Header */}
-      <p className="text-sm text-orange-600 tracking-widest font-semibold mb-2">
+      <p className="text-xl text-orange-600 tracking-widest font-semibold mb-2">
         CURRENT NEWS & BLOGS
       </p>
       <h2 className="text-4xl md:text-5xl font-bold text-gray-900 mb-10">

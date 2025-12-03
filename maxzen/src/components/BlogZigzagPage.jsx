@@ -4,14 +4,17 @@ import { motion } from "framer-motion";
 import img1 from "../assests/logoo3.jpg";
 import img2 from "../assests/logoo4.jpg";
 import img3 from "../assests/logoo5.jpg";
+import img4 from "../assests/blogcontant3.jpeg";
 import sidebarImg from "../assests/pic.png";
 import post1 from "../assests/logoo3.jpg";
 import post2 from "../assests/logoo4.jpg";
 import post3 from "../assests/logoo5.jpg";
+import img5 from "../assests/blog5img.jpeg";
 import { useNavigate } from "react-router-dom";
 import Header from "./Header.jsx";
 import Footer from "./Footer.jsx";
 import { useEffect } from "react";
+
 
 
 
@@ -76,7 +79,7 @@ const BlogZigzagPage = () => {
         <div className="flex flex-col md:flex-row items-center gap-8">
   {/* Image Section (clickable) */}
   <div
-    onClick={() => navigate("/blog1")}
+    
     className="relative group w-full md:w-1/2 h-80 overflow-hidden rounded-xl shadow-lg cursor-pointer"
   >
     <img
@@ -94,7 +97,9 @@ const BlogZigzagPage = () => {
 
   {/* Text Section */}
   <div className="md:w-1/2 text-left">
-    <h2 className="text-2xl font-bold mb-4">
+    <h2 
+    onClick={() => navigate("/blog1")}
+    className="text-2xl font-bold mb-4">
       Best App Development Companies in Hyderabad
     </h2>
     <p className="text-gray-700 leading-relaxed">
@@ -114,7 +119,7 @@ const BlogZigzagPage = () => {
           {/* Blog Section 2 (Reversed) */}
 <div className="flex flex-col md:flex-row-reverse items-center gap-8">
   <div
-    onClick={() => navigate("/blog2")}
+   
     role="button"
     tabIndex={0}
     onKeyDown={(e) => { if (e.key === "Enter") navigate("/blog2"); }}
@@ -134,7 +139,9 @@ const BlogZigzagPage = () => {
   </div>
 
   <div className="md:w-1/2">
-    <h2 className="text-2xl font-bold mb-4">Top 5 Affordable SEO Packages for Small Businesses</h2>
+    <h2 
+     onClick={() => navigate("/blog2")}
+     className="text-2xl font-bold mb-4">Top 5 Affordable SEO Packages for Small Businesses</h2>
     <p className="text-gray-700 leading-relaxed"> Learn how cost-effective SEO packages can boost your visibility,
                 increase leads, and grow your online presence with strategic insights.</p>
   </div>
@@ -142,7 +149,7 @@ const BlogZigzagPage = () => {
 {/* Blog Section 3 */}
 <div className="flex flex-col md:flex-row items-center gap-8">
   <div
-    onClick={() => navigate("/blog3")}
+   
     role="button"
     tabIndex={0}
     onKeyDown={(e) => { if (e.key === "Enter") navigate("/blog3"); }}
@@ -162,8 +169,66 @@ const BlogZigzagPage = () => {
   </div>
 
   <div className="md:w-1/2">
-    <h2 className="text-2xl font-bold mb-4">Digital Marketing Blogs & SEO Tips for Growth</h2>
+    <h2 
+     onClick={() => navigate("/blog3")}
+    className="text-2xl font-bold mb-4">Digital Marketing Blogs & SEO Tips for Growth</h2>
     <p className="text-gray-700 leading-relaxed">Discover expert insights on digital marketing, SEO strategies, and growth-driven content to elevate your online presence.</p>
+  </div>
+</div>
+<div className="flex flex-col md:flex-row-reverse items-center gap-8">
+  <div
+   
+    role="button"
+    tabIndex={0}
+    onKeyDown={(e) => { if (e.key === "Enter") navigate("/blog2"); }}
+    className="relative group w-full md:w-1/2 h-80 overflow-hidden rounded-xl shadow-lg cursor-pointer"
+  >
+    <img
+      src={img4}
+      alt="Blog 2"
+      className="w-full h-full object-cover transform transition-transform duration-500 group-hover:scale-110"
+    />
+    <div className="absolute top-4 left-4 bg-black text-white text-sm px-3 py-1 rounded">
+      AUG 10, 2025
+    </div>
+    <div className="absolute bottom-4 right-4 bg-black text-white p-3 rounded-full transition-transform duration-300 group-hover:scale-110">
+      <ArrowRight className="w-5 h-5" />
+    </div>
+  </div>
+
+  <div className="md:w-1/2">
+    <h2 
+     onClick={() => navigate("/blog4")}
+     className="text-2xl font-bold mb-4">Digital Marketing Strategy for Startups | Maxzen.tech Services</h2>
+    <p className="text-gray-700 leading-relaxed"> Learn the best digital marketing strategy for startups to grow fast. Maxzen.tech offers SEO, social media, paid ads & complete digital marketing services.</p>
+  </div>
+</div>
+<div className="flex flex-col md:flex-row items-center gap-8">
+  <div
+   
+    role="button"
+    tabIndex={0}
+    onKeyDown={(e) => { if (e.key === "Enter") navigate("/blog3"); }}
+    className="relative group w-full md:w-1/2 h-80 overflow-hidden rounded-xl shadow-lg cursor-pointer"
+  >
+    <img
+      src={img5}
+      alt="Blog 5"
+      className="w-full h-full object-cover transform transition-transform duration-500 group-hover:scale-110"
+    />
+    <div className="absolute top-4 left-4 bg-black text-white text-sm px-3 py-1 rounded">
+      SEP 1, 2025
+    </div>
+    <div className="absolute bottom-4 right-4 bg-black text-white p-3 rounded-full transition-transform duration-300 group-hover:scale-110">
+      <ArrowRight className="w-5 h-5" />
+    </div>
+  </div>
+
+  <div className="md:w-1/2">
+    <h2 
+     onClick={() => navigate("/blog5")}
+    className="text-2xl font-bold mb-4">Best Software Testing Companies in Hyderabad 2026</h2>
+    <p className="text-gray-700 leading-relaxed">Best Software Testing Companies in Hyderabad (2025 Guide) – maxzen.tech Ranked No.1</p>
   </div>
 </div>
 
@@ -195,7 +260,8 @@ const BlogZigzagPage = () => {
         <div className="lg:col-span-1">
           <div
             className="rounded-2xl shadow-xl border border-gray-200 p-8 space-y-6 sticky top-0"
-            style={{ backgroundColor: "rgba(243, 244, 246, 0.9)", minHeight: "100vh", width: "430px" }}
+           style={{ backgroundColor: "rgba(243, 244, 246, 0.9)", height: "100%", width: "430px" }}
+
           >
             {/* Search */}
             <div>
@@ -224,8 +290,10 @@ const BlogZigzagPage = () => {
               <ul className="text-gray-700 text-lg space-y-3 text-left">
                 <li>• Best App Developing companies in Hyderabad</li>
                 <li>• Top 5 Affordable SEO Packages for Small Business Growth - Maxzen.tech</li>
-                <li>• Top 7 Content Marketing Advantages Every Business Should Know</li>
+                {/* <li>• Top 7 Content Marketing Advantages Every Business Should Know</li> */}
                 <li>• SEO Agency Near Me Boost Your Local Rankings with Maxzen.tech</li>
+                 <li>• Digital Marketing Strategy for Startups | Maxzen.tech Services</li>
+                 <li>• Best Software Testing Companies in Hyderabad 2026</li>
               </ul>
             </div>
 
@@ -263,7 +331,9 @@ const BlogZigzagPage = () => {
               <ul className="space-y-3">
                 {[{ img: post1, title: "Boost SEO Fast", date: "Oct 25, 2025" },
                   { img: post2, title: "Content Tips", date: "Oct 22, 2025" },
-                  { img: post3, title: "Digital Marketing", date: "Oct 20, 2025" }
+                  { img: post3, title: "Digital Marketing", date: "Oct 20, 2025" },
+                   { img: img4, title: "Digital Marketing Strategy", date: "Aug 10, 2025" },
+                    { img: img5, title: "Software Testing", date: "Sep 1, 2025" }
                 ].map((post, index) => (
                   <li key={index} className="flex items-center gap-3">
                     <img src={post.img} alt={post.title} className="w-20 h-20 rounded-lg object-cover" />

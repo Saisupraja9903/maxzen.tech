@@ -85,26 +85,28 @@ const Home5 = () => {
 
       {/* CTA SECTION SAME */}
       <motion.div
-        initial={{ opacity: 0, y: 40 }}
-        whileInView={{ opacity: 1, y: 0 }}
-        transition={{ duration: 0.8 }}
-        className="mt-20 text-center bg-gradient-to-r from-blue-600 via-indigo-600 to-purple-600 text-white rounded-3xl shadow-2xl py-14 px-8 relative overflow-hidden"
-      >
-        <div className="absolute inset-0 bg-gray-900"></div>
+  initial={{ opacity: 0, y: 40 }}
+  whileInView={{ opacity: 1, y: 0 }}
+  transition={{ duration: 0.8 }}
+  className="mt-20 text-center bg-[#e7f7ff] text-blue-800 rounded-3xl shadow-2xl py-14 px-8 relative overflow-hidden"
+>
+  <div className="relative z-10">
+    <div className="flex justify-center mb-4">
+      <Rocket className="w-10 h-10 text-blue-700 opacity-90" />
+    </div>
 
-        <div className="relative z-10">
-          <div className="flex justify-center mb-4">
-            <Rocket className="w-10 h-10 text-white opacity-90" />
-          </div>
-          <h3 className="text-3xl md:text-4xl font-extrabold mb-4">
-            Partner with Maxzen.tech — Let’s Build the Future Together
-          </h3>
-          <p className="text-gray-100 text-lg max-w-3xl mx-auto leading-relaxed">
-            Collaborate with us to unlock your brand’s full potential.  
-            From concept to launch, we craft experiences that engage, inspire, and convert.
-          </p>
-        </div>
-      </motion.div>
+    <h3 className="text-3xl md:text-4xl font-extrabold mb-4">
+      Partner with Maxzen.tech — Let’s Build the Future Together
+    </h3>
+
+    <p className="text-blue-700 text-lg max-w-3xl mx-auto leading-relaxed">
+      Collaborate with us to unlock your brand’s full potential.
+      From concept to launch, we craft experiences that engage, inspire, and convert.
+    </p>
+  </div>
+</motion.div>
+
+      
     </section>
   );
 };

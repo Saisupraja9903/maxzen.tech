@@ -25,10 +25,10 @@ const steps = [
 const OurProcess = () => {
   return (
     <section className="py-20 bg-white text-center">
-      <p className="text-red-500 tracking-widest uppercase font-semibold mb-2">
+      <p className="text-red-500 tracking-widest uppercase text-lg font-semibold mb-2">
         An Effective Business Journey
       </p>
-      <h2 className="text-4xl font-bold text-gray-900 mb-12">Our Process</h2>
+      <h2 className="text-4xl font-bold  text-gray-900 mb-12">Our Process</h2>
 
       <div className="max-w-6xl mx-auto grid md:grid-cols-3 gap-10 px-6">
         {steps.map((step, index) => (

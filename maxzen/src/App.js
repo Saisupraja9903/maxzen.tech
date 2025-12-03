@@ -49,6 +49,7 @@ import Services9exp from './components/Services9exp.jsx';
 import Services9 from './components/Services9.jsx';
 import Services8 from './components/Services8.jsx';
 // import Services8page from './components/Services8page.jsx';
+import Blog5 from './components/Blog5.jsx';
 
 
 
@@ -72,6 +73,7 @@ import TermsAndConditions from './components/Termsandconditions.jsx';
 import Timeline from './components/Timeline.jsx';
 
 import ThreeD from './components/ThreeD.jsx';
+import Blog4 from './components/Blog4.jsx';
 
 
 
@@ -80,11 +82,12 @@ import ThreeD from './components/ThreeD.jsx';
 function App() {
   return (
     <div className="App">
-     
+     <div className="mt-16"></div>
         {/* <Header /> */}
 
       {/* ✅ Routes (no <Router> here) */}
       <Routes>
+         
       
         <Route path="/" element={<Home />} />
         <Route path="/about" element={<Aboutsection />} />
@@ -111,6 +114,8 @@ function App() {
         <Route path="/blog1" element={<Blog1 />} />
         <Route path="/blog2" element={<Blog2 />} />
         <Route path="/blog3" element={<Blog3 />} />
+          <Route path="/blog4" element={<Blog4 />} />
+          <Route path="/blog5" element={<Blog5 />} />
 
       
       </Routes>
@@ -207,6 +212,8 @@ function App() {
        {/* <TermsAndConditions/> */}
        {/* <ThreeD/> */}
        {/* <Timeline/> */}
+       {/* <Blog4/> */}
+       {/* <Blog5/> */}
     
       </div>
    );
