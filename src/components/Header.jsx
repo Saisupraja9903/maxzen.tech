@@ -263,6 +263,58 @@ const Header = () => {
         </button>
 
       </div>
+      {/* Mobile Menu */}
+{menuOpen && (
+  <div className="md:hidden bg-[#F2F5D1] shadow-lg px-6 py-4">
+    <ul className="flex flex-col gap-4 text-black font-medium">
+
+      <li
+        className="cursor-pointer hover:text-yellow-400"
+        onClick={() => handleNavigation("/")}>
+        Home
+      </li>
+
+      <li
+        className="cursor-pointer hover:text-yellow-400"
+        onClick={() => handleNavigation("/about")}>
+        About
+      </li>
+
+      <li
+        className="cursor-pointer hover:text-yellow-400"
+        onClick={() => handleNavigation("/services1")}>
+        Services
+      </li>
+
+      <li
+        className="cursor-pointer hover:text-yellow-400"
+        onClick={() => handleNavigation("/team")}>
+        Team
+      </li>
+
+      <li
+        className="cursor-pointer hover:text-yellow-400"
+        onClick={() => handleNavigation("/blog")}>
+        Blog
+      </li>
+
+      <li
+        className="cursor-pointer hover:text-yellow-400"
+        onClick={() => handleNavigation("/contact")}>
+        Contact
+      </li>
+
+    </ul>
+
+    {/* Mobile Social Icons */}
+    <div className="flex gap-5 mt-6 text-xl">
+      <FaInstagram className="cursor-pointer hover:scale-110 transition" />
+      <FaFacebookF className="cursor-pointer hover:scale-110 transition" />
+      <FaTwitter className="cursor-pointer hover:scale-110 transition" />
+    </div>
+  </div>
+)}
+
 
     </header>
   );
