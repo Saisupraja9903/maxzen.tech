@@ -1,27 +1,27 @@
 import React, { useState } from "react";
 import { ChevronLeft, ChevronRight, Star } from "lucide-react";
-import logoo6 from "../assests/logoo6.jpg";
-import logoo7 from "../assests/logoo7.jpg";
-import logoo8 from "../assests/logoo8.jpg";
+import logoo6 from "../assests/review2.jpeg";
+import logoo7 from "../assests/review3.jpg";
+import logoo8 from "../assests/review1.jpg";
 
 const testimonials = [
   {
     id: 1,
-    name: "Suvarchala",
+    name: "Jayendra Sameer",
     image: logoo6,
     rating: 5,
     text: "Maxzen.Tech provided excellent web and logo design services. Their team was professional, creative, and delivered high-quality work on time. Highly recommended for digital solutions!",
   },
   {
     id: 2,
-    name: "James",
+    name: "Naveen babu",
     image: logoo7,
     rating: 5,
     text: "I used Maxzen.Tech for WooCommerce integration, and they did an excellent job! Their team ensured a smooth setup, customized it to fit my needs, and optimized performance. Highly satisfied!",
   },
   {
     id: 3,
-    name: "Samrat",
+    name: "swathi",
     image: logoo8,
     rating: 4,
     text: "Maxzen.Tech delivered a well-designed, responsive, and efficient website. The development was smooth, with great functionality and attention to detail. Highly recommended!",
