@@ -125,7 +125,7 @@ const WebDevelopment = () => {
                 <span className="text-[#0d1b2a]">Maxzen.Tech</span> Websites
               </h2>
               <button 
-              onClick={() => navigate("/services")}
+              onClick={() => navigate("/services1")}
               className="mt-6 bg-[#0d1b2a] text-white px-6 py-3 rounded-full font-semibold hover:bg-[#172a45] transition-all shadow-md">
                 View Service
               </button>

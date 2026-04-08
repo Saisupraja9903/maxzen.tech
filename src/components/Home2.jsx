@@ -323,9 +323,8 @@ We help brands establish a powerful online presence, streamline customer acquisi
     rounded-2xl bg-white/70 backdrop-blur border border-orange-300
     shadow-[0_10px_30px_rgba(0,0,0,0.06)] scroll-smooth
     transition-all duration-500
-    hover:shadow-[0_0_45px_-8px_rgba(255,140,40,0.55)]
-    relative
-    hover:bg-gradient-to-br hover:from-[#fff2e5] hover:via-[#ffe0cc] hover:to-[#ffd1b3]
+  
+    
   "
   style={{ scrollbarWidth: "none", overscrollBehavior: "contain" }}
 >

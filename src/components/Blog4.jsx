@@ -3,7 +3,7 @@
 import React from "react";
 import { motion } from "framer-motion";
 import { FaCheckCircle } from "react-icons/fa";
-import { FaDesktop, FaSearch, FaShareAlt } from "react-icons/fa"; 
+// import { FaDesktop, FaSearch, FaShareAlt } from "react-icons/fa"; 
 import blogimg1 from "../assests/blogimg1.jpg";
 import blogimg2 from "../assests/blogimg2.jpg";
 import blogimg3 from "../assests/blogimg3.jpg";
@@ -11,10 +11,10 @@ import blogimg4 from "../assests/blogimg4.jpg";
 import blogimg5 from "../assests/blogimg5.jpg";
 import Header from "./Header";
 import Footer from "./Footer";
-import { useNavigate } from "react-router-dom";
+// import { useNavigate } from "react-router-dom";
 import { useEffect } from "react";
 const HeroIntro = () => {
-    const navigate = useNavigate();
+    // const navigate = useNavigate();
    useEffect(() => {
     window.scrollTo(0, 0);
   }, [])

@@ -56,7 +56,9 @@ const BlogZigzagPage = () => {
     <Header />
       
   <div className="bg-gray-200 min-h-screen p-8">
-      <div className="max-w-7xl mx-auto grid grid-cols-1 lg:grid-cols-4 gap-8">
+      {/* <div className="max-w-7xl mx-auto grid grid-cols-1 lg:grid-cols-4 gap-8"> */}
+      <div className="max-w-7xl mx-auto grid grid-cols-1 lg:grid-cols-4 gap-6 lg:gap-8">
+
         {/* Main Content */}
         <div className="lg:col-span-3 space-y-16">
           {/* Intro */}
@@ -77,7 +79,9 @@ const BlogZigzagPage = () => {
             </button> */}
           </div>
 
-        <div className="flex flex-col md:flex-row items-center gap-8">
+        {/* <div className="flex flex-col md:flex-row items-center gap-8"> */}
+        <div className="flex flex-col md:flex-row items-center gap-6 md:gap-8">
+
   {/* Image Section (clickable) */}
   <div
     
@@ -148,7 +152,9 @@ const BlogZigzagPage = () => {
   </div>
 </div>
 {/* Blog Section 3 */}
-<div className="flex flex-col md:flex-row items-center gap-8">
+{/* <div className="flex flex-col md:flex-row items-center gap-8"> */}
+  <div className="flex flex-col md:flex-row items-center gap-6 md:gap-8">
+
   <div
    
     role="button"
@@ -204,7 +210,9 @@ const BlogZigzagPage = () => {
     <p className="text-gray-700 leading-relaxed"> Learn the best digital marketing strategy for startups to grow fast. Maxzen.tech offers SEO, social media, paid ads & complete digital marketing services.</p>
   </div>
 </div>
-<div className="flex flex-col md:flex-row items-center gap-8">
+{/* <div className="flex flex-col md:flex-row items-center gap-8"> */}
+<div className="flex flex-col md:flex-row items-center gap-6 md:gap-8">
+
   <div
    
     role="button"
@@ -260,8 +268,11 @@ const BlogZigzagPage = () => {
         {/* Sidebar */}
         <div className="lg:col-span-1">
           <div
-            className="rounded-2xl shadow-xl border border-gray-200 p-8 space-y-6 sticky top-0"
-           style={{ backgroundColor: "rgba(243, 244, 246, 0.9)", height: "100%", width: "430px" }}
+          //   className="rounded-2xl shadow-xl border border-gray-200 p-8 space-y-6 sticky top-0"
+          //  style={{ backgroundColor: "rgba(243, 244, 246, 0.9)", height: "100%", width: "430px" }}
+          className="rounded-2xl shadow-xl border border-gray-200 p-6 lg:p-8 space-y-6 sticky lg:top-10 w-full"
+          style={{ backgroundColor: "rgba(243, 244, 246, 0.9)" }}
+
 
           >
             {/* Search */}

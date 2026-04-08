@@ -1,6 +1,6 @@
 import React from "react";
 import { motion } from "framer-motion";
-import { FaBullhorn, FaUsers, FaProjectDiagram, FaChartBar, FaWhatsapp } from "react-icons/fa";
+import { FaBullhorn, FaUsers, FaProjectDiagram, FaChartBar} from "react-icons/fa";
 // import { FaBullhorn, FaUsers, FaProjectDiagram, FaChartBar, FaWhatsapp, FaCheckCircle, FaArrowRight } from "react-icons/fa";
 import { useEffect } from "react";
 
@@ -55,7 +55,7 @@ const AboutAndServices = () => {
             initial={{ opacity: 0, y: 60, scale: 0.96 }}
             animate={{ opacity: 1, y: 0, scale: 1 }}
             transition={{ duration: 0.7, ease: "easeOut" }}
-            className="bg-gradient-to-br from-white via-[#fff8f2] to-[#ffe6d4] rounded-2xl p-10 shadow-[0_0_35px_-8px_rgba(255,140,40,0.35)] backdrop-blur-md border border-orange-200"
+            className="bg-gradient-to-br from-white via-[#fff8f2] to-[#ffe6d4] rounded-2xl p-10  backdrop-blur-md border border-orange-200"
           >
             <p className="text-lg leading-relaxed mb-6 text-gray-800 text-left">
               At <span className="text-orange-500 font-bold">Maxzen.Tech</span>, we are a performance-driven Digital Marketing Agency based in Hyderabad – Manjeera Trinity Corporate, 4th Floor. We build digital growth engines that maximize brand visibility, boost lead conversions, and scale your online presence with intelligent strategies.
