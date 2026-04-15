@@ -13,21 +13,9 @@ import { Navigation, Pagination } from "swiper/modules";
 import "swiper/css";
 import "swiper/css/navigation";
 import "swiper/css/pagination";
+import { GiCommercialAirplane } from "react-icons/gi";
 
-// // WooCommerce Brand Colors
-// const wooPrimary = "#96588A";
-// const wooDark = "#7a476e";
-// const wooLight = "#b77fa8";
-// const wooBg = "#f7eaf4";
 
-// const wooPrimary = "#A8A29E";
-// const wooDark    = "#78716C";
-// const wooLight   = "#CECAC7";
-// const wooBg      = "#F5F5F4";
-//  const wooPrimary = "#9EA4AB";
-// const wooDark    = "#565C63";
-// const wooLight   = "#C9CDD2";
-// const wooBg      = "#F0F1F3";
  const wooPrimary = "#3D8DFF";   // Medium clean blue
 const wooDark    = "#2C69C7";   // Slightly darker blue
 const wooLight   = "#FFA855";   // Soft orange accent
@@ -68,38 +56,38 @@ const services = [
 
 
 // ---------- Animated Heading ----------
-const AnimatedHeading = () => {
-  const fullText =
-    "Software Development Company in Hyderabad | Maxzen.Tech";
-  const words = fullText.split(" ");
-  const [visibleWords, setVisibleWords] = useState([]);
+// const AnimatedHeading = () => {
+//   const fullText =
+//     "Software Development Company in Hyderabad | Maxzen.Tech";
+//   const words = fullText.split(" ");
+//   const [visibleWords, setVisibleWords] = useState([]);
 
-  useEffect(() => {
-    const timer = setTimeout(() => {
-      const wordInterval = setInterval(() => {
-        setVisibleWords((prev) => {
-          if (prev.length < words.length) {
-            return [...prev, words[prev.length]];
-          }
-          clearInterval(wordInterval);
-          return prev;
-        });
-      }, 180);
-      return () => clearInterval(wordInterval);
-    }, 400);
+//   useEffect(() => {
+//     const timer = setTimeout(() => {
+//       const wordInterval = setInterval(() => {
+//         setVisibleWords((prev) => {
+//           if (prev.length < words.length) {
+//             return [...prev, words[prev.length]];
+//           }
+//           clearInterval(wordInterval);
+//           return prev;
+//         });
+//       }, 180);
+//       return () => clearInterval(wordInterval);
+//     }, 400);
 
-    return () => clearTimeout(timer);
-  }, [words]);
-   useEffect(() => {
-      window.scrollTo(0, 0);
-    }, [])
+//     return () => clearTimeout(timer);
+//   }, [words]);
+//    useEffect(() => {
+//       window.scrollTo(0, 0);
+//     }, [])
 
-  return (
-    <h1 className="text-center text-3xl md:text-4xl font-bold py-10 text-[#96588A]">
-      {visibleWords.join(" ")}
-    </h1>
-  );
-};
+//   return (
+//     <h1 className="text-center text-3xl md:text-4xl font-bold py-10 text-[#96588A]">
+//       {visibleWords.join(" ")}
+//     </h1>
+//   );
+// };
 
 // ---------- Services Hover Expanding Images ----------
 const SoftwareServiceImages = () => {
@@ -173,7 +161,7 @@ export default function Serviceswoo() {
 
   // ✅ ADD HERE
   const navigate = useNavigate();
-  const [btnText, setBtnText] = useState("Explore our WooCommerce Services 🚀");
+  const [btnText, setBtnText] = useState("Explore our WooCommerce Services");
 
   useEffect(() => {
     window.scrollTo(0, 0);
@@ -240,7 +228,13 @@ export default function Serviceswoo() {
             whileInView={{ opacity: 1, y: 0 }}
             className="text-lg text-gray-700 max-w-4xl mx-auto mb-8"
           >
-            Maxzen.Tech specializes in WooCommerce development, building fast,
+            <span
+  onClick={() => navigate("/#home2")}
+  className="cursor-pointer text-blue-600 font-semibold hover:underline"
+>
+  Maxzen.Tech
+</span>{" "}
+specializes in WooCommerce development, building fast,
             SEO-optimized, mobile-responsive eCommerce stores.
           </motion.p>
 
@@ -286,7 +280,14 @@ export default function Serviceswoo() {
                 background: `${wooPrimary}DD`,
               }}
             >
-              <h3 className="text-2xl font-bold mb-4">Why Choose Maxzen.Tech?</h3>
+              <h3 className="text-2xl font-bold mb-4">Why Choose{" "}
+<span
+  onClick={() => navigate("/#home2")}
+  className="cursor-pointer hover:underline"
+>
+  Maxzen.Tech
+</span>
+?</h3>
               <p className="leading-relaxed opacity-90">
                 As Hyderabad's trusted WooCommerce experts, we deliver
                 mobile-friendly, SEO-ready, conversion-optimized online stores.
@@ -385,15 +386,18 @@ export default function Serviceswoo() {
               SEO, and digital growth strategies.
             </p>
 
-            <motion.button
-  whileHover={{ scale: 1.08 }}
-  onMouseEnter={() => setBtnText("Maxzen.Tech")}
-  onMouseLeave={() => setBtnText("Explore our WooCommerce Services 🚀")}
-  onClick={() => navigate("/contact")}
-  className="px-10 py-3 bg-white text-[#96588A] font-bold rounded-full shadow-lg transition-all duration-300"
->
-  {btnText}
-</motion.button>
+            <div className="flex justify-center">
+  <motion.button
+    whileHover={{ scale: 1.08 }}
+    onMouseEnter={() => setBtnText("Maxzen.Tech")}
+    onMouseLeave={() => setBtnText("Explore our WooCommerce Services")}
+    onClick={() => navigate("/contact")}
+    className="px-10 py-3 bg-white text-[#96588A] font-bold rounded-full shadow-lg transition-all duration-300 flex items-center gap-2 justify-center"
+  >
+    {btnText}
+    <GiCommercialAirplane className="text-xl" />
+  </motion.button>
+</div>
 
           </motion.div>
         </div>
@@ -434,11 +438,18 @@ export default function Serviceswoo() {
 
           <div className="flex text-yellow-400 text-xl mb-3">★★★★★</div>
 
-          <p className="text-gray-700 leading-relaxed mb-6">
-            "Maxzen.Tech transformed our online presence with a responsive, SEO-friendly
-            website and effective digital marketing. We saw a 45% traffic increase in
-            3 months!"
-          </p>
+         <p className="text-gray-700 leading-relaxed mb-6">
+  "
+  <span
+    onClick={() => navigate("/#home2")}
+    className="text-blue-600 font-semibold cursor-pointer hover:underline"
+  >
+    Maxzen.Tech
+  </span>{" "}
+  transformed our online presence with a responsive, SEO-friendly
+  website and effective digital marketing. We saw a 45% traffic increase in
+  3 months!"
+</p>
 
           <p className="text-xs text-gray-500 mb-4">7 Days Ago</p>
 
@@ -461,10 +472,17 @@ export default function Serviceswoo() {
 
           <div className="flex text-yellow-400 text-xl mb-3">★★★★★</div>
 
-          <p className="text-gray-700 leading-relaxed mb-6">
-            "Our WooCommerce store was built by Maxzen.Tech and the results were amazing.
-            The site is fast, secure, and optimized!"
-          </p>
+        <p className="text-gray-700 leading-relaxed mb-6">
+  "
+  Our WooCommerce store was built by{" "}
+  <span
+    onClick={() => navigate("/#home2")}
+    className="text-blue-600 font-semibold cursor-pointer hover:underline"
+  >
+    Maxzen.Tech
+  </span>{" "}
+  and the results were amazing. The site is fast, secure, and optimized!"
+</p>
 
           <p className="text-xs text-gray-500 mb-4">10.04.2025</p>
 
@@ -488,7 +506,13 @@ export default function Serviceswoo() {
           <div className="flex text-yellow-400 text-xl mb-3">★★★★★</div>
 
           <p className="text-gray-700 leading-relaxed mb-6">
-            "The UI/UX team at Maxzen.Tech redesigned our website beautifully!
+            "The UI/UX team at{" "}
+  <span
+    onClick={() => navigate("/#home2")}
+    className="text-blue-600 font-semibold cursor-pointer hover:underline"
+  >
+    Maxzen.Tech
+  </span>{" "}  redesigned our website beautifully!
             Our customer engagement improved massively.”
           </p>
 

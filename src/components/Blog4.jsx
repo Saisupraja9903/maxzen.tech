@@ -11,14 +11,19 @@ import blogimg4 from "../assests/blogimg4.jpg";
 import blogimg5 from "../assests/blogimg5.jpg";
 import Header from "./Header";
 import Footer from "./Footer";
-// import { useNavigate } from "react-router-dom";
+import { useNavigate } from "react-router-dom";
 import { useEffect } from "react";
 const HeroIntro = () => {
-    // const navigate = useNavigate();
+    const navigate = useNavigate();
    useEffect(() => {
     window.scrollTo(0, 0);
   }, [])
 
+
+
+const goToHome2 = () => {
+  navigate("/#home2");
+};
   return (
     <><Header/>
     <div className="bg-gray-300">
@@ -82,76 +87,19 @@ const HeroIntro = () => {
           <div className="bg-blue-50 p-6 rounded-2xl border-l-4 border-blue-600 shadow-md">
             <p className="text-lg text-gray-700 leading-relaxed">
               If you're a startup in Hyderabad, KPHB, or anywhere in India,  
-              <strong className="text-blue-700"> Maxzen.tech </strong>  
+              <span
+  onClick={goToHome2}
+  className="text-blue-700 cursor-pointer hover:underline font-semibold"
+>
+  Maxzen.tech
+</span>  
               provides complete digital marketing services including SEO, social media marketing,
               website development, paid ads, and organic lead generation.
             </p>
           </div>
         </motion.div>
       </div>
-      {/* ===================== WHY IT MATTERS SECTION ===================== */}
-{/* <section className="max-w-7xl mx-auto px-6 py-20">
-
-
-  <motion.h2
-    initial={{ opacity: 0, y: 25 }}
-    whileInView={{ opacity: 1, y: 0 }}
-    transition={{ duration: 0.7 }}
-    className="text-3xl md:text-4xl font-bold text-gray-800 mb-8"
-  >
-    Why a Digital Marketing Strategy Matters for Every Startup
-  </motion.h2>
-
- 
-  <motion.p
-    initial={{ opacity: 0, y: 20 }}
-    whileInView={{ opacity: 1, y: 0 }}
-    transition={{ duration: 0.6 }}
-    className="text-lg text-gray-700 leading-relaxed mb-6"
-  >
-    Most startups fail not because of the product, but because they cannot reach 
-    the right audience. A powerful marketing strategy helps you:
-  </motion.p>
-
-
-  <div className="space-y-4 mb-6">
-    {[
-      "Build brand awareness",
-      "Drive quality traffic",
-      "Improve customer engagement",
-      "Generate leads consistently",
-      "Position your business as a trusted brand",
-      "Compete with larger companies"
-    ].map((item, i) => (
-      <motion.div
-        key={i}
-        initial={{ opacity: 0, x: -20 }}
-        whileInView={{ opacity: 1, x: 0 }}
-        transition={{ duration: 0.5, delay: i * 0.05 }}
-        className="flex items-start gap-3 text-lg text-gray-700"
-      >
-        <FaCheckCircle className="text-green-600 mt-1" />
-        <span>{item}</span>
-      </motion.div>
-    ))}
-  </div>
-
- 
-  <motion.p
-    initial={{ opacity: 0, y: 20 }}
-    whileInView={{ opacity: 1, y: 0 }}
-    transition={{ duration: 0.6 }}
-    className="text-lg text-gray-700 leading-relaxed bg-blue-50 p-5 rounded-xl border-l-4 border-blue-600"
-  >
-    Local customers search online using keywords like 
-    <strong> “best digital marketing services in Hyderabad”, “SEO agency near me”, 
-    and “affordable digital marketing for startups.”</strong>  
-    So digital marketing is not optional — it is essential.
-  </motion.p>
-
-</section> */}
-
-
+    
 {/* ===================== KEY ELEMENTS SECTION ===================== */}
 <section className="max-w-7xl mx-auto px-6 py-20">
 
@@ -178,7 +126,10 @@ const HeroIntro = () => {
             </li>
           ))}
         </ul>
-        <p className="mt-4 text-sm italic text-gray-600">Maxzen.tech creates SEO-ready websites that convert visitors into leads.</p>
+        <p className="mt-4 text-sm italic text-gray-600"><span onClick={goToHome2} className="cursor-pointer hover:underline font-semibold">
+  Maxzen.tech
+</span>{" "}
+creates SEO-ready websites that convert visitors into leads.</p>
       </motion.div>
       <motion.img
         src={blogimg1}
@@ -220,7 +171,10 @@ const HeroIntro = () => {
             ))}
           </div>
         </div>
-        <p className="mt-4 text-sm italic text-gray-600">Maxzen.tech manages complete SEO for long-term rankings.</p>
+        <p className="mt-4 text-sm italic text-gray-600"><span onClick={goToHome2} className="cursor-pointer hover:underline font-semibold">
+  Maxzen.tech
+</span>{" "}
+ manages complete SEO for long-term rankings.</p>
       </motion.div>
     </div>
 
@@ -236,7 +190,10 @@ const HeroIntro = () => {
             </li>
           ))}
         </ul>
-        <p className="mt-4 text-sm italic text-gray-600">Maxzen.tech helps startups build strong social media branding.</p>
+        <p className="mt-4 text-sm italic text-gray-600"><span onClick={goToHome2} className="cursor-pointer hover:underline font-semibold">
+  Maxzen.tech
+</span>{" "}
+helps startups build strong social media branding.</p>
       </motion.div>
       <motion.img
         src={blogimg2}
@@ -271,7 +228,10 @@ const HeroIntro = () => {
             </li>
           ))}
         </ul>
-        <p className="mt-4 text-sm italic text-gray-600">Maxzen.tech specializes in performance marketing services to help startups get fast, high-quality leads at a low cost.</p>
+        <p className="mt-4 text-sm italic text-gray-600"><span onClick={goToHome2} className="cursor-pointer hover:underline font-semibold">
+  Maxzen.tech
+</span>{" "}
+specializes in performance marketing services to help startups get fast, high-quality leads at a low cost.</p>
       </motion.div>
     </div>
 
@@ -333,7 +293,10 @@ const HeroIntro = () => {
             <li key={i} className="flex items-start gap-3"><FaCheckCircle className="text-teal-600 mt-1" /><span>{point}</span></li>
           ))}
         </ul>
-        <p className="mt-4 text-sm italic text-gray-600">Maxzen.tech provides GMB optimization services in Hyderabad for startups looking to increase local leads.</p>
+        <p className="mt-4 text-sm italic text-gray-600"><span onClick={goToHome2} className="cursor-pointer hover:underline font-semibold">
+  Maxzen.tech
+</span>{" "}
+provides GMB optimization services in Hyderabad for startups looking to increase local leads.</p>
       </motion.div>
     </div>
 
@@ -366,7 +329,12 @@ const HeroIntro = () => {
       ))}
     </div>
     <p className="mt-10 text-lg text-gray-700">
-      If you want all these benefits, <strong>Maxzen.tech</strong> is one of the most reliable digital marketing agencies in Hyderabad for startups.
+      If you want all these benefits, <span
+  onClick={goToHome2}
+  className="cursor-pointer hover:underline font-semibold"
+>
+  Maxzen.tech
+</span> is one of the most reliable digital marketing agencies in Hyderabad for startups.
     </p>
   </div>
 </section>
@@ -386,7 +354,12 @@ const HeroIntro = () => {
   </p>
 
   <p className="text-lg text-gray-700 leading-relaxed max-w-4xl mx-auto">
-    If you're looking for expert help, <strong>Maxzen.tech</strong> offers complete
+    If you're looking for expert help, <span
+  onClick={goToHome2}
+  className="cursor-pointer hover:underline font-semibold"
+>
+  Maxzen.tech
+</span> offers complete
     digital marketing services for startups—affordable, effective, and results-driven.
   </p>
 </section>

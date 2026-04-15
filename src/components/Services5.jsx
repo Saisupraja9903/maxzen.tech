@@ -21,6 +21,14 @@ import { TbDeviceMobileShare } from "react-icons/tb";
 import { BsLightbulb } from "react-icons/bs"; 
 import { IoRocket } from "react-icons/io5";
 import { FaFire } from "react-icons/fa6";
+import { PiShootingStarDuotone } from "react-icons/pi";
+import { TbTargetArrow, TbMoneybag  } from "react-icons/tb";
+import { GiCommercialAirplane } from "react-icons/gi";
+import { IoChatboxEllipsesOutline } from "react-icons/io5";
+import { FaEarthAfrica } from "react-icons/fa6";
+
+
+
 
 
 
@@ -114,7 +122,12 @@ const SocialMediaMarketing = () => {
           >
             <h2 className="text-4xl md:text-5xl font-extrabold leading-tight bg-clip-text text-transparent bg-gradient-to-r from-blue-500 via-purple-500 to-pink-500">
               Get Your Brand the Digital Edge with{" "}
-              <span className="text-blue-600">Maxzen.Tech</span>
+              <span
+  onClick={() => navigate("/#home2")}
+  className="text-blue-600 cursor-pointer hover:underline"
+>
+  Maxzen.Tech
+</span>
             </h2>
 
             <p className="mt-5 text-lg text-gray-700 max-w-2xl">
@@ -242,55 +255,71 @@ const SocialMediaMarketing = () => {
       How Social Media Marketing Helps Businesses Thrive
     </h3>
 
-    <p className="text-gray-700 text-lg leading-relaxed mb-6 text-center">
-      In today’s digital-first world, your customers are spending most of their time on
-      social media platforms. Whether it’s Instagram, Facebook, LinkedIn, or YouTube,
-      every like, comment, and share is an opportunity to connect with potential buyers.
-      Success in today’s digital world starts with selecting the right partner — and{" "}
-      <span className="font-semibold text-blue-600">Maxzen.Tech</span> is your go-to
-      social media marketing agency in Hyderabad.
-    </p>
+    import { useNavigate } from "react-router-dom";
 
-    <p className="text-gray-700 text-lg leading-relaxed mb-6 text-center">
-      At <span className="font-semibold text-blue-600">Maxzen.Tech</span>, we don’t just
-      create posts — we build strategies that increase engagement, generate genuine
-      leads, and establish a strong online presence for your brand. Social media
-      marketing is important because it:
-    </p>
+const navigate = useNavigate();
+
+<p className="text-gray-700 text-lg leading-relaxed mb-6 text-center">
+  In today’s digital-first world, your customers are spending most of their time on
+  social media platforms. Whether it’s Instagram, Facebook, LinkedIn, or YouTube,
+  every like, comment, and share is an opportunity to connect with potential buyers.
+  Success in today’s digital world starts with selecting the right partner — and{" "}
+  <span
+    onClick={() => navigate("/#home2")}
+    className="font-semibold text-blue-600 cursor-pointer hover:underline"
+  >
+    Maxzen.Tech
+  </span>{" "}
+  is your go-to social media marketing agency in Hyderabad.
+</p>
+
+<p className="text-gray-700 text-lg leading-relaxed mb-6 text-center">
+  At{" "}
+  <span
+    onClick={() => navigate("/#home2")}
+    className="font-semibold text-blue-600 cursor-pointer hover:underline"
+  >
+    Maxzen.Tech
+  </span>
+  , we don’t just create posts — we build strategies that increase engagement,
+  generate genuine leads, and establish a strong online presence for your brand.
+  Social media marketing is important because it:
+</p>
 
     <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6 mt-8">
       <div className="flex items-start gap-3">
-        <span className="text-blue-500 text-2xl">🌟</span>
-        <p className="text-gray-800 text-lg">
+        <span className="text-blue-500 text-4xl"><PiShootingStarDuotone /></span>
+        <p className="text-gray-800 text-lg  -ml-7">
           Builds brand awareness faster than traditional marketing.
         </p>
       </div>
 
       <div className="flex items-start gap-3">
-        <span className="text-purple-500 text-2xl">🎯</span>
-        <p className="text-gray-800 text-lg">
+        <span className="text-purple-500 text-4xl"><TbTargetArrow /></span>
+        <p className="text-gray-800 text-lg -ml-6">
           Generates high-quality leads for businesses of all sizes.
         </p>
       </div>
  
  
       <div className="flex items-start gap-3">
-        <span className="text-green-500 text-2xl"><FaHandshake /></span>
+        <span className="text-green-500 text-4xl"><FaHandshake /></span>
         <p className="text-gray-800 text-lg">
           Strengthens customer trust and loyalty.
         </p>
       </div>
 
       <div className="flex items-start gap-3">
-        <span className="text-pink-500 text-2xl"><PiChartLineUpFill /></span>
+        <span className="text-pink-500 text-4xl"><PiChartLineUpFill /></span>
         <p className="text-gray-800 text-lg">
           Drives consistent traffic to your website.
         </p>
       </div>
 
       <div className="flex items-start gap-3">
-        <span className="text-orange-500 text-2xl">💰</span>
-        <p className="text-gray-800 text-lg">
+        <span className="text-orange-500 text-4xl"><TbMoneybag />
+</span>
+        <p className="text-gray-800 text-lg -ml-1/2">
           Boosts sales with targeted ad campaigns.
         </p>
       </div>
@@ -307,7 +336,13 @@ const SocialMediaMarketing = () => {
           className="mt-20 text-center"
         >
           <h3 className="text-2xl md:text-3xl font-bold text-gray-900 mb-3">
-            When you choose Maxzen.Tech, you gain a growth partner.
+            When you choose{" "}
+<span
+  onClick={() => navigate("/#home2")}
+  className="text-blue-600 cursor-pointer hover:underline"
+>
+  Maxzen.Tech
+</span>, you gain a growth partner.
           </h3>
           <p className="text-gray-700 max-w-3xl mx-auto mb-8 text-lg leading-relaxed">
             We focus on measurable results — engagement, leads, website traffic, and
@@ -338,17 +373,30 @@ const SocialMediaMarketing = () => {
     About Our Social Media Marketing
   </h2>
 
-  <h3 className="text-2xl font-semibold text-blue-600 mb-6">
-    Why Choose Maxzen.Tech for Social Media Marketing?
-  </h3>
+ <h3 className="text-2xl font-semibold text-blue-600 mb-6">
+  Why Choose{" "}
+  <span
+    onClick={() => navigate("/#home2")}
+    className="cursor-pointer hover:underline"
+  >
+    Maxzen.Tech
+  </span>{" "}
+  for Social Media Marketing?
+</h3>
 
   <p className="text-gray-700 text-lg max-w-4xl mx-auto leading-relaxed mb-10">
-    Social media is not just about posting – it’s about building trust, engaging
-    your audience, and turning visitors into loyal customers. At{" "}
-    <span className="font-semibold text-blue-600">Maxzen.Tech</span>, we provide
-    results-driven social media marketing services in Hyderabad, helping businesses
-    of all sizes grow through creative posts, reels, videos, and paid ad campaigns.
-  </p>
+  Social media is not just about posting – it’s about building trust, engaging
+  your audience, and turning visitors into loyal customers. At{" "}
+  <span
+    onClick={() => navigate("/#home2")}
+    className="font-semibold text-blue-600 cursor-pointer hover:underline"
+  >
+    Maxzen.Tech
+  </span>
+  , we provide results-driven social media marketing services in Hyderabad,
+  helping businesses of all sizes grow through creative posts, reels, videos,
+  and paid ad campaigns.
+</p>
 
   <div className="flex flex-col items-start gap-4 w-fit mx-auto text-lg text-gray-800 font-medium">
   <div className="flex items-center gap-3">
@@ -400,9 +448,10 @@ const SocialMediaMarketing = () => {
           rotate: -25,
           transition: { type: 'spring', stiffness: 250, damping: 10 },
         }}
-        className="text-white text-lg"
+        className="text-white text-2xl"
       >
-        ✈️
+       <GiCommercialAirplane />
+
       </motion.span>
     </motion.button>
   </motion.div>
@@ -479,7 +528,12 @@ const SocialMediaMarketing = () => {
             </p>
             <p className="text-gray-700 text-lg leading-relaxed mb-10">
               At{" "}
-              <span className="font-semibold text-blue-600">Maxzen.Tech</span>, we go
+              <span
+  onClick={() => navigate("/#home2")}
+  className="font-semibold text-blue-600 cursor-pointer hover:underline"
+>
+  Maxzen.tech
+</span>, we go
               beyond basic posting. Our team builds tailored strategies that strengthen
               brand credibility, attract genuine leads, grow followers, and convert
               traffic into sales. We focus on turning platforms like Instagram, Facebook,
@@ -517,28 +571,31 @@ const SocialMediaMarketing = () => {
       Take your brand’s story directly to the people who matter most.
     </p>
 
-    <motion.button
-      whileHover={{ scale: 1.07 }}
-     onClick={() => navigate("/contact")}
-      className="px-8 py-3 mt-2 rounded-full bg-white text-blue-600 font-semibold shadow-lg hover:shadow-2xl transition-all"
-    >
-      Boost My Business Now 🚀
-    </motion.button>
-
+  <div className="flex justify-center">
+  <motion.button
+    whileHover={{ scale: 1.07 }}
+    onClick={() => navigate("/contact")}
+    className="px-8 py-3 mt-2 rounded-full bg-white text-blue-600 font-semibold shadow-lg hover:shadow-2xl transition-all flex items-center gap-2"
+  >
+    Boost My Business Now
+    <GiCommercialAirplane className="text-xl" />
+  </motion.button>
+</div>
     {/* Floating decorative icons */}
     <motion.div
       animate={{ y: [0, 12, 0], rotate: [0, 5, -5, 0] }}
       transition={{ duration: 6, repeat: Infinity }}
       className="absolute top-10 right-10 text-5xl opacity-40"
     >
-      💬
+      <IoChatboxEllipsesOutline />
     </motion.div>
     <motion.div
       animate={{ y: [0, -10, 0], rotate: [0, -10, 10, 0] }}
       transition={{ duration: 7, repeat: Infinity }}
       className="absolute bottom-10 left-8 text-4xl opacity-40"
     >
-      🌍
+      <FaEarthAfrica />
+
     </motion.div>
   </div>
 
@@ -583,10 +640,16 @@ const SocialMediaMarketing = () => {
         className="flex items-start gap-4"
       >
         <div className="text-3xl"><IoRocket /></div>
-        <p className="text-gray-700 text-lg">
-          Partner with <span className="font-semibold text-blue-600">Maxzen.Tech</span> —
-          your social media marketing agency in Hyderabad that turns engagement into growth.
-        </p>
+       <p className="text-gray-700 text-lg">
+  Partner with{" "}
+  <span
+    onClick={() => navigate("/#home2")}
+    className="font-semibold text-blue-600 cursor-pointer hover:underline"
+  >
+    Maxzen.Tech
+  </span>{" "}
+  — your social media marketing agency in Hyderabad that turns engagement into growth.
+</p>
       </motion.div>
 
       <motion.div

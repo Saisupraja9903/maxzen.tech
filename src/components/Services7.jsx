@@ -12,6 +12,7 @@ import chooseImg from "../assests/cc7.png";
 import Header from "./Header";
 import Footer from "./Footer";
 import { useEffect } from "react";
+import { useNavigate } from "react-router-dom";
 
 
 const CloudPage = () => {
@@ -32,6 +33,7 @@ const CloudPage = () => {
    useEffect(() => {
       window.scrollTo(0, 0);
     }, [])
+    const navigate = useNavigate();
   return (
     <>
     <Header/>
@@ -65,7 +67,21 @@ const CloudPage = () => {
             </div>
           </motion.h1>
 
-          <motion.h2 className="text-2xl mt-6 font-semibold text-yellow-300">Maxzen.Tech</motion.h2>
+         <motion.h2 className="text-2xl mt-6 font-semibold text-yellow-300">
+  <span
+    onClick={() => {
+      navigate("/");
+      setTimeout(() => {
+        document.getElementById("home2-start")?.scrollIntoView({
+          behavior: "smooth",
+        });
+      }, 200);
+    }}
+    className="cursor-pointer hover:underline"
+  >
+    Maxzen.Tech
+  </span>
+</motion.h2>
           <motion.p className="mt-4 text-lg md:text-xl text-gray-200 leading-relaxed">
             offers secure, scalable, and business-ready cloud solutions tailored for startups and enterprises.
           </motion.p>
@@ -84,24 +100,44 @@ const CloudPage = () => {
       {/* ========== CONTENT SECTION ========== */}
       <section className="relative py-20 px-6 md:px-16 bg-gradient-to-b from-[#0a0f2b] via-[#111c44] to-[#0a0f2b] text-gray-100">
         <div className="relative max-w-6xl mx-auto z-10">
-          <motion.h2
-            initial={{ opacity: 0, y: -30 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 1 }}
-            className="text-4xl md:text-5xl font-extrabold text-center mb-10 text-transparent bg-clip-text bg-gradient-to-r from-cyan-400 via-blue-500 to-purple-500"
-          >
-            Cloud Computing Services – Maxzen.Tech
-          </motion.h2>
+         <motion.h2 className="text-2xl mt-6 font-semibold text-yellow-300">
+  <span
+    onClick={() => {
+      navigate("/");
+      setTimeout(() => {
+        document.getElementById("home2-start")?.scrollIntoView({
+          behavior: "smooth",
+        });
+      }, 200);
+    }}
+    className="cursor-pointer hover:underline"
+  >
+    Maxzen.Tech
+  </span>
+</motion.h2>
 
           <div className="text-lg leading-relaxed space-y-6 text-gray-300">
             <p>
               Cloud computing allows businesses to access IT resources—like servers, storage, databases, and applications—through the internet instead of investing in expensive hardware. It reduces cost, improves security, and helps companies scale faster.
             </p>
             <p>
-              In today’s fast-paced digital world, <span className="text-cyan-400 font-semibold">cloud computing services in Hyderabad</span> by Maxzen.Tech empower startups, small businesses, and enterprises to scale effortlessly, reduce costs, and improve accessibility.
+              In today’s fast-paced digital world, <span className="text-cyan-400 font-semibold">cloud computing services in Hyderabad</span>by{" "}
+<span
+  onClick={() => navigate("/#home2")}
+  className="cursor-pointer hover:underline text-cyan-400 font-semibold"
+>
+  Maxzen.Tech
+</span>{" "}
+empower startups, small businesses, and enterprises to scale effortlessly, reduce costs, and improve accessibility.
             </p>
             <p>
-              At <span className="text-purple-400 font-semibold">Maxzen.Tech</span>, we provide the best cloud services, from migration to automation and DevOps adoption.
+              At{" "}
+<span
+  onClick={() => navigate("/#home2")}
+  className="text-purple-400 font-semibold cursor-pointer hover:underline"
+>
+  Maxzen.Tech
+</span>, we provide the best cloud services, from migration to automation and DevOps adoption.
             </p>
           </div>
 
@@ -203,7 +239,14 @@ const CloudPage = () => {
         className="md:w-1/2"
       >
         <h2 className="text-4xl font-bold text-white mb-4">
-          Why Choose <span className="text-yellow-500">Maxzen.Tech?</span>
+          Why Choose{" "}
+<span
+  onClick={() => navigate("/#home2")}
+  className="text-yellow-500 cursor-pointer hover:underline"
+>
+  Maxzen.Tech
+</span>
+?
         </h2>
 
         {/* Yellow line + arrow */}
@@ -213,7 +256,12 @@ const CloudPage = () => {
 
         <p className="text-gray-200 text-lg leading-relaxed mb-6">
           Choosing the right cloud partner can make a huge difference in business growth. 
-          At <span className="font-semibold text-yellow-600">Maxzen.Tech</span>, we provide
+          At <span
+  onClick={() => navigate("/#home2")}
+  className="font-semibold text-yellow-600 cursor-pointer hover:underline"
+>
+  Maxzen.Tech
+</span>, we provide
           <span className="font-semibold"> cloud computing services in Hyderabad</span>, KPHB, and Kukatpally 
           with a strong focus on affordability, performance, and security. 
           Unlike generic providers, we design and deploy customized cloud solutions that perfectly match 
@@ -223,7 +271,19 @@ const CloudPage = () => {
         <p className="text-gray-200 text-lg leading-relaxed mb-6">
           Our services in India stand out because we combine low-cost cloud solutions with expert troubleshooting, 
           smooth migration, and round-the-clock support. Whether you are a startup, small business, or enterprise, 
-          <span className="font-semibold text-yellow-600"> Maxzen.Tech</span> ensures your cloud journey is simple, 
+          <span
+  onClick={() => {
+    navigate("/");
+    setTimeout(() => {
+      document.getElementById("home2-start")?.scrollIntoView({
+        behavior: "smooth",
+      });
+    }, 200);
+  }}
+  className="font-semibold text-yellow-600 cursor-pointer hover:underline"
+>
+  Maxzen.Tech
+</span> ensures your cloud journey is simple, 
           cost-effective, and future-ready. That’s why businesses across Hyderabad and all over India trust us for 
           major cloud computing services that deliver real results.
         </p>

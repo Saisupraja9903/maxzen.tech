@@ -98,7 +98,12 @@ const PrivacyPolicy = () => {
             <div className="mt-3 space-y-1">
               <p><span className="font-semibold text-gray-900">Maxzen Tech</span></p>
               <p>📧 Email: <span className="text-blue-600">info@maxzen.tech</span></p>
-              <p>🌐 Website: <span className="text-blue-600">maxzen.tech</span></p>
+              <p>🌐 Website: <span
+  onClick={() => navigate("/#home2")}
+  className="text-blue-600 cursor-pointer hover:underline"
+>
+  Maxzen.Tech
+</span></p>
             </div>
           </Section>
         </div>

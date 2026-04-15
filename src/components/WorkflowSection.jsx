@@ -290,7 +290,7 @@ const WorkflowSection = () => {
 
         <div className="mt-14">
           <button 
-          onClick={() => navigate("/services1")}
+          onClick={() => navigate("/DigitalMarketingServices  ")}
           className="border border-gray-800 rounded-full px-8 py-3 text-lg font-medium hover:bg-gray-900 hover:text-white transition">
             Explore Now
           </button>

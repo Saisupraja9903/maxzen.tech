@@ -19,10 +19,21 @@ const Home5 = () => {
   <h2 className="text-4xl md:text-5xl font-extrabold text-gray-900 mb-4">
     Empowering Digital Growth 
   </h2>
-  <p className="text-gray-600 text-lg max-w-2xl mx-auto leading-relaxed">
-    At Maxzen.tech, we blend creativity and strategy to transform brands into digital success
-    stories. Every solution we deliver is purposeful, elegant, and impactful.
-  </p>
+ <p className="text-gray-600 text-lg max-w-2xl mx-auto leading-relaxed">
+  At{" "}
+  <span
+    onClick={() =>
+      document.getElementById("home2-start")?.scrollIntoView({
+        behavior: "smooth",
+      })
+    }
+    className="text-orange-600 font-semibold cursor-pointer"
+  >
+    Maxzen.tech
+  </span>
+  , we blend creativity and strategy to transform brands into digital success
+  stories. Every solution we deliver is purposeful, elegant, and impactful.
+</p>
 </motion.div>
 
 
@@ -94,10 +105,20 @@ const Home5 = () => {
     <div className="flex justify-center mb-4">
       <Rocket className="w-10 h-10 text-blue-700 opacity-90" />
     </div>
-
-    <h3 className="text-3xl md:text-4xl font-extrabold mb-4">
-      Partner with Maxzen.tech — Let’s Build the Future Together
-    </h3>
+<h3 className="text-3xl md:text-4xl font-extrabold mb-4">
+  Partner with{" "}
+  <span
+    onClick={() =>
+      document.getElementById("home2-start")?.scrollIntoView({
+        behavior: "smooth",
+      })
+    }
+    className="text-blue-700 cursor-pointer"
+  >
+    Maxzen.tech
+  </span>{" "}
+  — Let’s Build the Future Together
+</h3>
 
     <p className="text-blue-700 text-lg max-w-3xl mx-auto leading-relaxed">
       Collaborate with us to unlock your brand’s full potential.

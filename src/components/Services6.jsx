@@ -5,6 +5,8 @@ import { Layers, Gem, PenTool, Palette } from "lucide-react";
 import { useNavigate } from "react-router-dom";
 import Header from "./Header";
 import Footer from "./Footer";
+import { FaPhone } from "react-icons/fa6";
+
 
 const LogoDesigning = () => {
   useEffect(() => {
@@ -98,7 +100,12 @@ const LogoDesigning = () => {
             >
               Your logo is the face of your brand — the visual identity that speaks volumes
               before a single word is read. At{" "}
-              <span className="text-blue-700 font-semibold">Maxzen.tech</span>, we
+              <span
+  onClick={() => navigate("/#home2")}
+  className="text-blue-700 font-semibold cursor-pointer hover:underline"
+>
+  Maxzen.tech
+</span>, we
               specialize in professional logo designing in Hyderabad, creating
               memorable and meaningful logos that resonate deeply with your target audience.
               We believe a great logo is born from strategy, not just software. That's why
@@ -157,7 +164,14 @@ const LogoDesigning = () => {
             transition={{ duration: 0.8 }}
           >
             <h3 className="text-3xl font-extrabold mb-6 text-center bg-gradient-to-r from-blue-600 to-slate-500 text-transparent bg-clip-text">
-              Why Choose Maxzen.tech for Logo Designing?
+              Why Choose{" "}
+<span
+  onClick={() => navigate("/#home2")}
+  className="cursor-pointer hover:underline"
+>
+  Maxzen.tech
+</span>{" "}
+for Logo Designing?
             </h3>
             <p className="text-lg text-gray-700 leading-relaxed text-center max-w-5xl mx-auto">
               We combine creativity, research, and strategy to create logos that stand
@@ -203,19 +217,37 @@ const LogoDesigning = () => {
             </h3>
             <p className="text-gray-700 max-w-3xl mx-auto mb-8 text-lg leading-relaxed">
               Looking for a professional logo that defines your brand perfectly?{" "}
-              <span className="font-semibold text-blue-600">Maxzen.tech</span> offers
+              <span
+  onClick={() => navigate("/#home2")}
+  className="font-semibold text-blue-600 cursor-pointer hover:underline"
+>
+  Maxzen.tech
+</span> offers
               creative and strategic logo designing solutions to help your business stand
               out with confidence.
             </p>
 
-            <motion.button
-              whileHover={{ scale: 1.1 }}
-              whileTap={{ scale: 0.95 }}
-              onClick={() => navigate("/contact")}
-              className="bg-gradient-to-r from-blue-500 to-slate-600 hover:from-slate-600 hover:to-blue-500 text-white font-semibold text-lg px-10 py-4 rounded-full shadow-lg hover:shadow-xl transition-all duration-300"
-            >
-              📞 Contact Maxzen.tech Today
-            </motion.button>
+<div className="flex justify-center mt-6">
+  <motion.button
+    whileHover={{ scale: 1.1 }}
+    whileTap={{ scale: 0.95 }}
+    onClick={() => navigate("/contact")}
+    className="bg-gradient-to-r from-blue-500 to-slate-600 hover:from-slate-600 hover:to-blue-500 text-white font-semibold text-lg px-10 py-4 rounded-full shadow-lg hover:shadow-xl transition-all duration-300 flex items-center justify-center gap-2 text-center"
+  >
+    <FaPhone className="text-xl" />
+
+    <span className="text-center">
+      Contact{" "}
+      <span
+        onClick={() => navigate("/#home2")}
+        className="cursor-pointer hover:underline"
+      >
+        Maxzen.tech
+      </span>{" "}
+      Today
+    </span>
+  </motion.button>
+</div>
           </motion.div>
         </div>
       </div>

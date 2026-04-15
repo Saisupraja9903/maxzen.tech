@@ -5,6 +5,7 @@ import { FaFacebookF, FaTwitter, FaLinkedinIn, FaInstagram } from "react-icons/f
 import { useEffect } from "react";
 import Header from "./Header";
 import Footer from "./Footer";
+import { useNavigate } from "react-router-dom";
 
 const HeroQuotes = () => {
   const quotes = [
@@ -73,6 +74,12 @@ At Maxzen.tech, we specialize in content marketing that gets results. Whether yo
     window.scrollTo(0, 0);
   }, [])
 
+  const navigate = useNavigate();
+
+const goToHome2 = () => {
+  navigate("/#home2");
+};
+
   return (
    
    <><Header/>
@@ -122,7 +129,15 @@ At Maxzen.tech, we specialize in content marketing that gets results. Whether yo
           </p>
 
           <p className="mb-6 italic font-semibold text-gray-800 animate-fadeInUp delay-800">
-            “At Maxzen.tech, we help businesses create keyword-rich, SEO-optimized content that ranks and delivers long-term results.”
+            
+“At{" "}
+<span
+  onClick={goToHome2}
+  className="cursor-pointer hover:underline font-semibold"
+>
+  Maxzen.tech
+</span>
+, we help businesses create keyword-rich, SEO-optimized content that ranks and delivers long-term results.”
           </p>
         </div>
       </section>

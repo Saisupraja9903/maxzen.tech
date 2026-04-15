@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from "react";
 import { FaPhoneAlt, FaMapMarkerAlt, FaEnvelope } from "react-icons/fa";
 import { motion } from "framer-motion";
+import { useNavigate } from "react-router-dom";
 
 const ContactSection = () => {
   const [animate, setAnimate] = useState(false);
@@ -16,6 +17,12 @@ const ContactSection = () => {
     window.scrollTo(0, 0);
   }, [])
 
+  const navigate = useNavigate();
+
+const goToHome2 = () => {
+  navigate("/#home2");
+};
+
   return (
     <section className="text-center py-16 px-6 bg-white">
       {/* Top Text */}
@@ -26,7 +33,12 @@ const ContactSection = () => {
             animate ? "circle-animate" : ""
           }`}
         >
-          Maxzen.Tech
+          <span
+  onClick={goToHome2}
+  className="cursor-pointer hover:underline"
+>
+  Maxzen.Tech
+</span>
           <span className="absolute inset-0 border-2 border-blue-600 rounded-full opacity-0 animate-none"></span>
         </span>
       </h2>
@@ -73,7 +85,12 @@ const ContactSection = () => {
 >
   <FaEnvelope className="text-gray-600 text-5xl mb-4" />
   <h3 className="text-xl font-semibold text-gray-800 mb-2">E-mail us at</h3>
-  <p className="text-gray-600 text-lg">info@maxzen.tech</p>
+  <p className="text-gray-600 text-lg">info@<span
+  onClick={goToHome2}
+  className="cursor-pointer hover:underline"
+>
+  Maxzen.Tech
+</span></p>
 </motion.div>
 </div>
 
@@ -107,7 +124,12 @@ const ContactSection = () => {
     viewport={{ once: true }}
     className="text-gray-700 text-lg leading-relaxed"
   >
-    At <span className="text-blue-600 font-semibold">Maxzen.tech</span>, we’re more than just a digital marketing agency in Hyderabad — we serve clients across the globe with the same passion and performance.
+    At <span className="text-blue-600 font-semibold"><span
+  onClick={goToHome2}
+  className="cursor-pointer hover:underline"
+>
+  Maxzen.Tech
+</span></span>, we’re more than just a digital marketing agency in Hyderabad — we serve clients across the globe with the same passion and performance.
   </motion.p>
 
   <motion.p

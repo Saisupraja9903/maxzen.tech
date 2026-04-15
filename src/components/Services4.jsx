@@ -156,7 +156,14 @@ const SeoServices = () => {
   <div className="max-w-7xl mx-auto flex flex-col md:flex-row items-center justify-between">
     
     <h1 className="text-3xl md:text-4xl font-bold">
-      Top SEO Services — <span className="text-yellow-300">Maxzen.Tech</span>
+      Top SEO Services — <span
+  onClick={() => navigate("/#home2")}
+  className="text-yellow-300 cursor-pointer hover:underline"
+>
+  Maxzen.Tech
+</span>
+
+
     </h1>
 
     <button
@@ -266,79 +273,6 @@ const SeoServices = () => {
         </motion.div>
       </section>
 
-      {/* ---------- SERVICE CARDS SECTION ----------
-      <section className="bg-blue-300 text-white py-6 px-8 flex items-center justify-between relative">
-        <h1 className="text-3xl md:text-4xl font-extrabold">
-          SEO Services in Hyderabad - <span className="text-white">Maxzen.Tech</span>
-        </h1>
-
-        <button
-          onClick={() => navigate("/contact")}
-          className="border-2 border-white px-5 py-2 rounded-full hover:bg-white hover:text-blue-500 transition-all"
-        >
-          ＋ REQUEST A QUOTE
-        </button>
-      </section>
-
-      {/* MAIN HERO SECTION */}
-      {/* <section className="py-20 px-6 md:px-16 bg-white flex flex-col md:flex-row items-center gap-20">
-        <motion.img
-          initial={{ opacity: 0, x: -50 }}
-          whileInView={{ opacity: 1, x: 0 }}
-          transition={{ duration: 0.8 }}
-          src={heroImg}
-          className="w-full md:w-1/2 max-w-lg rounded-3xl shadow-xl"
-        />
-
-        <motion.div
-          initial={{ opacity: 0, x: 50 }}
-          whileInView={{ opacity: 1, x: 0 }}
-          transition={{ duration: 0.8 }}
-          className="md:w-1/2"
-        >
-          <h2 className="text-4xl md:text-5xl font-extrabold text-gray-900">
-            Grow Your Business with <span className="text-purple-500">SEO</span>
-          </h2>
-          <p className="mt-6 text-gray-600 text-lg">
-            Boost your brand visibility and attract customers with powerful SEO strategies.
-          </p>
-        </motion.div>
-      </section>
-
-      {/* BUBBLE SECTION */}
-      {/* <section className="min-h-screen flex items-center justify-center bg-[#fffefc] px-6">
-        <motion.div
-          initial={{ opacity: 0, y: 40 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          className="relative max-w-7xl w-full border shadow-2xl rounded-[3rem] p-12 bg-cover bg-center"
-          style={{ backgroundImage: `url(${seoBg})` }}
-        >
-          <div className="absolute inset-0 bg-white/60 rounded-[3rem]" />
-
-          <div className="relative z-10">
-            <h2 className="text-5xl font-extrabold text-center text-red-500 mb-16">
-              What is <span className="text-black italic">SEO?</span>
-            </h2>
-
-            <div className="flex flex-wrap justify-center gap-14">
-              {circles.map((circle, i) => (
-                <motion.div
-                  key={i}
-                  className={`rounded-full bg-gradient-to-br from-[#fffaf2]/70 to-[#fff3e1]/70 text-center p-6 ${sizeMap[circle.size]}`}
-                  animate={{ y: [0, -15, 0] }}
-                  transition={{ duration: 4 + i, repeat: Infinity }}
-                >
-                  <h3 className="text-xl font-semibold text-red-500 mb-2">
-                    {circle.title}
-                  </h3>
-                  <p className="text-gray-700 text-sm">{circle.desc}</p>
-                </motion.div>
-              ))}
-            </div>
-          </div> */}
-        {/* </motion.div> */}
-      {/* </section> */} 
-
       {/* ---------- SERVICES SECTION (Horizontal Scroll) ---------- */}
       <section className="py-24 bg-gradient-to-b from-[#fff8f4] via-[#fffdfb] to-[#fff3e8]">
         <div className="text-center mb-16">
@@ -395,7 +329,15 @@ const SeoServices = () => {
       className="bg-white/80 backdrop-blur-md border border-[#f8e8d8]/60 shadow-[0_8px_40px_rgba(0,0,0,0.06)] rounded-3xl p-8 md:p-12 max-w-5xl mx-auto text-gray-700 text-lg leading-relaxed"
     >
       <p className="mb-4">
-        <span className="font-semibold text-[#e63946]">At Maxzen.Tech</span>, we don’t just offer SEO — we create strategies that turn clicks into real business growth. Our strength lies in understanding the Hyderabad market and combining it with proven global SEO practices.
+        <span className="font-semibold text-[#e63946]">
+  At{" "}
+  <span
+    onClick={() => navigate("/#home2")}
+    className="cursor-pointer hover:underline"
+  >
+    Maxzen.Tech
+  </span>
+</span>, we don’t just offer SEO — we create strategies that turn clicks into real business growth. Our strength lies in understanding the Hyderabad market and combining it with proven global SEO practices.
       </p>
       <p className="mb-4">
         When it comes to SEO services in Hyderabad, many agencies promise results, but few actually deliver. While other SEO companies often rely on generic strategies, Maxzen Tech stands out as a results-driven SEO agency.
@@ -405,7 +347,12 @@ const SeoServices = () => {
       </p>
       <p>
         That’s why businesses choose{" "}
-        <span className="font-semibold text-[#e63946]">Maxzen Tech</span> as the best SEO agency in Hyderabad — because we don’t just create strategies, we deliver outcomes that help your business grow.
+        <span
+  onClick={() => navigate("/#home2")}
+  className="font-semibold text-[#e63946] cursor-pointer hover:underline"
+>
+  Maxzen.Tech
+</span> as the best SEO agency in Hyderabad — because we don’t just create strategies, we deliver outcomes that help your business grow.
       </p>
     </motion.div>
   </div>
@@ -425,7 +372,7 @@ const SeoServices = () => {
 
      <div className="md:w-1/2 w-full">
   <div className="flex items-center gap-3 mb-4">
-    <p className="text-5xl text-[#11e1fc]">
+    <p className="text-5xl text-[#e63946]">
       <AiOutlineGlobal />
     </p>
 
@@ -455,7 +402,7 @@ const SeoServices = () => {
 
       <div className="md:w-1/2 w-full">
   <div className="flex items-center gap-3 mb-4">
-    <span className="text-5xl text-[#fca311]">
+    <span className="text-5xl text-[#e63946]">
       <FcComboChart />
     </span>
 
@@ -485,7 +432,7 @@ const SeoServices = () => {
 
       <div className="md:w-1/2 w-full">
   <div className="flex items-center gap-3 mb-4">
-    <span className="text-5xl text-black">
+    <span className="text-5xl text-[#e63946]">
       <FaHandshake />
     </span>
 
@@ -545,7 +492,7 @@ const SeoServices = () => {
 
       <div className="md:w-1/2 w-full">
   <div className="flex items-center gap-3 mb-4">
-    <span className="text-5xl text-blue-600">
+    <span className="text-5xl text-[#e63946]">
       <BsRocketTakeoff />
     </span>
 
@@ -566,7 +513,12 @@ const SeoServices = () => {
   {/* Outro */}
   <div className="max-w-4xl mx-auto text-center mt-28">
     <p className="text-gray-700 text-lg leading-relaxed">
-      Choose <span className="font-semibold text-[#e63946]">Maxzen Tech</span> — 
+      Choose <span
+  onClick={() => navigate("/#home2")}
+  className="font-semibold text-[#e63946] cursor-pointer hover:underline"
+>
+  Maxzen.Tech
+</span> — 
       where innovation meets expertise, creating SEO strategies that don’t just rank, but truly deliver business growth and visibility.
     </p>
   </div>

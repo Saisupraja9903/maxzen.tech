@@ -20,10 +20,10 @@ const fadeUp = {
   show: { opacity: 1, y: 0, transition: { duration: 0.7 } },
 };
 
-const scaleIn = {
-  hidden: { opacity: 0, scale: 0.85 },
-  show: { opacity: 1, scale: 1, transition: { duration: 0.6 } },
-};
+// const scaleIn = {
+//   hidden: { opacity: 0, scale: 0.85 },
+//   show: { opacity: 1, scale: 1, transition: { duration: 0.6 } },
+// };
 
 // ------------------ TIMELINE DATA ------------------
 const steps = [
@@ -90,6 +90,7 @@ const Timeline = () => {
     handleScroll();
     return () => window.removeEventListener("scroll", handleScroll);
   }, []);
+  
 
 
 
@@ -183,7 +184,13 @@ const ExtraContent = ({ step, index }) => (
 // ------------------ COUNTDOWN COMPONENT ------------------
 // ------------------ COUNTDOWN COMPONENT ------------------
 const Countdown = () => {
-  const targetDate = new Date("2025-12-31T23:59:59").getTime(); // <<< FIXED DATE
+  const now = new Date();
+const targetDate = new Date(
+  now.getFullYear(),
+  now.getMonth() + 2, 
+  now.getDate(),
+  23, 59, 59
+).getTime(); // <<< FIXED DATE
 
   const [timeLeft, setTimeLeft] = useState({
     days: 0,
@@ -252,22 +259,34 @@ const Countdown = () => {
       </div>
 
       {/* Paragraph */}
-      <p className="max-w-4xl mx-auto mt-10 text-lg leading-relaxed text-gray-700">
-        At Maxzen Tech, we’re more than just a{" "}
-        <strong>digital marketing agency</strong> — we’re your
-        growth partner. With proven strategies in SEO, paid ads, social
-        media marketing, and local SEO, we help startups and businesses
-        generate real, measurable results. Whether you want more traffic,
-        better leads, or stronger online visibility,{" "}
-        <strong>Maxzen Tech</strong> delivers the expertise and dedication
-        your brand deserves.
-      </p>
+     <p className="max-w-4xl mx-auto mt-10 text-lg leading-relaxed text-gray-700">
+  At{" "}
+  <span
+    onClick={() => navigate("/#home2")}
+    className="text-gray-600 font-bold cursor-pointer hover:underline"
+  >
+    Maxzen.Tech
+  </span>{" "}
+  we’re more than just a{" "}
+  <strong>digital marketing agency</strong> — we’re your
+  growth partner. With proven strategies in SEO, paid ads, social
+  media marketing, and local SEO, we help startups and businesses
+  generate real, measurable results. Whether you want more traffic,
+  better leads, or stronger online visibility,{" "}
+  <span
+    onClick={() => navigate("/#home2")}
+    className="text-gray-600 font-bold cursor-pointer hover:underline"
+  >
+    Maxzen.Tech
+  </span>{" "}
+  delivers the expertise and dedication your brand deserves.
+</p>
 
       {/* Buttons */}
       <div className="flex justify-center gap-6 mt-4 mb-4">
         <button
-  onClick={() => navigate("/services1")}
-  className="px-8 py-3 bg-gray-600 hover:bg-blue-400 text-white rounded-xl shadow-md font-semibold "
+  onClick={() => navigate("/digital-marketing-services")}
+  className="px-8 py-3 bg-gray-600 hover:bg-gray-400 text-white rounded-xl shadow-md font-semibold "
 >
   Services 
 </button>
@@ -350,14 +369,25 @@ export default function DigitalMarketingNew() {
             >
               <h1 className="text-4xl md:text-5xl font-extrabold leading-tight text-gray-900">
                 Accelerate Your Business Growth with{" "}
-                <span className="text-purple-700">Maxzen.Tech</span>
+                <span
+  onClick={() => navigate("/#home2")}
+  className="text-purple-700 cursor-pointer hover:underline"
+>
+  Maxzen.Tech
+</span>
               </h1>
 
-              <p className="mt-6 text-lg md:text-xl text-gray-700 leading-relaxed">
-                Maxzen.Tech is Hyderabad’s leading digital marketing agency —
-                helping startups and enterprises dominate online with SEO, Ads,
-                and Social Media strategies that deliver measurable results.
-              </p>
+           <p className="mt-6 text-lg md:text-xl text-gray-700 leading-relaxed">
+  <span
+    onClick={() => navigate("/#home2")}
+    className="text-gray-600 font-bold cursor-pointer hover:underline"
+  >
+    Maxzen.Tech
+  </span>{" "}
+  is Hyderabad’s leading digital marketing agency —
+  helping startups and enterprises dominate online with SEO, Ads,
+  and Social Media strategies that deliver measurable results.
+</p>
 
               <div className="mt-10 flex flex-wrap gap-4">
                 <motion.button
@@ -370,7 +400,7 @@ export default function DigitalMarketingNew() {
                 </motion.button>
                 <motion.button
                   whileHover={{ scale: 1.05 }}
-                   onClick={() => navigate("/services1")}
+                   onClick={() => navigate("/digital-marketing-services")}
                   className="px-7 py-3 bg-white border border-purple-300 text-purple-700 font-semibold rounded-full hover:bg-purple-50 transition"
                 >
                   Learn More
@@ -429,7 +459,11 @@ export default function DigitalMarketingNew() {
             whileInView="show"
             className="bg-white rounded-3xl shadow-xl p-6 hover:shadow-2xl transition border-t-8 border-purple-500"
           >
-            <img src={dms5} className="rounded-xl h-48 w-full object-cover" />
+            <img
+  src={dms5}
+  alt="SEO Service"
+  className="rounded-xl h-48 w-full object-cover"
+/>
             <h3 className="text-2xl font-bold mt-4 text-purple-600">SEO</h3>
             <ul className="mt-3 space-y-2 text-gray-600 text-left">
               <li>• Long-term organic traffic</li>
@@ -446,7 +480,9 @@ export default function DigitalMarketingNew() {
             whileInView="show"
             className="bg-white rounded-3xl shadow-xl p-6 hover:shadow-2xl transition border-t-8 border-indigo-500"
           >
-            <img src={dms6} className="rounded-xl h-48 w-full object-cover" />
+            <img src={dms6} 
+            alt="Local SEO Service"
+            className="rounded-xl h-48 w-full object-cover" />
             <h3 className="text-2xl font-bold mt-4 text-indigo-600">
               Local SEO
             </h3>
@@ -465,7 +501,9 @@ export default function DigitalMarketingNew() {
             whileInView="show"
             className="bg-white rounded-3xl shadow-xl p-6 hover:shadow-2xl transition border-t-8 border-yellow-500"
           >
-            <img src={dms7} className="rounded-xl h-48 w-full object-cover" />
+            <img src={dms7} 
+             alt="Advertising Service"
+             className="rounded-xl h-48 w-full object-cover" />
             <h3 className="text-2xl font-bold mt-4 text-yellow-600">Ads</h3>
             <ul className="mt-3 space-y-2 text-gray-600 text-left">
               <li>• High ROI Google Ads</li>
@@ -482,7 +520,9 @@ export default function DigitalMarketingNew() {
             whileInView="show"
             className="bg-white rounded-3xl shadow-xl p-6 hover:shadow-2xl transition border-t-8 border-pink-500"
           >
-            <img src={dms8} className="rounded-xl h-48 w-full object-cover" />
+            <img src={dms8} 
+             alt="Social Media"
+             className="rounded-xl h-48 w-full object-cover" />
             <h3 className="text-2xl font-bold mt-4 text-pink-600">
               Social Media
             </h3>

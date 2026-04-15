@@ -51,9 +51,16 @@ const BusinessIntro = () => {
         >
           <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4 hover:text-white transition-all duration-300">
             Grow Your Business with{" "}
-            <span className="text-orange-600 hover:text-white transition-all duration-300">
-              Maxzen.tech
-            </span>
+            <span
+  onClick={() =>
+    document.getElementById("home2-start")?.scrollIntoView({
+      behavior: "smooth",
+    })
+  }
+  className="text-orange-600 hover:text-white transition-all duration-300 cursor-pointer"
+>
+  Maxzen.tech
+</span>
           </h2>
 
           <p className="text-gray-700 font-semibold mb-3 hover:text-white transition-all duration-300">
@@ -63,9 +70,16 @@ const BusinessIntro = () => {
 
           <p className="text-gray-600 leading-relaxed hover:text-white transition-all duration-300">
             At{" "}
-            <span className="text-orange-600 font-semibold hover:text-white transition-all duration-300">
-              Maxzen.tech
-            </span>
+            <span
+  onClick={() =>
+    document.getElementById("home2-start")?.scrollIntoView({
+      behavior: "smooth",
+    })
+  }
+  className="text-orange-600 font-semibold hover:text-white transition-all duration-300 cursor-pointer"
+>
+  Maxzen.tech
+</span>
             , we help you grow organically and through paid strategies that
             actually work. Whether you need SEO, Google Ads, or social media
             management — we’ve got you covered with proven{" "}

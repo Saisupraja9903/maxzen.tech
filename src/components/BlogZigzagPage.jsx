@@ -50,7 +50,9 @@ const BlogZigzagPage = () => {
     window.scrollTo(0, 0);
   }, [])
 
-
+const goToHome2 = () => {
+  navigate("/#home2");
+};
   return (
     <>
     <Header />
@@ -67,7 +69,18 @@ const BlogZigzagPage = () => {
               Digital Marketing Blogs for Business Growth in 2025
             </h1>
             <p className="text-gray-900 leading-relaxed">
-              At <span className="text-blue-600 font-bold">Maxzen.Tech</span>, we bring you
+              At <span
+  onClick={goToHome2}
+  className="text-gray-600 font-bold cursor-pointer hover:underline"
+>
+  
+<span
+  onClick={goToHome2}
+  className="cursor-pointer hover:underline"
+>
+  Maxzen.tech
+</span>
+</span>, we bring you
               expert-written <span className="font-semibold">Digital Marketing</span> Blogs designed
               to help business owners, startups, and entrepreneurs grow online.
               Our blogs include practical tips, real-world strategies, and proven methods
@@ -104,7 +117,7 @@ const BlogZigzagPage = () => {
   <div className="md:w-1/2 text-left">
     <h2 
     onClick={() => navigate("/blog1")}
-    className="text-2xl font-bold mb-4">
+    className="text-2xl font-bold mb-4 cursor-pointer">
       Best App Development Companies in Hyderabad
     </h2>
     <p className="text-gray-700 leading-relaxed">
@@ -146,7 +159,7 @@ const BlogZigzagPage = () => {
   <div className="md:w-1/2">
     <h2 
      onClick={() => navigate("/blog2")}
-     className="text-2xl font-bold mb-4">Top 5 Affordable SEO Packages for Small Businesses</h2>
+     className="text-2xl font-bold mb-4 cursor-pointer">Top 5 Affordable SEO Packages for Small Businesses</h2>
     <p className="text-gray-700 leading-relaxed"> Learn how cost-effective SEO packages can boost your visibility,
                 increase leads, and grow your online presence with strategic insights.</p>
   </div>
@@ -178,7 +191,7 @@ const BlogZigzagPage = () => {
   <div className="md:w-1/2">
     <h2 
      onClick={() => navigate("/blog3")}
-    className="text-2xl font-bold mb-4">Digital Marketing Blogs & SEO Tips for Growth</h2>
+    className="text-2xl font-bold mb-4 cursor-pointer">Digital Marketing Blogs & SEO Tips for Growth</h2>
     <p className="text-gray-700 leading-relaxed">Discover expert insights on digital marketing, SEO strategies, and growth-driven content to elevate your online presence.</p>
   </div>
 </div>
@@ -206,8 +219,33 @@ const BlogZigzagPage = () => {
   <div className="md:w-1/2">
     <h2 
      onClick={() => navigate("/blog4")}
-     className="text-2xl font-bold mb-4">Digital Marketing Strategy for Startups | Maxzen.tech Services</h2>
-    <p className="text-gray-700 leading-relaxed"> Learn the best digital marketing strategy for startups to grow fast. Maxzen.tech offers SEO, social media, paid ads & complete digital marketing services.</p>
+     className="text-2xl font-bold mb-4 cursor-pointer">Digital Marketing Strategy for Startups |{" "}
+<span
+  onClick={goToHome2}
+  className="cursor-pointer hover:underline"
+>
+  
+<span
+  onClick={goToHome2}
+  className="cursor-pointer hover:underline"
+>
+  Maxzen.tech
+</span>
+</span>{" "}
+Services</h2>
+    <p className="text-gray-700 leading-relaxed"> Learn the best digital marketing strategy for startups to grow fast. <span
+  onClick={goToHome2}
+  className="cursor-pointer hover:underline font-semibold"
+>
+  
+<span
+  onClick={goToHome2}
+  className="cursor-pointer hover:underline"
+>
+  Maxzen.tech
+</span>
+</span>{" "}
+offers SEO, social media, paid ads & complete digital marketing services.</p>
   </div>
 </div>
 {/* <div className="flex flex-col md:flex-row items-center gap-8"> */}
@@ -236,8 +274,21 @@ const BlogZigzagPage = () => {
   <div className="md:w-1/2">
     <h2 
      onClick={() => navigate("/blog5")}
-    className="text-2xl font-bold mb-4">Best Software Testing Companies in Hyderabad 2026</h2>
-    <p className="text-gray-700 leading-relaxed">Best Software Testing Companies in Hyderabad (2025 Guide) – maxzen.tech Ranked No.1</p>
+    className="text-2xl font-bold mb-4 cursor-pointer">Best Software Testing Companies in Hyderabad 2026</h2>
+    <p className="text-gray-700 leading-relaxed">Best Software Testing Companies in Hyderabad (2025 Guide) – <span
+  onClick={goToHome2}
+  className="cursor-pointer hover:underline font-semibold"
+>
+  
+<span
+  onClick={goToHome2}
+  className="cursor-pointer hover:underline"
+>
+  Maxzen.tech
+</span>
+</span>{" "}
+Ranked No.1
+offers SEO</p>
   </div>
 </div>
 
@@ -301,10 +352,35 @@ const BlogZigzagPage = () => {
               <h1 className="text-xl font-semibold mb-3 text-left">Recent posts</h1>
               <ul className="text-gray-700 text-lg space-y-3 text-left">
                 <li>• Best App Developing companies in Hyderabad</li>
-                <li>• Top 5 Affordable SEO Packages for Small Business Growth - Maxzen.tech</li>
+                <li>• Top 5 Affordable SEO Packages for Small Business Growth - 
+<span
+  onClick={goToHome2}
+  className="cursor-pointer hover:underline"
+>
+  Maxzen.tech
+</span></li>
                 {/* <li>• Top 7 Content Marketing Advantages Every Business Should Know</li> */}
-                <li>• SEO Agency Near Me Boost Your Local Rankings with Maxzen.tech</li>
-                 <li>• Digital Marketing Strategy for Startups | Maxzen.tech Services</li>
+                <li>• SEO Agency Near Me Boost Your Local Rankings with 
+<span
+  onClick={goToHome2}
+  className="cursor-pointer hover:underline"
+>
+  Maxzen.tech
+</span></li>
+                 <li>• Digital Marketing Strategy for Startups |{" "}
+<span
+  onClick={goToHome2}
+  className="cursor-pointer hover:underline"
+>
+  
+<span
+  onClick={goToHome2}
+  className="cursor-pointer hover:underline"
+>
+  Maxzen.tech
+</span>
+</span>{" "}
+Services</li>
                  <li>• Best Software Testing Companies in Hyderabad 2026</li>
               </ul>
             </div>
@@ -339,7 +415,20 @@ const BlogZigzagPage = () => {
 
             {/* WHY CHOOSE US */}
 <div className="bg-white rounded-xl p-5 shadow-md border border-gray-200">
-  <h3 className="text-xl font-semibold mb-3">Why Choose Maxzen.Tech?</h3>
+  <h3 className="text-xl font-semibold mb-3">Why Choose{" "}
+<span
+  onClick={() => navigate("/#home2")}
+  className="cursor-pointer hover:underline"
+>
+  
+<span
+  onClick={goToHome2}
+  className="cursor-pointer hover:underline"
+>
+  Maxzen.tech
+</span>
+</span>
+?</h3>
   <ul className="space-y-2 text-gray-700 text-sm leading-relaxed text-left">
     <li>• 100% result-driven SEO strategies</li>
     <li>• Modern, high-performance website development</li>

@@ -22,6 +22,7 @@ import { motion } from "framer-motion";
 import Header from "./Header";
 import Footer from "./Footer";
 import { useEffect } from "react";
+import { useNavigate } from "react-router-dom";
 
 
 const teamMembers = [
@@ -51,6 +52,12 @@ const TeamPageCombined = () => {
    useEffect(() => {
     window.scrollTo(0, 0);
   }, [])
+
+  const goToHome2 = () => {
+  navigate("/#home2");
+};
+
+  const navigate = useNavigate();
   return (
     <>
       <Header />
@@ -72,11 +79,23 @@ const TeamPageCombined = () => {
             viewport={{ once: true }}
             className="text-3xl md:text-4xl font-bold text-center mb-4"
           >
-            Our Team – <span className="text-blue-800">Maxzen.Tech</span>
+            Our Team –{" "}
+<span
+  onClick={goToHome2}
+  className="text-blue-800 cursor-pointer hover:underline"
+>
+  Maxzen.Tech
+</span>
           </motion.h2>
 
           <p className="text-center text-gray-600 max-w-3xl mx-auto leading-relaxed">
-            At <span className="font-semibold text-blue-800">Maxzen.Tech</span>, we believe a strong
+            At{" "}
+<span
+  onClick={goToHome2}
+  className="font-semibold text-blue-800 cursor-pointer hover:underline"
+>
+  Maxzen.Tech
+</span>, we believe a strong
             business starts with a strong team. Our success is powered by the dedication, creativity,
             and expertise of professionals who bring ideas to life.
           </p>
@@ -175,7 +194,14 @@ const TeamPageCombined = () => {
             viewport={{ once: true }}
             className="text-5xl font-bold text-gray-900 mb-8 text-left leading-relaxed mb-12 space-y-2 max-w-4xl mx-auto "
           >
-            Why Choose <span className="text-blue-800">Maxzen.Tech</span> Team?
+            Why Choose{" "}
+<span
+  onClick={goToHome2}
+  className="text-blue-800 cursor-pointer hover:underline"
+>
+  Maxzen.Tech
+</span>{" "}
+Team?
           </motion.h2>
 
           <motion.div
@@ -209,7 +235,13 @@ const TeamPageCombined = () => {
             viewport={{ once: true }}
             className="text-gray-700 max-w-5xl mx-auto text-lg space-y-2 mb-12"
           >
-            At <span className="font-semibold text-blue-900">Maxzen.Tech</span>, our team is more than
+            At{" "}
+<span
+  onClick={goToHome2}
+  className="font-semibold text-blue-900 cursor-pointer hover:underline"
+>
+  Maxzen.Tech
+</span>, our team is more than
             just a group of individuals – we are your digital growth partners. Whether you need a new
             website, a powerful SEO strategy, or complete{" "}
             <span className="text-green-700 font-semibold">

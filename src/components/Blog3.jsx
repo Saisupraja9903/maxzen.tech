@@ -27,6 +27,7 @@ import seoBlog2 from "../assests/seo-blog2.jpg";
 import { useEffect } from "react";
 import Header from "./Header.jsx";
 import Footer from "./Footer.jsx";
+import { useNavigate } from "react-router-dom";
 
 
 const PremiumSEOContentAnimated = () => {
@@ -147,6 +148,12 @@ const PremiumSEOContentAnimated = () => {
     window.scrollTo(0, 0);
   }, [])
 
+  const navigate = useNavigate();
+
+const goToHome2 = () => {
+  navigate("/#home2");
+};
+
   return (
     <>
     <Header/>
@@ -176,12 +183,25 @@ const PremiumSEOContentAnimated = () => {
           variants={fadeInUp}
         >
           <h1 className="text-3xl md:text-4xl font-bold text-gray-800 mb-4">
-            SEO Agency Near Me — Boost Your Local Rankings with Maxzen.tech
+            SEO Agency Near Me — Boost Your Local Rankings with{" "}
+<span
+  onClick={goToHome2}
+  className="cursor-pointer hover:underline"
+>
+  Maxzen.tech
+</span>
           </h1>
           <p className="text-gray-700 text-lg">
             Are you a business owner searching for a reliable SEO agency near me
             to improve your online visibility and attract local customers? You're
-            in the right place. At Maxzen.tech, we specialize in local SEO
+            in the right place. At{" "}
+<span
+  onClick={goToHome2}
+  className="cursor-pointer hover:underline font-semibold"
+>
+  Maxzen.tech
+</span>
+, we specialize in local SEO
             services, website optimization, and digital marketing strategies that
             put your business on the map—literally.
           </p>
@@ -238,7 +258,14 @@ const PremiumSEOContentAnimated = () => {
           Our Approach to SEO Success
         </h2>
         <p className="text-gray-700 text-lg max-w-3xl mx-auto mb-12">
-          At Maxzen.tech, our approach is built on a foundation of proven SEO
+          At{" "}
+<span
+  onClick={goToHome2}
+  className="cursor-pointer hover:underline font-semibold"
+>
+  Maxzen.tech
+</span>
+, our approach is built on a foundation of proven SEO
           tactics tailored to your local market. We combine these strategies with a
           conversion-first mindset because visibility means nothing without
           results.
@@ -282,8 +309,15 @@ const PremiumSEOContentAnimated = () => {
             What Services Do We Offer?
           </h2>
           <p className="text-gray-700 text-lg max-w-3xl mx-auto mb-12">
-            At Maxzen.tech, we offer complete digital marketing and SEO solutions that go beyond just rankings. We aim to maximize your visibility, generate quality leads, and deliver measurable results.
-          </p>
+  At{" "}
+  <span
+    onClick={goToHome2}
+    className="cursor-pointer hover:underline font-semibold"
+  >
+    Maxzen.tech
+  </span>
+  , we offer complete digital marketing and SEO solutions that go beyond just rankings. We aim to maximize your visibility, generate quality leads, and deliver measurable results.
+</p>
         </div>
 
         <div className="flex flex-col lg:flex-row gap-12 items-center">
@@ -336,7 +370,13 @@ const PremiumSEOContentAnimated = () => {
       {/* Decorative Shapes */}
       <div className="absolute top-[-50px] right-[-100px] w-72 h-72 bg-purple-200 rounded-full opacity-30 -z-10"></div>
       <div className="absolute bottom-[-50px] left-[-80px] w-64 h-64 bg-blue-200 rounded-full opacity-30 -z-10"></div>
-      {/* Final Thoughts / Why Choose Maxzen.tech Section with Wavy Background */}
+      {/* Final Thoughts / Why Choose{" "}
+<span
+  onClick={goToHome2}
+  className="cursor-pointer hover:underline"
+>
+  Maxzen.tech
+</span> Section with Wavy Background */}
 <motion.div
   className="relative mb-24 overflow-hidden"
   initial={{ opacity: 0, y: 50 }}
@@ -366,11 +406,24 @@ const PremiumSEOContentAnimated = () => {
 
   <div className="text-center mb-12 relative z-10">
     <h2 className="text-3xl md:text-4xl font-bold text-gray-800 mb-4">
-      🌟 Final Thoughts: Why Choose Maxzen.tech for Your Business Growth?
+      🌟 Final Thoughts: Why Choose{" "}
+<span
+  onClick={goToHome2}
+  className="cursor-pointer hover:underline"
+>
+  Maxzen.tech
+</span> for Your Business Growth?
     </h2>
-    <p className="text-gray-700 text-lg max-w-3xl mx-auto">
-      At Maxzen.tech, we don’t believe in one-size-fits-all SEO packages. Tailored Marketing Strategies for Your Unique Business. Whether you need a hyper-local SEO campaign or a full digital marketing solution, we create personalized plans to meet your exact needs.
-    </p>
+<p className="text-gray-700 text-lg max-w-3xl mx-auto">
+  At{" "}
+  <span
+    onClick={goToHome2}
+    className="cursor-pointer hover:underline font-semibold"
+  >
+    Maxzen.tech
+  </span>
+  , we don’t believe in one-size-fits-all SEO packages. Tailored Marketing Strategies for Your Unique Business Whether you need a hyper-local SEO campaign or a full digital marketing solution, we create personalized plans to meet your exact needs.
+    </p> 
   </div>
 
   <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 relative z-10">

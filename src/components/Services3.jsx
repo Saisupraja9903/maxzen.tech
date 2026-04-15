@@ -1,5 +1,5 @@
-import React from "react";
-import { motion, useScroll, useTransform } from "framer-motion";
+// import React from "react";
+import { motion} from "framer-motion";
 import {
   Code2,
   Globe,
@@ -13,7 +13,7 @@ import {
   ShieldCheck,
 } from "lucide-react";
 
-import heroImg from "../assests/logoo10.png";
+// import heroImg from "../assests/logoo10.png";
 import devImage from "../assests/webdev1.jpg";
 import launchImg from "../assests/webdev5.jpeg";
 import discoveryImg from "../assests/webdev2.jpeg";
@@ -23,9 +23,9 @@ import Header from "./Header";
 import Footer from "./Footer";
 import { useNavigate } from "react-router-dom";
 import { useEffect } from "react";
-import project1 from "../assests/webdev6.png";
-import project2 from "../assests/webdev7.png";
-import project3 from "../assests/webdev8.png";
+// import project1 from "../assests/webdev6.png";
+// import project2 from "../assests/webdev7.png";
+// import project3 from "../assests/webdev8.png";
 
 
 const fadeUp = {
@@ -86,7 +86,7 @@ const WebDevelopment = () => {
       direction: "top",
     },
   ];
-  const { scrollYProgress } = useScroll();
+  // const { scrollYProgress } = useScroll();
    const navigate = useNavigate();
     useEffect(() => {
        window.scrollTo(0, 0);
@@ -122,10 +122,16 @@ const WebDevelopment = () => {
             >
               <h2 className="text-4xl md:text-5xl text-black font-extrabold leading-tight">
                 Visitor <span className="text-orange-500">Benefits</span> with{" "}
-                <span className="text-[#0d1b2a]">Maxzen.Tech</span> Websites
+                <span
+  onClick={() => navigate("/#home2")}
+  className="text-[#0d1b2a] cursor-pointer hover:underline"
+>
+  Maxzen.Tech
+</span>
+ Websites
               </h2>
               <button 
-              onClick={() => navigate("/services1")}
+              onClick={() => navigate("/DigitalMarketingServices  ")}
               className="mt-6 bg-[#0d1b2a] text-white px-6 py-3 rounded-full font-semibold hover:bg-[#172a45] transition-all shadow-md">
                 View Service
               </button>
@@ -139,7 +145,14 @@ const WebDevelopment = () => {
             >
               <p className="text-black/90 mt-20 leading-relaxed text-justify bg-[#0d1b2a]/20 backdrop-blur-sm p-6 rounded-2xl shadow-md border border-white/20">
                 Web development services in Hyderabad by{" "}
-                <span className="font-semibold text-orange-500">Maxzen.Tech</span> are designed to go beyond just great design — we craft websites that truly accelerate your business growth.Our approach focuses on creating mobile-friendly, SEO-optimized, and customer-focused solutions that not only attract visitors but also convert them into loyal clients. By combining creativity, modern technology, and smart strategies, we make sure your website becomes a powerful digital asset that drives long-term success for your brand.
+                
+ <span
+  onClick={() => navigate("/#home2")}
+  className="font-semibold text-orange-500 cursor-pointer hover:underline"
+>
+  Maxzen.Tech
+</span>
+ are designed to go beyond just great design — we craft websites that truly accelerate your business growth.Our approach focuses on creating mobile-friendly, SEO-optimized, and customer-focused solutions that not only attract visitors but also convert them into loyal clients. By combining creativity, modern technology, and smart strategies, we make sure your website becomes a powerful digital asset that drives long-term success for your brand.
               </p>
             </motion.div>
           </div>
@@ -175,7 +188,15 @@ const WebDevelopment = () => {
           transition={{ duration: 0.6 }}
           className="text-3xl md:text-4xl font-extrabold text-center text-[#0d1b2a] mb-10"
         >
-          Why Choose Maxzen.Tech for Web Development Services 
+          Why Choose{" "}
+<span
+  onClick={() => navigate("/#home2")}
+  className="cursor-pointer hover:underline"
+>
+  Maxzen.Tech
+</span>{" "}
+for Web Development Services
+ 
         </motion.h2>
 
         <div className="max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-3 gap-10 items-center">
@@ -199,7 +220,14 @@ const WebDevelopment = () => {
             className="md:col-span-1 text-center md:text-left"
           >
             <p className="text-gray-700 text-lg leading-relaxed">
-              At <span className="font-semibold text-[#ff8c1a]">Maxzen.Tech</span>, we don’t just build websites — we create high-performance digital ecosystems for your brand’s success.
+              At{" "}
+<span
+  onClick={() => navigate("/#home2")}
+  className="font-semibold text-[#ff8c1a] cursor-pointer hover:underline"
+>
+  Maxzen.Tech
+</span>
+, we don’t just build websites — we create high-performance digital ecosystems for your brand’s success.
             </p>
           </motion.div>
 
@@ -357,7 +385,13 @@ const WebDevelopment = () => {
       transition={{ duration: 0.8 }}
       className="text-4xl md:text-5xl font-extrabold text-[#0d1b2a] leading-tight mb-6"
     >
-      <span className="text-[#ff8c1a]">Maxzen.Tech</span> – providing Top Web Development Services
+      <span
+  onClick={() => navigate("/#home2")}
+  className="text-[#ff8c1a] cursor-pointer hover:underline"
+>
+  Maxzen.Tech
+</span>
+ – providing Top Web Development Services
     </motion.h2>
 
     {/* Glowing underline */}
@@ -376,7 +410,14 @@ const WebDevelopment = () => {
       className="bg-white/80 backdrop-blur-sm border border-[#ff8c1a]/20 rounded-3xl shadow-xl p-8 md:p-10 mb-6 hover:shadow-2xl hover:-translate-y-1 transition-all duration-500"
     >
       <p className="text-lg md:text-xl text-gray-700 leading-relaxed">
-        At <span className="font-semibold text-[#ff8c1a]">Maxzen.Tech</span>, we provide top{" "}
+        At{" "}
+<span
+  onClick={() => navigate("/#home2")}
+  className="font-semibold text-[#ff8c1a] cursor-pointer hover:underline"
+>
+  Maxzen.Tech
+</span>
+, we provide top{" "}
         <span className="font-semibold text-[#0d1b2a]">web development services in Hyderabad</span> designed to help
         businesses thrive in the digital era. Our websites are{" "}
         <span className="font-semibold text-[#0d1b2a]">responsive, SEO-optimized,</span> and{" "}

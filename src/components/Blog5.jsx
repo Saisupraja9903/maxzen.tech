@@ -3,11 +3,18 @@ import { motion } from "framer-motion";
 import { FaCheckCircle } from "react-icons/fa";
 import Header from "./Header";
 import Footer from "./Footer";
+import { useNavigate } from "react-router-dom";
 
 const SoftwareTestingIntro = () => {
   useEffect(() => {
     window.scrollTo(0, 0);
   }, []);
+
+  const navigate = useNavigate();
+
+const goToHome2 = () => {
+  navigate("/#home2");
+};
 
   return (
     <>
@@ -57,7 +64,12 @@ const SoftwareTestingIntro = () => {
             >
               <p className="text-lg text-gray-700 leading-relaxed">
                 If you’re searching for the best software testing companies in Hyderabad,
-                one company consistently stands at the top — <strong>maxzen.tech</strong>.
+                one company consistently stands at the top — <span
+  onClick={goToHome2}
+  className="cursor-pointer hover:underline font-semibold"
+>
+  maxzen.tech
+</span>.
                 Located at KPHB 3rd Phase, Manjeera Trinity Corporate, maxzen.tech is trusted
                 by startups, enterprises, and SaaS brands for delivering high-quality QA services.
               </p>
@@ -67,7 +79,12 @@ const SoftwareTestingIntro = () => {
                   <strong>KPHB (Kukatpally Housing Board)</strong> is one of Hyderabad’s strongest
                   IT and commercial hotspots—offering metro connectivity, business infrastructure,
                   and proximity to Hitech City, Madhapur, Kondapur & Gachibowli.  
-                  This makes <strong>maxzen.tech</strong> a preferred QA partner.
+                  This makes <span
+  onClick={goToHome2}
+  className="cursor-pointer hover:underline font-semibold"
+>
+  maxzen.tech
+</span> a preferred QA partner.
                 </p>
               </div>
             </motion.div>
@@ -148,7 +165,13 @@ const SoftwareTestingIntro = () => {
               className="text-center"
             >
               <h2 className="text-4xl font-extrabold text-blue-900 mb-4">
-                maxzen.tech – No.1 Software Testing Company in Hyderabad
+                <span
+  onClick={goToHome2}
+  className="cursor-pointer hover:underline"
+>
+  maxzen.tech
+</span>{" "}
+– No.1 Software Testing Company in Hyderabad
               </h2>
               <p className="text-lg text-gray-700 max-w-3xl mx-auto">
                 Companies located in Madhapur, Hitech City, Ameerpet, Gachibowli, and KPHB rely on professional QA teams to maintain software quality and reliability.

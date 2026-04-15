@@ -3,8 +3,10 @@ import { motion } from "framer-motion";
 import { FaBullhorn, FaUsers, FaProjectDiagram, FaChartBar} from "react-icons/fa";
 // import { FaBullhorn, FaUsers, FaProjectDiagram, FaChartBar, FaWhatsapp, FaCheckCircle, FaArrowRight } from "react-icons/fa";
 import { useEffect } from "react";
+import { useNavigate } from "react-router-dom";
 
 const AboutAndServices = () => {
+  const navigate = useNavigate();
 
   const services = [
     {
@@ -47,7 +49,12 @@ const AboutAndServices = () => {
             transition={{ duration: 0.7, ease: "easeOut" }}
             className="text-4xl md:text-5xl font-bold mb-6 text-black text-left"
           >
-            About <span className="text-black">Maxzen.Tech</span>
+            About <span
+  onClick={() => navigate("/")}
+  className="text-black cursor-pointer"
+>
+  Maxzen.Tech
+</span>
           </motion.h2>
 
           {/* main orange card block immediate animation */}
@@ -58,7 +65,12 @@ const AboutAndServices = () => {
             className="bg-gradient-to-br from-white via-[#fff8f2] to-[#ffe6d4] rounded-2xl p-10  backdrop-blur-md border border-orange-200"
           >
             <p className="text-lg leading-relaxed mb-6 text-gray-800 text-left">
-              At <span className="text-orange-500 font-bold">Maxzen.Tech</span>, we are a performance-driven Digital Marketing Agency based in Hyderabad – Manjeera Trinity Corporate, 4th Floor. We build digital growth engines that maximize brand visibility, boost lead conversions, and scale your online presence with intelligent strategies.
+              At <span
+  onClick={() => navigate("/")}
+  className="text-orange-500 font-bold cursor-pointer"
+>
+  Maxzen.Tech
+</span>, we are a performance-driven Digital Marketing Agency based in Hyderabad – Manjeera Trinity Corporate, 4th Floor. We build digital growth engines that maximize brand visibility, boost lead conversions, and scale your online presence with intelligent strategies.
             </p>
 
             <p className="text-lg leading-relaxed mb-6 text-gray-800 text-left">

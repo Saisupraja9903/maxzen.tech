@@ -88,7 +88,7 @@ const GlobalBrandSection = () => {
           whileInView={{ opacity: 1, scale: 1 }}
           transition={{ duration: 0.5, delay: 0.4 }}
           viewport={{ once: true }}
-          onClick={() => navigate("/services1")}
+          onClick={() => navigate("/DigitalMarketingServices  ")}
         >
           View More Detail
         </motion.button>

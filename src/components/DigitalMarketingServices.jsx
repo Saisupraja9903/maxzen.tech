@@ -1,5 +1,5 @@
 import React, { useRef } from "react";
-import { motion, useInView, useScroll, useTransform, useAnimation ,animate} from "framer-motion";
+import { motion, useInView, useScroll, useTransform,animate} from "framer-motion";
 
 import Header from "./Header";
 import Footer from "./Footer";
@@ -15,12 +15,17 @@ import s7 from "../assests/DM2.jpg";
 import ab from "../assests/logoo17.jpg";
 import abc from "../assests/logoo18.png";
 import { useNavigate } from "react-router-dom";
+import { IoIosRocket, IoMdCheckmarkCircleOutline} from "react-icons/io";
+ import { TbMessageDots } from "react-icons/tb";
+import { BsFire } from "react-icons/bs";
+// import { MdPermContactCalendar } from "react-icons/md";
 
 
 
 
-import { SiI18Next } from "react-icons/si";
-// import { motion, useInView, useAnimationControls, animate } from "framer-motion";
+
+// import { SiI18Next } from "react-icons/si";
+
 import { useEffect,  useState } from "react";
 
 function CountUp({ end }) {
@@ -37,6 +42,7 @@ function CountUp({ end }) {
       });
     }
   }, [isInView, end]);
+  // const navigate = useNavigate();
 
   return (
     <span ref={ref}>
@@ -115,25 +121,18 @@ const services = [
 ];
 
 
-// ---------- Background Colors ----------
-// const bgColors = [
-//   "bg-[#FFE8C2]",
-//   "bg-[#C8F7C5]",
-//   "bg-[#C7E9FF]",
-//   "bg-[#FFD6D9]",
-//   "bg-[#FFF6A1]",
-//   "bg-[#E4C7FF]",
-//   "bg-[#C1FFF2]",
+
 const bgColors = [
   "bg-[#F2F5D1]",
   
 ];
 
 
-export default function DigitalMarketingServices() {
+export default function DigitalMarketingServices  () {
    useEffect(() => {
       window.scrollTo(0, 0);
     }, [])
+    const navigate = useNavigate()
   return (
     <>
       <Header />
@@ -170,12 +169,13 @@ export default function DigitalMarketingServices() {
 
       {/* Floating Tag */}
       <motion.div
-        animate={{ y: [0, -10, 0] }}
-        transition={{ duration: 3, repeat: Infinity, ease: "easeInOut" }}
-        className="absolute -bottom-8 left-1/2 -translate-x-1/2 bg-white text-[#0d1b2a] font-semibold px-6 py-2 rounded-full shadow-lg border border-[#ff8c1a]/20"
-      >
-        🚀 Boost Your Brand Visibility
-      </motion.div>
+  animate={{ y: [0, -10, 0] }}
+  transition={{ duration: 3, repeat: Infinity, ease: "easeInOut" }}
+  className="absolute -bottom-8 left-1/2 -translate-x-1/2 bg-white text-[#0d1b2a] font-semibold px-6 py-2 rounded-full shadow-lg border border-[#ff8c1a]/20 flex items-center gap-2"
+>
+  <IoIosRocket className="text-[#ff8c1a] text-2xl" />
+  Boost Your Brand Visibility
+</motion.div>
     </motion.div>
 
     {/* Right Content */}
@@ -204,7 +204,12 @@ export default function DigitalMarketingServices() {
           digital marketing services near me
         </span>{" "}
         to grow your business online? At{" "}
-        <span className="font-semibold text-[#0d1b2a]">Maxzen.Tech</span>, we
+        <span
+  onClick={() => navigate("/#home2")}
+  className="font-semibold text-[#0d1b2a] cursor-pointer"
+>
+  Maxzen.Tech
+</span>, we
         deliver performance-focused strategies that elevate your brand,
         increase visibility, and turn followers into loyal customers.
       </p>
@@ -221,7 +226,7 @@ export default function DigitalMarketingServices() {
             whileHover={{ scale: 1.03 }}
             className="flex items-center gap-3 bg-white/80 border border-[#ff8c1a]/20 rounded-xl p-3 shadow-sm hover:shadow-md transition"
           >
-            <span className="text-[#ff8c1a] text-xl">✅</span>
+            <span className="text-[#ff8c1a] text-xl"><IoMdCheckmarkCircleOutline  size={30}/></span>
             <p className="text-gray-800 font-medium">{point}</p>
           </motion.div>
         ))}
@@ -233,19 +238,29 @@ export default function DigitalMarketingServices() {
           “digital marketing services near me,”
         </span>{" "}
         choose a partner who ensures measurable results. That’s where{" "}
-        <span className="font-semibold text-[#0d1b2a]">Maxzen.Tech</span> comes in.
+        <span
+  onClick={() => navigate("/#home2")}
+  className="font-semibold text-[#0d1b2a] cursor-pointer"
+>
+  Maxzen.Tech
+</span> comes in.
       </p>
 
-      <motion.button
-        whileHover={{ scale: 1.05 }}
-        transition={{ duration: 0.3 }}
-        onClick={() =>
-          window.open("https://wa.me/919059991807?text=Hi! I’d like to know more about your digital marketing services.", "_blank")
-        }
-        className="mt-4 px-10 py-3 rounded-full bg-gradient-to-r from-[#ff8c1a] to-[#0d1b2a] text-white font-semibold shadow-lg hover:shadow-2xl transition"
-      >
-        💬 Chat With Us
-      </motion.button>
+    
+
+<motion.button
+  whileHover={{ scale: 1.05 }}
+  transition={{ duration: 0.3 }}
+  onClick={() =>
+    window.open(
+      "https://wa.me/919059991807?text=Hi! I’d like to know more about your digital marketing services.",
+      "_blank"
+    )
+  }
+className="mt-4 px-10 py-3 rounded-full bg-gradient-to-r from-[#ff8c1a] to-[#0d1b2a] text-white font-semibold shadow-lg hover:shadow-2xl transition flex items-center gap-2 mx-auto">
+  <TbMessageDots className="text-2xl" />
+  Chat With Us
+</motion.button>
     </motion.div>
   </div>
 </section>
@@ -268,36 +283,7 @@ export default function DigitalMarketingServices() {
           </div>
         </section>
 
-        {/* ----------------- WINGS OF FIRE SECTION ----------------- */}
-        {/* <section className="w-full bg-gradient-to-b mt-40 from-[#0d1a3a] via-[#274d8a] to-[#5ba6ff] text-black py-16 flex flex-col items-center justify-center z-10">
-          <h1 className="text-4xl font-bold text-white mb-8 text-center">
-            WINGS OF FIRE LEGACY
-          </h1>
-
-          <div className="flex items-center justify-center mr-10 py-12 gap-10 px-4 flex-wrap">
-            <img
-              src={ab}
-              alt="Vice President Event"
-              className="w-[350px] h-[400px] object-cover rounded-2xl shadow-xl hover:scale-105 transition-transform duration-500"
-            />
-            <img
-              src={abc}
-              alt="Abdul Kalam Event"
-              className="w-[550px] h-[400px] object-cover rounded-2xl shadow-xl hover:scale-105 transition-transform duration-500"
-            />
-          </div>
-
-          <div className="flex flex-col items-center text-center mb-10 px-6 sm:px-12 md:px-20">
-            <p className="text-white text-lg max-w-5xl leading-relaxed">
-              It was an absolute honour to be part of the launch event of the
-              new and expanded edition of the book “Wings of Fire” by Dr. Arun
-              Tiwari, commemorating the 94th Birth Anniversary of Dr. APJ Abdul
-              Kalam, Former President of India, held at IIIT Hyderabad. A moment
-              of pride and inspiration, and an incredible experience listening
-              to Sri VC Sajjanar, IPS, Commissioner of Police Hyderabad.
-            </p>
-          </div>
-        </section> */}
+      
       </div>
       {/* ----------------- WHY CHOOSE LOCAL AGENCY SECTION ----------------- */}
 <section className="relative py-24 px-6 md:px-20 bg-gradient-to-br from-[#fffefe] via-[#f7fbff] to-[#eef6ff] mt-20 overflow-hidden">
@@ -328,7 +314,12 @@ export default function DigitalMarketingServices() {
       <p className="text-gray-700 text-lg mb-6 leading-relaxed">
         When you look for a <span className="font-semibold text-[#ff8c1a]">“digital marketing agency near me”</span>,
         you need a partner who truly understands your market. A local agency like
-        <span className="font-semibold text-[#0d1b2a]"> Maxzen.tech</span> provides:
+        <span
+  onClick={() => navigate("/#home2")}
+  className="font-semibold text-[#0d1b2a] cursor-pointer"
+>
+  Maxzen.tech
+</span> provides:
       </p>
 
       <div className="grid sm:grid-cols-2 lg:grid-cols-2 gap-5 mt-6">
@@ -343,7 +334,8 @@ export default function DigitalMarketingServices() {
             whileHover={{ scale: 1.03 }}
             className="flex items-center gap-3 bg-[#fff8f2] rounded-xl p-4 border border-[#ff8c1a]/20 shadow-sm"
           >
-            <span className="text-[#ff8c1a] text-xl">🔥</span>
+            <span className="text-[#ff8c1a] text-xl"><BsFire />
+</span>
             <p className="text-gray-800 font-medium">{point}</p>
           </motion.div>
         ))}
@@ -412,16 +404,23 @@ export default function DigitalMarketingServices() {
       <h2 className="text-3xl font-bold mb-4">Ready to Grow Your Business?</h2>
       <p className="text-lg mb-6">
         Contact us today and let’s take your brand visibility to the next level!
-      </p>=''
+      </p>
 
-      <button
-        onClick={() =>
-          window.open("https://wa.me/919059991807?text=Hi! I want to grow my business online with Maxzen.Tech", "_blank")
-        }
-        className="px-10 py-3 bg-white text-[#0d1b2a] font-semibold rounded-full shadow-lg hover:scale-105 transition-transform"
-      >
-        📩 Contact Us
-      </button>
+    <button
+  onClick={() =>
+    window.open(
+      "https://wa.me/919059991807?text=Hi! I want to grow my business online with Maxzen.Tech",
+      "_blank"
+    )
+  }
+  className="relative px-10 py-3 bg-white text-[#0d1b2a] font-semibold rounded-full shadow-lg hover:scale-105 transition-transform"
+>
+  {/* Icon (left side absolute) */}
+  {/* <MdPermContactCalendar className="absolute left-4 top-1/2 -translate-y-1/2 text-center text-2xl text-black-600" /> */}
+
+  {/* Centered Text */}
+  <span className="block text-center">Contact Us</span>
+</button>
     </motion.div>
 
   </div>
@@ -556,8 +555,29 @@ function AnimatedCard({ item, bgColor }) {
         className={`${bgColor} w-full md:w-1/2 h-[350px] shadow-md rounded-2xl p-8 flex flex-col justify-center hover:shadow-lg transition-all duration-300`}
       >
         <h3 className="text-2xl font-semibold text-gray-800 mb-3">{item.title}</h3>
-        <p className="text-sm text-blue-700 font-medium mb-4">{item.issuer}</p>
-        <p className="text-gray-800 leading-relaxed text-base">{item.description}</p>
+        <p className="text-sm text-blue-700 font-medium mb-4"><span
+  onClick={() => (window.location.href = "/#home2")}
+  className="cursor-pointer hover:underline"
+>
+  {item.issuer}
+</span></p>
+       <p className="text-gray-800 leading-relaxed text-base">
+  {item.description.split("Maxzen.Tech").map((part, index) =>
+    index === 0 ? (
+      part
+    ) : (
+      <>
+        <span
+          onClick={() => (window.location.href = "/#home2")}
+          className="cursor-pointer text-blue-700 font-semibold"
+        >
+          Maxzen.Tech
+        </span>
+        {part}
+      </>
+    )
+  )}
+</p>
       </motion.div>
 
     </div>

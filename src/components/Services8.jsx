@@ -169,18 +169,28 @@ const MobileAppHero = () => {
     "This wide experience is why businesses call Maxzen.Tech the best app development company in Hyderabad.";
 
   // Typing animation effect
-  useEffect(() => {
-    let index = 0;
-    const timer = setInterval(() => {
-      if (index < fullText.length) {
-        setText((prev) => prev + fullText.charAt(index));
-        index++;
-      } else {
-        clearInterval(timer);
-      }
-    }, 40);
-    return () => clearInterval(timer);
-  }, []);
+ useEffect(() => {
+  let index = 0;
+
+  const timer = setInterval(() => {
+    if (index < fullText.length) {
+      setText(fullText.slice(0, index + 1)); // ✅ FIX
+      index++;
+    } else {
+      clearInterval(timer);
+    }
+  }, 40);
+
+  return () => clearInterval(timer);
+}, []);
+  const goToHome2 = () => {
+  navigate("/");
+  setTimeout(() => {
+    document.getElementById("home2-start")?.scrollIntoView({
+      behavior: "smooth",
+    });
+  }, 200);
+};
 
 
   return (
@@ -309,7 +319,19 @@ const MobileAppHero = () => {
           transition={{ duration: 0.8, delay: 0.2 }}
           className="text-lg text-white/90 max-w-4xl mx-auto leading-relaxed"
         >
-          At <span className="text-cyan-300 font-semibold">Maxzen.Tech</span>, we are a trusted app development company in Hyderabad delivering innovative, scalable, and user-friendly mobile applications. Whether you’re a startup or an established business, our expert team builds Android, iOS, and cross-platform apps that drive growth and engage users.
+          At <span
+  onClick={() => {
+    navigate("/");
+    setTimeout(() => {
+      document.getElementById("home2-start")?.scrollIntoView({
+        behavior: "smooth",
+      });
+    }, 200);
+  }}
+  className="text-cyan-300 font-semibold cursor-pointer hover:underline"
+>
+  Maxzen.Tech
+</span>, we are a trusted app development company in Hyderabad delivering innovative, scalable, and user-friendly mobile applications. Whether you’re a startup or an established business, our expert team builds Android, iOS, and cross-platform apps that drive growth and engage users.
         </motion.p>
 
         <motion.p
@@ -396,7 +418,7 @@ const MobileAppHero = () => {
           onClick={() => navigate("/contact")}
           className="bg-gradient-to-r from-cyan-400 to-purple-500 hover:from-purple-500 hover:to-cyan-400 text-white text-lg font-semibold px-8 py-4 rounded-full shadow-lg transition-transform duration-300 hover:scale-105"
         >
-          Get Free Quote 🚀
+          Get Free Quote 
         </button>
         </motion.div>
       </div>
@@ -409,7 +431,14 @@ const MobileAppHero = () => {
     transition={{ duration: 0.8 }}
     className="text-4xl font-extrabold mb-8 bg-gradient-to-r from-cyan-300 via-purple-400 to-pink-500 text-transparent bg-clip-text"
   >
-    Why Choose Maxzen.Tech?
+    Why Choose{" "}
+<span
+  onClick={() => navigate("/#home2")}
+  className="cursor-pointer hover:underline"
+>
+  Maxzen.Tech
+</span>
+?
   </motion.h3>
 
   <div className="flex flex-col gap-6 mt-10">
@@ -537,7 +566,12 @@ const MobileAppHero = () => {
             className="overflow-hidden p-6"
           >
             <div className="grid md:grid-cols-2 gap-8">
-              <img src={item.img} className="w-100 h-100rounded-2xl object-cover border border-white/20" />
+              
+<img 
+  src={item.img} 
+  alt="Industry application"
+  className="w-100 h-100 rounded-2xl object-cover border border-white/20" 
+/>
               <p className="text-lg text-white/85 leading-relaxed">{item.content}</p>
             </div>
           </motion.div>
@@ -555,9 +589,20 @@ const MobileAppHero = () => {
   <div className="grid md:grid-cols-3 gap-10">
     {/* Travels */}
     <div className="bg-white/10 backdrop-blur-xl border border-white/20 rounded-2xl p-6 hover:shadow-[0_0_35px_rgba(0,255,255,0.3)] transition-all duration-300 text-center">
-      <img src={img12} className="w-full h-56 object-cover rounded-xl mb-5" />
+      
+<img 
+  src={img12} 
+  alt="Travel app project"
+  className="w-full h-56 object-cover rounded-xl mb-5" 
+/>
       <p className="text-lg text-white/85 leading-relaxed mb-4">
-        “Maxzen.Tech built our travel booking app with great features and smooth performance.
+        “
+<span
+  onClick={goToHome2}
+  className="text-white font-semibold cursor-pointer hover:underline"
+>
+  Maxzen.Tech
+</span>{" "} built our travel booking app with great features and smooth performance.
         Highly satisfied with their work.”
       </p>
       <p className="text-xl font-semibold text-cyan-300">Narendar Reddy</p>
@@ -572,11 +617,19 @@ const MobileAppHero = () => {
     <div className="bg-white/10 backdrop-blur-xl border border-white/20 rounded-2xl p-6 hover:shadow-[0_0_35px_rgba(0,255,255,0.3)] transition-all duration-300 text-center">
       <img 
   src={img9} 
+  alt="Bus booking app"
+
   className="w-full h-56 object-contain rounded-xl mb-5 bg-black/10 p-2"
 />
 
       <p className="text-lg text-white/85 leading-relaxed mb-4">
-        “Maxzen.Tech provided the best mobile app development services for our bus business.
+         “
+<span
+  onClick={goToHome2}
+  className="text-white font-semibold cursor-pointer hover:underline"
+>
+  Maxzen.Tech
+</span>{" "} provided the best mobile app development services for our bus business.
         Very satisfied.”
       </p>
       <p className="text-xl font-semibold text-cyan-300">Laxman Netha</p>
@@ -589,7 +642,12 @@ const MobileAppHero = () => {
 
     {/* Cars Buddy */}
     <div className="bg-white/10 backdrop-blur-xl border border-white/20 rounded-2xl p-6 hover:shadow-[0_0_35px_rgba(0,255,255,0.3)] transition-all duration-300 text-center">
-      <img src={img13} className="w-full h-56 object-cover rounded-xl mb-5" />
+      
+<img 
+  src={img13} 
+  alt="Cars Buddy app"
+  className="w-full h-56 object-cover rounded-xl mb-5" 
+/>
       <p className="text-lg text-white/85 leading-relaxed mb-4">
         “Great experience working with their app developers in Hyderabad. The Cars Buddy app works flawlessly.”
       </p>
@@ -609,10 +667,22 @@ const MobileAppHero = () => {
 
       <div className="relative z-10 max-w-4xl mx-auto px-6">
         {/* Typing Animation Line */}
-        <p className="text-lg md:text-xl text-cyan-300 font-medium mb-6 min-h-[2rem] whitespace-pre-wrap tracking-wide">
-          {text}
-          <span className="animate-pulse text-cyan-400">|</span>
-        </p>
+       <p className="text-lg md:text-xl text-cyan-300 font-medium mb-6 min-h-[2rem] whitespace-pre-wrap tracking-wide">
+  {text.split("Maxzen.Tech").map((part, index, arr) => (
+    <span key={index}>
+      {part}
+      {index !== arr.length - 1 && (
+        <span
+          onClick={goToHome2}
+          className="text-cyan-400 font-semibold cursor-pointer hover:underline"
+        >
+          Maxzen.Tech
+        </span>
+      )}
+    </span>
+  ))}
+  <span className="animate-pulse text-cyan-400">|</span>
+</p>
 
         {/* Heading */}
         <h2 className="text-4xl md:text-5xl font-bold mb-6 bg-gradient-to-r from-cyan-400 via-blue-500 to-purple-500 text-transparent bg-clip-text">
@@ -622,7 +692,13 @@ const MobileAppHero = () => {
         {/* Description */}
         <p className="text-lg md:text-xl text-gray-200 mb-10 leading-relaxed">
           If you’re searching for a reliable app development company in Hyderabad,{" "}
-          <span className="text-cyan-400 font-semibold">Maxzen.Tech</span> is your
+          <span
+  onClick={goToHome2}
+  className="text-cyan-400 font-semibold cursor-pointer hover:underline"
+>
+  Maxzen.Tech
+</span>
+   is your
           trusted partner. We specialize in mobile application development in
           Hyderabad with other services covering Android, iOS, and hybrid platforms.
         </p>

@@ -5,6 +5,7 @@ import heroImg from "../assests/hero.gif";
 import person from "../assests/person.gif";
 import team from "../assests/hc.jpg";
 import { useNavigate } from "react-router-dom";
+import { Link } from "react-router-dom";
 
 /* ----------------------------------------------------
    BULLETS FOR HOME2
@@ -110,7 +111,7 @@ const HomeCombined = () => {
       {/* =====================================================
             🔥 HOME 1 SECTION  
       ===================================================== */}
-      <section className="relative py-16 md:py-20 px-6 md:px-32 overflow-hidden">
+      <section id="home2-start" className="relative py-16 md:py-20 px-6 md:px-32 overflow-hidden"> 
         <div className="flex flex-col md:flex-row items-start justify-between gap-4 relative z-10">
 
           {/* LEFT IMAGE */}
@@ -216,10 +217,19 @@ const HomeCombined = () => {
               </p>
             </div>
 
-            <p className="text-gray-700 text-sm md:text-lg leading-relaxed max-w-md mx-auto md:mx-0">
-             Maxzen.Tech empowers businesses with innovative, ROI-focused digital growth strategies.
-We help brands establish a powerful online presence, streamline customer acquisition, and drive meaningful conversions through data-backed methods. From website development and branding to SEO, social media, and paid advertising, we ensure every step of your digital journey leads to measurable success and long-term business growth.
-            </p>
+   <p className="text-gray-700 text-sm md:text-lg leading-relaxed max-w-md mx-auto md:mx-0">
+  <Link
+  to="/"
+  onClick={() => window.scrollTo(0, 0)}
+>
+  <span className="font-bold text-gray-600 text-base md:text-xl cursor-pointer">
+    Maxzen.Tech
+  </span>
+
+  </Link>{" "}
+  empowers businesses with innovative, ROI-focused digital growth strategies.
+  We help brands establish a powerful online presence, streamline customer acquisition, and drive meaningful conversions through data-backed methods. From website development and branding to SEO, social media, and paid advertising, we ensure every step of your digital journey leads to measurable success and long-term business growth.
+</p>
 
             <motion.button
               whileHover={{ scale: 1.05 }}
@@ -267,7 +277,7 @@ We help brands establish a powerful online presence, streamline customer acquisi
 
             <motion.div
               whileHover={{ scale: 1.1 }}
-              onClick={() => navigate("/services1")}
+              onClick={() => navigate("/digital-marketing-services")}
               className="absolute flex items-center justify-center w-20 h-20 rounded-full bg-gradient-to-r from-[#d73b3e] to-[#f57c00] text-white text-sm font-semibold shadow-md cursor-pointer"
             >
               Start
@@ -292,11 +302,22 @@ We help brands establish a powerful online presence, streamline customer acquisi
           >
             <h2 className="text-4xl md:text-5xl font-extrabold text-gray-900 mb-6 text-left relative">
               Why Choose{" "}
-              <span className="text-orange-500 hover:text-gray-600">Maxzen.tech</span> for Digital Marketing in Hyderabad?
+              <span className="text-orange-500 hover:text-gray-600"><Link
+  to="/"
+  onClick={() => window.scrollTo(0, 0)}
+>Maxzen.tech</Link>{" "}</span> for Digital Marketing in Hyderabad?
             </h2>
 
             <p className="text-lg text-gray-700 leading-relaxed mb-4 text-left">
-              At Maxzen.tech, we don’t just run ads we create digital experiences that drive results...
+              At <Link
+  to="/"
+  onClick={() => window.scrollTo(0, 0)}
+>
+  <span className="font-bold text-gray-700 text-base md:text-xl cursor-pointer">
+    Maxzen.Tech
+  </span>
+
+  </Link>{" "}, we don’t just run ads we create digital experiences that drive results...
             </p>
           </motion.div>
 
@@ -610,7 +631,7 @@ export default HomeCombined;
 //               </svg>
 //             </motion.div>
 
-//             <motion.div whileHover={{ scale: 1.1 }} onClick={() => navigate("/services1")} className="absolute flex items-center justify-center w-12 h-12 rounded-full bg-gradient-to-r from-[#d73b3e] to-[#f57c00] text-white text-sm font-semibold shadow-md cursor-pointer">
+//             <motion.div whileHover={{ scale: 1.1 }} onClick={() => navigate("/DigitalMarketingServices  ")} className="absolute flex items-center justify-center w-12 h-12 rounded-full bg-gradient-to-r from-[#d73b3e] to-[#f57c00] text-white text-sm font-semibold shadow-md cursor-pointer">
 //               Start
 //             </motion.div>
 //           </div>

@@ -93,7 +93,15 @@ const SoftwareServiceImages = () => {
             </p>
 
             <p className="text-gray-600 leading-relaxed">
-              Looking for a trusted software development company in Hyderabad to build powerful, scalable, and customized solutions for your business? At <span className="font-semibold text-orange-600">Maxzen.Tech</span>, we specialize in creating custom software, web applications, and enterprise solutions that help businesses streamline operations, improve efficiency, and achieve sustainable growth.
+              Looking for a trusted software development company in Hyderabad to build powerful, scalable, and customized solutions for your business? At{" "}
+<span
+  onClick={goToHome2}
+  className="font-semibold text-orange-600 cursor-pointer hover:underline"
+>
+  Maxzen.Tech
+</span>,
+
+ we specialize in creating custom software, web applications, and enterprise solutions that help businesses streamline operations, improve efficiency, and achieve sustainable growth.
             </p>
 
             <motion.button
@@ -132,7 +140,15 @@ const SoftwareServiceImages = () => {
             transition={{ duration: 0.8 }}
             className="text-4xl md:text-5xl font-bold text-gray-900 mb-8"
           >
-            Why Choose <span className="text-orange-500">Maxzen .Tech</span> for Software Development in Hyderabad?
+            Why Choose{" "}
+<span
+  onClick={goToHome2}
+  className="text-orange-500 cursor-pointer hover:underline"
+>
+  Maxzen.Tech
+</span>
+
+ for Software Development in Hyderabad?
           </motion.h2>
 
           <motion.p
@@ -141,17 +157,25 @@ const SoftwareServiceImages = () => {
             transition={{ delay: 0.3, duration: 0.7 }}
             className="text-lg text-gray-600 max-w-3xl mx-auto mb-10"
           >
-            Maxzen .Tech is a leading software development company in Hyderabad delivering custom software solutions, web applications, and enterprise-grade software tailored to your business needs.
+            <span
+  onClick={goToHome2}
+  className="cursor-pointer hover:underline font-semibold"
+>
+  Maxzen.Tech
+</span>{" "}
+is a leading software development company
+
+ in Hyderabad delivering custom software solutions, web applications, and enterprise-grade software tailored to your business needs.
           </motion.p>
 
           <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8 max-w-5xl mx-auto">
             {[
-              "✔ Strategic location at KPHB, JNTU Road – Hyderabad’s IT hub",
-              "✔ Affordable software development services for startups and SMEs",
-              "✔ Expertise in enterprise applications, SaaS products, and mobile apps",
-              "✔ Agile development methodology for faster delivery",
-              "✔ Ongoing software maintenance & support for long-term performance",
-              "✔ Experienced developers with proven track records",
+              " Strategic location at KPHB, JNTU Road – Hyderabad’s IT hub",
+              " Affordable software development services for startups and SMEs",
+              " Expertise in enterprise applications, SaaS products, and mobile apps",
+              " Agile development methodology for faster delivery",
+              " Ongoing software maintenance & support for long-term performance",
+              " Experienced developers with proven track records",
             ].map((text, index) => (
               <motion.div
                 key={index}
@@ -160,7 +184,7 @@ const SoftwareServiceImages = () => {
                 transition={{ delay: index * 0.1 }}
                 className="bg-white shadow-lg rounded-2xl p-6 flex items-start gap-4 hover:shadow-2xl transition-shadow duration-300"
               >
-                <CheckCircle className="text-orange-500 w-7 h-7 mt-1" />
+                <CheckCircle className="text-orange-500 w-10 h-10 mt-1" />
                 <p className="text-gray-700 text-left">{text}</p>
               </motion.div>
             ))}
@@ -234,7 +258,14 @@ const SoftwareServiceImages = () => {
             transition={{ duration: 0.8 }}
             className="text-4xl md:text-5xl font-extrabold text-center mb-10 bg-gradient-to-r from-orange-600 via-red-500 to-pink-500 bg-clip-text text-transparent"
           >
-            Key Advantages of Working with <span className="text-gray-800">Maxzen .Tech</span>
+            Key Advantages of Working with <span
+  onClick={goToHome2}
+  className="text-gray-800 cursor-pointer hover:underline"
+>
+  Maxzen.Tech
+</span>
+
+
           </motion.h2>
           <motion.div
             className="mx-auto mb-16 h-1 w-48 rounded-full bg-gradient-to-r from-orange-500 via-red-500 to-pink-500 shadow-lg"
@@ -244,13 +275,13 @@ const SoftwareServiceImages = () => {
           ></motion.div>
           <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-10">
             {[
-              "Experienced Developers with industry expertise",
-              "Agile Development Process ensuring faster delivery",
-              "Affordable Pricing without compromising quality",
-              "End-to-End Solutions from planning to deployment",
-              "Client-Centric Approach focused on growth",
-              "Timely Delivery & Support",
-            ].map((text, index) => (
+  "Strategic location at KPHB, JNTU Road – Hyderabad’s IT hub",
+  "Affordable software development services for startups and SMEs",
+  "Expertise in enterprise applications, SaaS products, and mobile apps",
+  "Agile development methodology for faster delivery",
+  "Ongoing software maintenance & support for long-term performance",
+  "Experienced developers with proven track records",
+].map((text, index) => (
               <motion.div
                 key={index}
                 initial={{ opacity: 0, y: 60, scale: 0.9 }}
@@ -342,7 +373,15 @@ const SoftwareServiceImages = () => {
       transition={{ duration: 0.8, delay: 0.2 }}
       className="text-lg text-gray-700 text-center max-w-4xl mx-auto leading-relaxed mb-12"
     >
-      At <span className="font-semibold text-orange-600">Maxzen.Tech</span>, we are a results-driven software development company in Hyderabad, located at Manjeera Trinity Corporate, KPHB, JNTU Road. We specialize in building innovative, scalable, and cost-effective digital solutions that empower startups, mid-sized businesses, and enterprises to succeed in today’s fast-moving digital economy.
+      At{" "}
+<span
+  onClick={goToHome2}
+  className="font-semibold text-orange-600 cursor-pointer hover:underline"
+>
+  Maxzen.Tech
+</span>,
+
+ we are a results-driven software development company in Hyderabad, located at Manjeera Trinity Corporate, KPHB, JNTU Road. We specialize in building innovative, scalable, and cost-effective digital solutions that empower startups, mid-sized businesses, and enterprises to succeed in today’s fast-moving digital economy.
     </motion.p>
 
     {/* Split Grid Layout */}
@@ -356,7 +395,7 @@ const SoftwareServiceImages = () => {
         <h3 className="text-2xl font-bold text-gray-900 mb-4">
           Best Services for Startups & Mid-Sized Companies
         </h3>
-        <ul className="space-y-6 text-gray-700">
+        <ul className="space-y-6 text-gray-700 list-none pl-0">
           <li>
             <span className="text-orange-600 font-semibold">MVP Development:</span> For startups with innovative ideas, we build Minimum Viable Products (MVPs) that help validate concepts, attract investors, and scale quickly.
           </li>
@@ -411,7 +450,15 @@ const SoftwareServiceImages = () => {
       className="mt-20 text-center"
     >
       <h3 className="text-3xl font-bold text-gray-900 mb-4">
-        Maxzen.Tech – Your Reliable Software Partner in Hyderabad
+        <span
+  onClick={goToHome2}
+  className="cursor-pointer hover:underline"
+>
+  Maxzen.Tech
+</span>{" "}
+– Your Reliable Software Partner
+
+ in Hyderabad
       </h3>
       <p className="text-lg text-gray-700 max-w-3xl mx-auto mb-8">
         As a growing software development company in Hyderabad, Maxzen.Tech has become a trusted technology partner for startups and mid-level businesses across industries like healthcare, real estate, education, retail, and IT services.
@@ -433,11 +480,18 @@ const SoftwareServiceImages = () => {
           whileTap={{ scale: 0.95 }}
           className="bg-white border border-orange-400 text-orange-600 font-semibold py-3 px-8 rounded-full shadow hover:bg-orange-50 transition"
         >
-          💬 Chat on WhatsApp
+          <IoChatboxEllipsesOutline /> Chat on WhatsApp
         </motion.a>
       </div>
       <p className="text-gray-600 mt-6">
-        <span className="font-semibold text-orange-600">maxzen.tech</span> — Innovate. Transform. Lead.
+        <span
+  onClick={goToHome2}
+  className="font-semibold text-orange-600 cursor-pointer hover:underline"
+>
+  Maxzen.tech
+</span>
+
+ — Innovate. Transform. Lead.
       </p>
     </motion.div>
   </div>

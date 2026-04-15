@@ -208,7 +208,7 @@ const Home1AndSolutions = () => {
 
             <motion.div
               whileHover={{ scale: 1.1 }}
-              onClick={() => navigate("/services1")}
+              onClick={() => navigate("/DigitalMarketingServices  ")}
               className="absolute flex items-center justify-center w-12 h-12 rounded-full bg-gradient-to-r from-[#d73b3e] to-[#f57c00] text-white text-sm font-semibold shadow-md cursor-pointer"
             >
               Start

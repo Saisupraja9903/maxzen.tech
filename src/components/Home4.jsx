@@ -225,7 +225,16 @@ const CombinedDigitalMarketingPartners = () => {
           className="text-lg text-gray-700 max-w-3xl mx-auto leading-relaxed mb-6"
         >
           At{" "}
-          <span className="text-orange-600 font-semibold">Maxzen.tech</span>, we are a full-service
+          <span
+  onClick={() =>
+    document.getElementById("home2-start")?.scrollIntoView({
+      behavior: "smooth",
+    })
+  }
+  className="text-orange-600 font-semibold cursor-pointer"
+>
+  Maxzen.tech
+</span>, we are a full-service
           digital marketing agency helping businesses grow through smart online strategies, powerful ads,
           and expert SEO techniques. Our team focuses on generating real results — more traffic, better
           visibility, and higher conversions.
@@ -241,7 +250,16 @@ const CombinedDigitalMarketingPartners = () => {
                    We combine creativity with technology to deliver end-to-end marketing solutions for startups,
                    small businesses, and established brands across industries. Whether you need targeted ad
                    campaigns, SEO ranking improvements, or a complete social media marketing plan —{" "}
-                   <span className="text-orange-600 font-semibold">Maxzen.tech</span> is your go-to partner for
+                   <span
+  onClick={() =>
+    document.getElementById("home2-start")?.scrollIntoView({
+      behavior: "smooth",
+    })
+  }
+  className="text-orange-600 font-semibold cursor-pointer"
+>
+  Maxzen.tech
+</span> is your go-to partner for
                    growth.
                  </motion.p>
 
