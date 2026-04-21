@@ -285,7 +285,7 @@ const targetDate = new Date(
       {/* Buttons */}
       <div className="flex justify-center gap-6 mt-4 mb-4">
         <button
-  onClick={() => navigate("/digital-marketing-services")}
+  onClick={() => navigate("/digitalmarketingservices")}
   className="px-8 py-3 bg-gray-600 hover:bg-gray-400 text-white rounded-xl shadow-md font-semibold "
 >
   Services 
@@ -400,7 +400,7 @@ export default function DigitalMarketingNew() {
                 </motion.button>
                 <motion.button
                   whileHover={{ scale: 1.05 }}
-                   onClick={() => navigate("/digital-marketing-services")}
+                   onClick={() => navigate("/digitalmarketingservices")}
                   className="px-7 py-3 bg-white border border-purple-300 text-purple-700 font-semibold rounded-full hover:bg-purple-50 transition"
                 >
                   Learn More

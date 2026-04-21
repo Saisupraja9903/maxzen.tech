@@ -19,11 +19,6 @@ import { IoIosRocket, IoMdCheckmarkCircleOutline} from "react-icons/io";
  import { TbMessageDots } from "react-icons/tb";
 import { BsFire } from "react-icons/bs";
 // import { MdPermContactCalendar } from "react-icons/md";
-
-
-
-
-
 // import { SiI18Next } from "react-icons/si";
 
 import { useEffect,  useState } from "react";

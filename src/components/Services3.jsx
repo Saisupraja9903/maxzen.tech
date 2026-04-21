@@ -22,7 +22,7 @@ import testImg from "../assests/webdev4.jpg";
 import Header from "./Header";
 import Footer from "./Footer";
 import { useNavigate } from "react-router-dom";
-import { useEffect } from "react";
+import { useEffect, useState } from "react";
 // import project1 from "../assests/webdev6.png";
 // import project2 from "../assests/webdev7.png";
 // import project3 from "../assests/webdev8.png";
@@ -37,24 +37,48 @@ const fadeUp = {
   }),
 };
 
-const WebDevelopment = () => {
+const Webdevelopement = () => {
   const services = [
-    { title: "Fast Loading Speed", desc: "Visitors don’t have to wait; your site opens quickly and keeps them engaged." },
-    { title: "Easy Navigation", desc: "Clear menus and layouts help users find what they need without confusion." },
-    { title: "Mobile-Friendly Design", desc: "Your website looks and works perfectly on mobiles, tablets, and desktops." },
-    { title: "SEO-Friendly Structure", desc: "Customers easily discover your business on Google and other search engines." },
-    { title: "Secure & Reliable", desc: "Visitors feel safe browsing, sharing details, or making transactions." },
-    { title: "Engaging User Experience", desc: "Interactive design and smooth flow keep users interested and encourage them to return." },
-  ];
-
-  const features = [
-    { icon: <Code2 />, text: "Custom Website Development" },
-    { icon: <Globe />, text: "WordPress Development" },
-    { icon: <Smartphone />, text: "Responsive & Mobile-Friendly Design" },
-    { icon: <ShoppingCart />, text: "E-Commerce Solutions" },
-    { icon: <Layers />, text: "CMS Integration" },
-    { icon: <MonitorSmartphone />, text: "Web Application Development" },
-  ];
+  "Skilled team with experience in latest web technologies",
+  "Customized website solutions based on business needs",
+  "SEO optimized structure for better visibility",
+  "Fast responsive and secure website development",
+  "Dedicated support and ongoing maintenance",
+  "building digital platforms that drive real business results",
+];
+const [activeFeature, setActiveFeature] = useState(0);
+ const features = [
+  {
+    icon: <Code2 />,
+    text: "Custom Website Development",
+    content: "We design and develop websites tailored to your specific business goals."
+  },
+  {
+    icon: <Globe />,
+    text: "WordPress Development",
+    content: "We create easy to manage WordPress websites with strong SEO foundation."
+  },
+  {
+    icon: <Smartphone />,
+    text: "Responsive Web Design",
+    content: "We ensure your website works seamlessly across all devices and screen sizes."
+  },
+  {
+    icon: <ShoppingCart />,
+    text: "E-Commerce Solutions",
+    content: "We build ecommerce platforms that are secure user friendly and optimized for conversions."
+  },
+  {
+    icon: <Layers />,
+    text: "Website Redesign Services",
+    content: "We upgrade existing websites to improve design performance and user experience."
+  },
+  {
+    icon: <MonitorSmartphone />,
+    text: "Web Application Development",
+    content: "We provide complete website development services to help your business grow online."
+  },
+];
 
   const processSteps = [
     {
@@ -96,16 +120,16 @@ const WebDevelopment = () => {
 <><Header/>
     <div className="bg-gradient-to-b from-white via-[#fff5f5] to-[#fff1f8] text-gray-800 overflow-hidden">
       {/* ================= HERO SECTION ================= */}
-      <section className="relative bg-orange-100 overflow-hidden text-white">
-        <h1 className="fixed mt-20 text-[6rem] md:text-[8rem] font-extrabold text-[#fc8d71]/40 top-[-40px] left-1/2 -translate-x-1/2 select-none">
+      <section className="relative bg-orange-10 overflow-hidden text-white">
+        <h1 className="fixed mt-20 text-[6rem] md:text-[8rem] font-bold text-[#fc8d71]/40 top-[-40px] left-1/2 -translate-x-1/2 select-none">
           Web_Development
         </h1>
 
         <div className="relative z-10 max-w-7xl mx-auto px-6 md:px-12 py-16">
           <div className="flex flex-wrap justify-between items-center mb-8">
-            <div className="bg-[#0d1b2a] text-white text-lg font-semibold px-6 py-2 rounded-tr-3xl rounded-bl-3xl shadow-md">
-              WEB DEVELOPMENT SERVICES
-            </div>
+            <h1 className="bg-[#0d1b2a] text-white text-lg font-semibold px-6 py-2 rounded-tr-3xl rounded-bl-3xl shadow-md">
+              WEB DEVELOPMENT SERVICES IN HYDERABAD
+            </h1>
             <button
              onClick={() => navigate("/contact")}
              className="bg-[#0d1b2a] text-white px-6 py-2 rounded-full font-semibold hover:bg-[#172a45] transition-all shadow-md">
@@ -144,7 +168,11 @@ const WebDevelopment = () => {
               className="lg:w-1/2 w-full"
             >
               <p className="text-black/90 mt-20 leading-relaxed text-justify bg-[#0d1b2a]/20 backdrop-blur-sm p-6 rounded-2xl shadow-md border border-white/20">
-                Web development services in Hyderabad by{" "}
+                
+Searching for a professional website design company in Hyderabad to grow your business online Maxzen.tech delivers high quality website design and development solutions that focus on performance user experience and business growth
+
+We are a results oriented digital marketing agency offering services like web development SEO social media marketing and app development Our approach is simple we create websites that attract visitors engage users and convert them into customers
+At {" "}
                 
  <span
   onClick={() => navigate("/#home2")}
@@ -152,12 +180,25 @@ const WebDevelopment = () => {
 >
   Maxzen.Tech
 </span>
- are designed to go beyond just great design — we craft websites that truly accelerate your business growth.Our approach focuses on creating mobile-friendly, SEO-optimized, and customer-focused solutions that not only attract visitors but also convert them into loyal clients. By combining creativity, modern technology, and smart strategies, we make sure your website becomes a powerful digital asset that drives long-term success for your brand.
+ we take time to understand your business your audience and your goals Based on this we build a customized website that represents your brand and supports your long term success
+
               </p>
             </motion.div>
           </div>
 
-          <div className="mt-14 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
+          {/* Heading */}
+<h3 className="mt-14 text-2xl md:text-3xl font-bold text-center text-[#0d1b2a] mb-6">
+  Why Choose{" "}
+  <span
+    onClick={() => navigate("/#home2")}
+    className="text-orange-500 cursor-pointer hover:underline"
+  >
+    Maxzen.Tech
+  </span>
+</h3>
+
+{/* Cards */}
+<div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
             {services.map((service, index) => (
               <motion.div
                 key={index}
@@ -170,10 +211,9 @@ const WebDevelopment = () => {
                 <div className="flex items-center justify-center w-12 h-12 rounded-full bg-[#0d1b2a] text-white text-xl font-bold mb-4">
                   {index + 1}
                 </div>
-                <h3 className="text-lg md:text-xl font-semibold text-[#0d1b2a] mb-2">
-                  {service.title}
-                </h3>
-                <p className="text-gray-700 leading-relaxed">{service.desc}</p>
+                <p className="text-gray-700 text-center font-medium leading-relaxed">
+  {service}
+</p>
               </motion.div>
             ))}
           </div>
@@ -188,18 +228,39 @@ const WebDevelopment = () => {
           transition={{ duration: 0.6 }}
           className="text-3xl md:text-4xl font-extrabold text-center text-[#0d1b2a] mb-10"
         >
-          Why Choose{" "}
+          Web Development Services in Hyderabad and KPHB
+{/* {" "}
 <span
   onClick={() => navigate("/#home2")}
   className="cursor-pointer hover:underline"
 >
   Maxzen.Tech
 </span>{" "}
-for Web Development Services
+for Web Development Services */}
+
+
  
         </motion.h2>
+            <p className="text-black/90 mb-10 mt-10 leading-relaxed text-justify bg-[#0d1b2a]/20 backdrop-blur-sm p-6 rounded-2xl shadow-md border border-white/20">
+ 
+                
+ <span
+  onClick={() => navigate("/#home2")}
+  className="font-semibold text-orange-500 cursor-pointer hover:underline"
+>
+  Maxzen.Tech
+</span> {" "}
+ 
+is recognized as a best web development company in Hyderabad for delivering modern scalable and SEO optimized websites
 
-        <div className="max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-3 gap-10 items-center">
+We develop websites with strong technical structure fast loading speed and smooth user experience Our goal is to help your business stand out online and generate consistent leads
+       Maxzen.tech offers reliable web development services in Hyderabad including Kukatpally and KPHB We support local businesses with tailored digital solutions
+
+If you are looking for a web development company in KPHB we provide affordable and efficient services with quick turnaround time
+       
+              </p>
+
+        <div className="max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-3 gap-6 mb-16 items-center">
           <motion.div
             initial={{ opacity: 0, x: -40 }}
             whileInView={{ opacity: 1, x: 0 }}
@@ -213,7 +274,7 @@ for Web Development Services
             />
           </motion.div>
 
-          <motion.div
+          {/* <motion.div
             initial={{ opacity: 0, y: 40 }}
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6 }}
@@ -229,7 +290,24 @@ for Web Development Services
 </span>
 , we don’t just build websites — we create high-performance digital ecosystems for your brand’s success.
             </p>
-          </motion.div>
+          </motion.div> */}
+
+          <motion.div
+  initial={{ opacity: 0, y: 40 }}
+  whileInView={{ opacity: 1, y: 0 }}
+  transition={{ duration: 0.6 }}
+  className="md:col-span-1 text-center md:text-left"
+>
+  <motion.p
+    key={activeFeature}
+    initial={{ opacity: 0, y: 10 }}
+    animate={{ opacity: 1, y: 0 }}
+    transition={{ duration: 0.4 }}
+    className="text-gray-700 text-lg leading-relaxed"
+  >
+    {features[activeFeature].content}
+  </motion.p>
+</motion.div>
 
           <motion.div
             initial={{ opacity: 0, x: 40 }}
@@ -239,9 +317,15 @@ for Web Development Services
           >
             {features.map((feature, i) => (
               <div
-                key={i}
-                className="flex items-center gap-3 bg-[#f8fafc] px-4 py-3 rounded-xl shadow hover:shadow-md hover:-translate-y-1 transition-all duration-300"
-              >
+  key={i}
+  onClick={() => setActiveFeature(i)}
+  className={`flex items-center gap-3 px-4 py-3 rounded-xl shadow cursor-pointer transition-all duration-300
+    ${
+      activeFeature === i
+        ? "bg-[#ff8c1a]/10 border border-[#ff8c1a]"
+        : "bg-[#f8fafc] hover:shadow-md hover:-translate-y-1"
+    }`}
+>
                 <span className="text-[#ff8c1a]">{feature.icon}</span>
                 <span className="font-medium text-gray-800">{feature.text}</span>
               </div>
@@ -251,7 +335,7 @@ for Web Development Services
       </section>
 
       {/* ================= OUR PROCESS SECTION (WRAPPED IN ONE CARD) ================= */}
-      <section className="py-28 px-6 md:px-12 bg-gradient-to-b from-[#fff9f3] via-white to-[#fff6ef] relative overflow-hidden">
+      <section className="py-16 px-6  md:px-12 bg-gradient-to-b from-[#fff9f3] via-white to-[#fff6ef] relative overflow-hidden">
         <motion.div
           initial={{ opacity: 0, y: 40 }}
           whileInView={{ opacity: 1, y: 0 }}
@@ -313,8 +397,56 @@ for Web Development Services
           </div>
         </motion.div>
       </section>
+      <section className="py-20 px-6 md:px-12 bg-gradient-to-b from-white to-[#fff5f0]">
+  
+  {/* H2 Heading */}
+  <h2 className="text-3xl md:text-4xl font-extrabold text-center text-[#0d1b2a] mb-6">
+    Digital Marketing Services by{" "}
+    <span className="text-[#ff8c1a]">Maxzen.Tech</span>
+  </h2>
+
+  {/* Description */}
+  <p className="max-w-3xl mx-auto text-center text-gray-700 mb-12 leading-relaxed">
+    Along with website development, we provide digital marketing services to improve your online presence and grow your business effectively.
+  </p>
+
+  {/* Services Grid */}
+  <div className="max-w-6xl mx-auto grid grid-cols-1 md:grid-cols-3 gap-8">
+    
+    {/* SEO */}
+    <div className="bg-white p-6 rounded-2xl shadow-md hover:shadow-xl transition-all duration-300">
+      <h3 className="text-xl font-bold text-[#0d1b2a] mb-3">
+        SEO Services
+      </h3>
+      <p className="text-gray-600 leading-relaxed">
+        We help your website rank higher on search engines and attract quality organic traffic.
+      </p>
+    </div>
+
+    {/* Social Media */}
+    <div className="bg-white p-6 rounded-2xl shadow-md hover:shadow-xl transition-all duration-300">
+      <h3 className="text-xl font-bold text-[#0d1b2a] mb-3">
+        Social Media Marketing
+      </h3>
+      <p className="text-gray-600 leading-relaxed">
+        We build your brand presence and engagement across all major social media platforms.
+      </p>
+    </div>
+
+    {/* App Development */}
+    <div className="bg-white p-6 rounded-2xl shadow-md hover:shadow-xl transition-all duration-300">
+      <h3 className="text-xl font-bold text-[#0d1b2a] mb-3">
+        App Development
+      </h3>
+      <p className="text-gray-600 leading-relaxed">
+        We develop mobile applications that enhance user experience and expand your business reach.
+      </p>
+    </div>
+
+  </div>
+</section>
      {/* ================= PORTFOLIO / PROJECTS SECTION ================= */}
-<section className="py-24 px-6 md:px-12 bg-gradient-to-b from-[#fff5f0] via-white to-[#fffaf7] overflow-hidden">
+<section className="py-12 px-6 md:px-12 bg-gradient-to-b from-[#fff5f0] via-white to-[#fffaf7] overflow-hidden">
   <h2 className="text-4xl md:text-5xl font-extrabold text-center text-[#0d1b2a] mb-14">
     Portfolio / <span className="text-[#ff8c1a]">Projects</span>
   </h2>
@@ -451,11 +583,133 @@ for Web Development Services
   </div>
 </section>
 
+<section className="py-24 px-6 md:px-12 bg-gradient-to-b from-white via-[#fff7f2] to-white">
 
+  {/* ================= WHY SECTION ================= */}
+  <div className="max-w-7xl mx-auto grid md:grid-cols-2 gap-12 items-center mb-24">
+
+    {/* LEFT CONTENT */}
+    <div>
+      <h2 className="text-4xl md:text-5xl font-extrabold text-[#0d1b2a] mb-6 leading-tight">
+        Why Your Business Needs a <span className="text-[#ff8c1a]">Professional Website</span>
+      </h2>
+
+      <p className="text-gray-700 mb-4 leading-relaxed">
+        A well-designed website builds trust and credibility while improving your online visibility.
+      </p>
+
+      <p className="text-gray-700 leading-relaxed">
+        It helps you reach potential customers, generate leads, and increase conversions — all while strengthening your brand presence.
+      </p>
+    </div>
+
+    {/* RIGHT DESIGN CARDS */}
+    <div className="grid gap-6">
+      <div className="bg-white p-6 rounded-2xl shadow-lg border-l-4 border-[#ff8c1a]">
+        <h3 className="font-semibold text-[#0d1b2a] mb-2">Build Trust</h3>
+        <p className="text-gray-600 text-sm">Professional websites improve credibility instantly.</p>
+      </div>
+
+      <div className="bg-white p-6 rounded-2xl shadow-lg border-l-4 border-[#ff8c1a]">
+        <h3 className="font-semibold text-[#0d1b2a] mb-2">Increase Visibility</h3>
+        <p className="text-gray-600 text-sm">Reach more customers through search engines.</p>
+      </div>
+
+      <div className="bg-white p-6 rounded-2xl shadow-lg border-l-4 border-[#ff8c1a]">
+        <h3 className="font-semibold text-[#0d1b2a] mb-2">Boost Conversions</h3>
+        <p className="text-gray-600 text-sm">Turn visitors into paying customers effectively.</p>
+      </div>
+    </div>
+  </div>
+
+
+  {/* ================= CTA SECTION (MODERN CARDS) ================= */}
+  <div className="max-w-7xl mx-auto grid md:grid-cols-3 gap-8 mb-24">
+
+    <div className="group bg-gradient-to-br from-orange-200 text-black p-8 rounded-3xl shadow-xl hover:scale-105 transition-all">
+      <h3 className="text-xl font-bold mb-3">Free Consultation</h3>
+      <p className="mb-5 text-black/90">Build your website with expert guidance.</p>
+     {/* CARD 1 */}
+<button
+  onClick={() => navigate("/digitalmarketingservices")}
+  className="bg-white text-[#ff8c1a] px-5 py-2 rounded-full font-semibold hover:scale-105 transition"
+>
+  Get Started
+</button>
+    </div>
+
+    <div className="group bg-gray-400 text-white p-8 rounded-3xl shadow-xl hover:scale-105 transition-all">
+      <h3 className="text-xl font-bold mb-3">Quick Support</h3>
+      <p className="mb-5 text-white/80">Chat with our experts instantly.</p>
+      {/* CARD 2 */}
+<button
+  onClick={() => window.open("https://wa.me/918498989844", "_blank")}
+  className="bg-[#ff8c1a] px-5 py-2 rounded-full font-semibold hover:scale-105 transition"
+>
+  WhatsApp Chat
+</button>
+    </div>
+
+    <div className="group bg-white p-8 rounded-3xl shadow-xl border hover:scale-105 transition-all">
+      <h3 className="text-xl font-bold text-[#0d1b2a] mb-3">Get a Quote</h3>
+      <p className="text-gray-600 mb-5">Start your digital journey today.</p>
+      {/* CARD 3 */}
+<button
+  onClick={() => navigate("/contact")}
+  className="bg-[#0d1b2a] text-white px-5 py-2 rounded-full hover:scale-105 transition"
+>
+  Request Now
+</button>
+    </div>
+
+  </div>
+
+
+  {/* ================= FAQ (MODERN STYLE) ================= */}
+  <div className="max-w-4xl mx-auto">
+
+    <h2 className="text-4xl font-extrabold text-center text-[#0d1b2a] mb-12">
+      FAQ – Website Design Company
+    </h2>
+
+    <div className="space-y-4">
+
+      {[
+        {
+          q: "Which is the best website design company in Hyderabad?",
+          a: "Maxzen.Tech offers customized web development and digital marketing solutions."
+        },
+        {
+          q: "Why choose Maxzen.Tech?",
+          a: "We provide SEO-optimized, fast, and high-quality websites with full support."
+        },
+        {
+          q: "Do you provide services in KPHB & Kukatpally?",
+          a: "Yes, we serve all areas including KPHB and Kukatpally."
+        },
+        {
+          q: "What is the cost of website development?",
+          a: "Pricing depends on features and requirements. We offer flexible packages."
+        },
+        {
+          q: "Will my website be SEO optimized?",
+          a: "Yes, all our websites are built with SEO best practices."
+        }
+      ].map((item, i) => (
+        <div key={i} className="bg-white p-5 rounded-xl shadow-md hover:shadow-lg transition">
+          <h3 className="font-semibold text-[#0d1b2a]">{item.q}</h3>
+          <p className="text-gray-600 mt-2 text-sm">{item.a}</p>
+        </div>
+      ))}
+
+    </div>
+  </div>
+
+</section>
 
     </div>
    < Footer/></>
   );
 };
 
-export default WebDevelopment;
+export default Webdevelopement;

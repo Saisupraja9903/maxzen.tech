@@ -10,9 +10,9 @@ const Home1AndSolutions = () => {
   const serviceRoutes = {
     "Web Designing": "/serviceswd",
     "SEO Optimization": "/services4",
-    "Web Development": "/services3",
+    "Web Development": "/Webdevelopement",
     "App Development": "/services8",
-    "Social Media Marketing": "/services5",
+    "Social Media Marketing": "/Social-Media-Marketing-Agency-in-Hyderabad",
     "Software Development": "/services9",
     "Cloud Computing": "/services7",
   };

@@ -59,7 +59,7 @@ function App() {
         <Route path="/" element={<Home />} />
         <Route path="/about" element={<Aboutsection />} />
         {/* <Route path="/Services" element={<DigitalMarketingServices   />} /> */}
-        <Route path="/digital-marketing-services" element={<DigitalMarketingServices />} />
+        <Route path="/digitalmarketingservices" element={<DigitalMarketingServices />} />
         <Route path="/team" element={<Teampage />} />
         <Route path="/blog" element={<BlogZigzagPage />} />
         <Route path="/contact" element={<ContactPage />} />
@@ -71,9 +71,9 @@ function App() {
         <Route path="/termsandconditions" element={<TermsAndConditions />} />
 
         
-        <Route path="/services3" element={<Services3 />} />
+        <Route path="/webdevelopement" element={<Services3 />} />
         <Route path="/services4" element={<Services4 />} />
-        <Route path="/services5" element={<Services5/>} />
+        <Route path="/socialmediamarketing" element={<Services5 />} />
         <Route path="/services9" element={<Services9 />} />
         <Route path="/services7" element={<Services7 />} />
         <Route path="/services6" element={<Services6 />} />

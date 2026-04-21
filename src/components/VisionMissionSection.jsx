@@ -44,7 +44,8 @@ const VisionMissionSection = () => {
               </span>{" "}
               provide SEO, <span className="font-semibold">Paid Ads</span>, and{" "}
               <span className="underline underline-offset-2 decoration-orange-500 font-semibold">
-                Social Media Marketing Agency in Hyderabad
+                Social-Media-Marketing-Agency-in-Hyderabad
+
               </span>{" "}
               that drive measurable ROI.
             </li>

@@ -170,10 +170,10 @@ const Header = () => {
             {/* SERVICES */}
             <li
               className={`relative group cursor-pointer transition-colors ${
-                isActive("/digital-marketing-services") ? "text-red-500 font-bold" : "text-black"
+                isActive("/digitalmarketingservices") ? "text-red-500 font-bold" : "text-black"
               } hover:text-yellow-400`}
             >
-              <span onClick={() => handleNavigation("/digital-marketing-services")}>Services</span>
+              <span onClick={() => handleNavigation("/digitalmarketingservices")}>Services</span>
 
               {/* Dropdown */}
              <ul className="absolute left-0 mt-2 w-64 bg-[#F2F5D1] shadow-lg rounded-xl text-left border border-gray-200 opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-300 z-50">
@@ -183,7 +183,7 @@ const Header = () => {
     Digital Marketing
   </li>
 
-  <li onClick={() => handleNavigation("/services5")}
+  <li onClick={() => handleNavigation("/socialmediamarketing")}
       className="px-4 py-2 rounded-lg text-black transition hover:bg-gradient-to-r hover:from-[#ff8c1a] hover:to-[#0d1b2a] hover:text-white">
     Social Media Marketing
   </li>
@@ -193,7 +193,7 @@ const Header = () => {
     Woo-commerce Website
   </li>
 
-  <li onClick={() => handleNavigation("/services3")}
+  <li onClick={() => handleNavigation("/webdevelopement")}
       className="px-4 py-2 rounded-lg text-black transition hover:bg-gradient-to-r hover:from-[#ff8c1a] hover:to-[#0d1b2a] hover:text-white">
     Web Development
   </li>
@@ -282,7 +282,7 @@ const Header = () => {
 
       <li
         className="cursor-pointer hover:text-yellow-400"
-        onClick={() => handleNavigation("/digital-marketing-services")}>
+        onClick={() => handleNavigation("/digitalmarketingservices")}>
         Services
       </li>
 
