@@ -8,7 +8,7 @@ import { useNavigate } from "react-router-dom";
 const Home1AndSolutions = () => {
   const navigate = useNavigate();
   const serviceRoutes = {
-    "Web Designing": "/serviceswd",
+    "Web Designing": "/websitedesignCompanyinHyderabad",
     "SEO Optimization": "/services4",
     "Web Development": "/Webdevelopement",
     "App Development": "/services8",

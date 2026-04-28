@@ -121,38 +121,33 @@ const [activeFeature, setActiveFeature] = useState(0);
     <div className="bg-gradient-to-b from-white via-[#fff5f5] to-[#fff1f8] text-gray-800 overflow-hidden">
       {/* ================= HERO SECTION ================= */}
       <section className="relative bg-orange-10 overflow-hidden text-white">
-        <h1 className="fixed mt-20 text-[6rem] md:text-[8rem] font-bold text-[#fc8d71]/40 top-[-40px] left-1/2 -translate-x-1/2 select-none">
+        {/* Hide the large heading on mobile, show on md+ */}
+        <h1 className="fixed mt-20 hidden md:block text-[6rem] md:text-[8rem] font-bold text-[#fc8d71]/40 top-[-40px] left-1/2 -translate-x-1/2 select-none z-0">
           Web_Development
         </h1>
 
-        <div className="relative z-10 max-w-7xl mx-auto px-6 md:px-12 py-16">
-          <div className="flex flex-wrap justify-between items-center mb-8">
-            <h1 className="bg-[#0d1b2a] text-white text-lg font-semibold px-6 py-2 rounded-tr-3xl rounded-bl-3xl shadow-md">
+        <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 md:px-12 py-10 sm:py-16">
+          <div className="flex flex-wrap justify-end items-center mb-20">
+            {/* <h1 className="bg-[#0d1b2a] text-white text-lg font-semibold px-6 py-2 rounded-tr-3xl rounded-bl-3xl shadow-md">
               WEB DEVELOPMENT SERVICES IN HYDERABAD
-            </h1>
-            <button
+            </h1> */}
+            {/* <button
              onClick={() => navigate("/contact")}
              className="bg-[#0d1b2a] text-white px-6 py-2 rounded-full font-semibold hover:bg-[#172a45] transition-all shadow-md">
               Get A Free Consultation
-            </button>
+            </button> */}
           </div>
 
-          <div className="flex flex-col lg:flex-row items-center justify-between gap-10 mt-10">
+          <div className="flex flex-col lg:flex-row items-center justify-between gap-10  -mt-20">
             <motion.div
               initial={{ opacity: 0, x: -40 }}
               whileInView={{ opacity: 1, x: 0 }}
               transition={{ duration: 0.6 }}
               className="lg:w-1/2 w-full"
             >
-              <h2 className="text-4xl md:text-5xl text-black font-extrabold leading-tight">
-                Visitor <span className="text-orange-500">Benefits</span> with{" "}
-                <span
-  onClick={() => navigate("/#home2")}
-  className="text-[#0d1b2a] cursor-pointer hover:underline"
->
-  Maxzen.Tech
-</span>
- Websites
+              <h2 className="text-4xl md:text-5xl text-gray-600 font-extrabold leading-tight">
+               WEB DEVELOPMENT SERVICES IN HYDERABAD
+ 
               </h2>
               <button 
               onClick={() => navigate("/DigitalMarketingServices  ")}
@@ -169,7 +164,7 @@ const [activeFeature, setActiveFeature] = useState(0);
             >
               <p className="text-black/90 mt-20 leading-relaxed text-justify bg-[#0d1b2a]/20 backdrop-blur-sm p-6 rounded-2xl shadow-md border border-white/20">
                 
-Searching for a professional website design company in Hyderabad to grow your business online Maxzen.tech delivers high quality website design and development solutions that focus on performance user experience and business growth
+Searching for a professional<i> <b>website design company in Hyderabad</b> </i> to grow your business online Maxzen.tech delivers high quality website design and development solutions that focus on performance user experience and business growth
 
 We are a results oriented digital marketing agency offering services like web development SEO social media marketing and app development Our approach is simple we create websites that attract visitors engage users and convert them into customers
 At {" "}
@@ -251,7 +246,7 @@ for Web Development Services */}
   Maxzen.Tech
 </span> {" "}
  
-is recognized as a best web development company in Hyderabad for delivering modern scalable and SEO optimized websites
+is recognized as a<b> best web development company in Hyderabad </b> for delivering modern scalable and SEO optimized websites
 
 We develop websites with strong technical structure fast loading speed and smooth user experience Our goal is to help your business stand out online and generate consistent leads
        Maxzen.tech offers reliable web development services in Hyderabad including Kukatpally and KPHB We support local businesses with tailored digital solutions
@@ -446,12 +441,12 @@ If you are looking for a web development company in KPHB we provide affordable a
   </div>
 </section>
      {/* ================= PORTFOLIO / PROJECTS SECTION ================= */}
-<section className="py-12 px-6 md:px-12 bg-gradient-to-b from-[#fff5f0] via-white to-[#fffaf7] overflow-hidden">
+{/* <section className="py-12 px-6 md:px-12 bg-gradient-to-b from-[#fff5f0] via-white to-[#fffaf7] overflow-hidden">
   <h2 className="text-4xl md:text-5xl font-extrabold text-center text-[#0d1b2a] mb-14">
     Portfolio / <span className="text-[#ff8c1a]">Projects</span>
   </h2>
 
-  {/* ⭐ Horizontal Scroll + Hidden Scrollbar */}
+  
   <div className="relative max-w-7xl mx-auto overflow-x-auto overflow-y-hidden rounded-3xl shadow-2xl border border-[#ff8c1a]/20 scrollbar-hide">
     
     <div className="flex gap-6 py-4 px-4 w-max">
@@ -490,99 +485,47 @@ If you are looking for a web development company in KPHB we provide affordable a
   </div>
 
   <div className="text-center mt-10"></div>
-</section>
+</section> */}
 
 
 
 
 
      {/* ================= INTRO SECTION: MAXZEN.TECH - TOP WEB DEVELOPMENT SERVICES ================= */}
-<section className="relative overflow-hidden py-28 px-6 md:px-12 bg-gradient-to-b from-[#fff8f3] via-white to-[#fff3e6]">
-  {/* Floating Gradient Orbs */}
-  <motion.div
-    className="absolute top-[-100px] left-[-80px] w-72 h-72 bg-[#ff8c1a]/20 rounded-full blur-3xl"
-    animate={{ x: [0, 30, 0], y: [0, 20, 0] }}
-    transition={{ duration: 10, repeat: Infinity, ease: "easeInOut" }}
-  />
-  <motion.div    className="absolute bottom-[-100px] right-[-80px] w-80 h-80 bg-[#0d1b2a]/10 rounded-full blur-3xl"
-    animate={{ x: [0, -30, 0], y: [0, -20, 0] }}
-    transition={{ duration: 12, repeat: Infinity, ease: "easeInOut" }}
-  />
+{/* ================= OUR LOCAL STRENGTH SECTION ================= */}
+<section className="py-20 px-6 md:px-12 bg-white">
+  <h3 className="text-2xl md:text-3xl font-bold text-center text-[#0d1b2a] mb-10">
+    Our <span className="text-[#ff8c1a]">Local Strength</span>
+  </h3>
 
-  <div className="relative z-10 max-w-5xl mx-auto text-center">
-    {/* Animated Heading */}
-    <motion.h2
-      initial={{ opacity: 0, y: 40 }}
-      whileInView={{ opacity: 1, y: 0 }}
-      transition={{ duration: 0.8 }}
-      className="text-4xl md:text-5xl font-extrabold text-[#0d1b2a] leading-tight mb-6"
-    >
-      <span
-  onClick={() => navigate("/#home2")}
-  className="text-[#ff8c1a] cursor-pointer hover:underline"
->
-  Maxzen.Tech
-</span>
- – providing Top Web Development Services
-    </motion.h2>
-
-    {/* Glowing underline */}
-    <motion.div
-      initial={{ scaleX: 0 }}
-      whileInView={{ scaleX: 1 }}
-      transition={{ duration: 0.8, ease: "easeOut" }}
-      className="mx-auto mb-10 h-1 w-24 bg-gradient-to-r from-[#ff8c1a] to-[#0d1b2a] rounded-full origin-left"
-    />
-
-    {/* Paragraph Card 1 */}
-    <motion.div
-      initial={{ opacity: 0, y: 40 }}
-      whileInView={{ opacity: 1, y: 0 }}
-      transition={{ duration: 0.7 }}
-      className="bg-white/80 backdrop-blur-sm border border-[#ff8c1a]/20 rounded-3xl shadow-xl p-8 md:p-10 mb-6 hover:shadow-2xl hover:-translate-y-1 transition-all duration-500"
-    >
-      <p className="text-lg md:text-xl text-gray-700 leading-relaxed">
-        At{" "}
-<span
-  onClick={() => navigate("/#home2")}
-  className="font-semibold text-[#ff8c1a] cursor-pointer hover:underline"
->
-  Maxzen.Tech
-</span>
-, we provide top{" "}
-        <span className="font-semibold text-[#0d1b2a]">web development services in Hyderabad</span> designed to help
-        businesses thrive in the digital era. Our websites are{" "}
-        <span className="font-semibold text-[#0d1b2a]">responsive, SEO-optimized,</span> and{" "}
-        <span className="font-semibold text-[#0d1b2a]">user-focused</span>, ensuring every visitor leaves with a lasting
-        impression.
-      </p>
-    </motion.div>
-
-    {/* Paragraph Card 2 */}
-    <motion.div
-      initial={{ opacity: 0, y: 40 }}
-      whileInView={{ opacity: 1, y: 0 }}
-      transition={{ duration: 0.7, delay: 0.2 }}
-      className="bg-[#0d1b2a]/90 text-white rounded-3xl p-8 md:p-10 shadow-2xl hover:shadow-[0_8px_30px_rgba(13,27,42,0.4)] hover:-translate-y-1 transition-all duration-500"
-    >
-      <p className="text-lg md:text-xl leading-relaxed">
-        A great website should do more than look good — it should perform efficiently, load fast, and deliver an
-        exceptional user experience. That’s why we merge elegant design with clean coding and modern technology to
-        create websites that elevate your business and brand presence.
-      </p>
-
-      <motion.button
-        onClick={() => navigate("/contact")}
-        whileHover={{ scale: 1.05 }}
-        transition={{ duration: 0.3 }}
-        className="mt-8 bg-[#ff8c1a] text-white px-8 py-3 rounded-full font-semibold shadow-md hover:shadow-lg transition-all"
+  <div className="max-w-6xl mx-auto grid grid-cols-1 sm:grid-cols-2 gap-6">
+    
+    {[
+      "Strong understanding of Hyderabad business environment",
+      "Customized solutions based on industry requirements",
+      "Transparent communication and regular updates",
+      "Flexible pricing options for startups and small businesses",
+    ].map((item, index) => (
+      <motion.div
+        key={index}
+        initial={{ opacity: 0, y: 40 }}
+        whileInView={{ opacity: 1, y: 0 }}
+        transition={{ delay: index * 0.2, duration: 0.5 }}
+        className="bg-[#f8fafc] p-6 rounded-2xl shadow-md hover:shadow-xl hover:-translate-y-1 transition-all duration-300 flex items-start gap-4"
       >
-        Contact Us
-      </motion.button>
-    </motion.div>
+        {/* Number / Icon */}
+        <div className="w-10 h-10 flex items-center justify-center rounded-full bg-[#ff8c1a] text-white font-bold">
+          {index + 1}
+        </div>
+
+        {/* Text */}
+        <p className="text-gray-700 font-medium leading-relaxed">
+          {item}
+        </p>
+      </motion.div>
+    ))}
   </div>
 </section>
-
 <section className="py-24 px-6 md:px-12 bg-gradient-to-b from-white via-[#fff7f2] to-white">
 
   {/* ================= WHY SECTION ================= */}
@@ -694,6 +637,10 @@ If you are looking for a web development company in KPHB we provide affordable a
         {
           q: "Will my website be SEO optimized?",
           a: "Yes, all our websites are built with SEO best practices."
+        },
+         {
+          q: "Is Maxzen.tech a good web development company in KPHB?",
+          a: "Yes Maxzen.tech is a trusted web development company in KPHB known for quality service and support."
         }
       ].map((item, i) => (
         <div key={i} className="bg-white p-5 rounded-xl shadow-md hover:shadow-lg transition">
@@ -706,6 +653,53 @@ If you are looking for a web development company in KPHB we provide affordable a
   </div>
 
 </section>
+
+<section className="py-12 px-6 md:px-12 bg-gradient-to-b from-[#fff5f0] via-white to-[#fffaf7] overflow-hidden">
+  <h2 className="text-4xl md:text-5xl font-extrabold text-center text-[#0d1b2a] mb-14">
+    Portfolio / <span className="text-[#ff8c1a]">Projects</span>
+  </h2>
+
+  
+  <div className="relative max-w-7xl mx-auto overflow-x-auto overflow-y-hidden rounded-3xl shadow-2xl border border-[#ff8c1a]/20 scrollbar-hide">
+    
+    <div className="flex gap-6 py-4 px-4 w-max">
+      <img
+        src={require("../assests/webdev6.png")}
+        alt="Project 1"
+        className="h-80 w-auto object-cover rounded-xl"
+      />
+      <img
+        src={require("../assests/webdev7.png")}
+        alt="Project 2"
+        className="h-80 w-auto object-cover rounded-xl"
+      />
+      <img
+        src={require("../assests/webdev8.png")}
+        alt="Project 3"
+        className="h-80 w-auto object-cover rounded-xl"
+      />
+      <img
+        src={require("../assests/logoo21.PNG")}
+        alt="Project 4"
+        className="h-80 w-auto object-cover rounded-xl"
+      />
+      <img
+        src={require("../assests/logoo22.PNG")}
+        alt="Project 7"
+        className="h-80 w-auto object-cover rounded-xl"
+      />
+     
+      <img
+        src={require("../assests/logoo23.PNG")}
+        alt="Project 6"
+        className="h-80 w-auto object-cover rounded-xl"
+      />
+    </div>
+  </div>
+
+  <div className="text-center mt-10"></div>
+</section>
+
 
     </div>
    < Footer/></>

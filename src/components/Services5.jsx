@@ -91,7 +91,7 @@ const handleWhatsApp = () => {
   return (
     <><Header/>
     
-    <section className="relative w-full overflow-hidden py-20 bg-white text-gray-800">
+    <section className="relative w-full overflow-hidden py-10 sm:py-20 bg-white text-gray-800">
       {/* 🌈 FLOATING COLORFUL ICONS */}
       {/* 🌈 FLOATING COLORFUL ICONS */}
 <FloatingIcon icon={FaFacebookF} color="blue-600" top="10%" left="90%" duration={6} />
@@ -110,7 +110,7 @@ const handleWhatsApp = () => {
 <FloatingIcon icon={FaTwitter} color="sky-400" top="20%" left="40%" duration={10} />
 
       
-      <div className="max-w-7xl mx-auto px-6 relative z-10">
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 relative z-10">
         {/* 🌟 HEADER SECTION */}
         <div className="grid md:grid-cols-2 gap-12 items-center mb-20">
           <motion.div
@@ -467,7 +467,7 @@ Increase brand visibility
   <h2 className="text-4xl font-extrabold text-gray-900 mb-4">
    Social Media Marketing for Local Businesses in Hyderabad
   </h2>
-
++nn 
  <h3 className="text-2xl font-semibold text-gray-600 mb-6">
  If you run a business in Kukatpally, KPHB, or nearby areas, local targeting is key to success.
 We help you
@@ -605,7 +605,7 @@ We help you
 </p>
 
           {/* 📸 IMAGE GALLERY (6 images) */}
-          <div className="grid grid-cols-2 md:grid-cols-3 gap-6 mb-12">
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-6 mb-12">
             {[sm1, sm2, sm3,sm4,sm5 ].map(
               (img, index) => (
                 <motion.div

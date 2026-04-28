@@ -10,21 +10,26 @@ import localSeo from "../assests/seo5.jpg";
 import competitor from "../assests/seo6.webp";
 import analytics from "../assests/seo7.png";
 import content from "../assests/seo8.jpg";
-import seo9 from "../assests/seo9.jpg";
-import seoBg from "../assests/seobg.jpeg"; // ✅ Background image inside curved card
+// import seo9 from "../assests/seo9.jpg";
+import seoBg from "../assests/seobg.jpeg"; 
 import heroImg from "../assests/logoo12.jpg";
 import { useNavigate } from "react-router-dom";
-import seo10 from "../assests/seo10.jpg";
-import seo11 from "../assests/seo11.jpg";
-import seo12 from "../assests/seo12.jpg";
-import seo13 from "../assests/seo13.avif";
+// import seo10 from "../assests/seo10.jpg";
+// import seo11 from "../assests/seo11.jpg";
+// import seo12 from "../assests/seo12.jpg";
+// import seo13 from "../assests/seo13.avif";
 import Header from "./Header";
 import Footer from "./Footer";
-import { AiOutlineGlobal } from "react-icons/ai";
-import { FcComboChart } from "react-icons/fc";
-import { FaHandshake } from "react-icons/fa";
-import { TbTargetArrow } from "react-icons/tb";
-import { BsRocketTakeoff } from "react-icons/bs";
+// import { AiOutlineGlobal } from "react-icons/ai";
+// import { FcComboChart } from "react-icons/fc";
+import { FaArrowUp,FaUser,FaBriefcase,FaTrophy} from "react-icons/fa";
+// import { TbTargetArrow } from "react-icons/tb";
+// import { BsRocketTakeoff } from "react-icons/bs";
+import { FiSearch } from "react-icons/fi";
+import { BsCpu } from "react-icons/bs";
+
+
+
 
 const SeoServices = () => {
   // ---------- Bubble Section ----------
@@ -65,47 +70,87 @@ const SeoServices = () => {
 
   // ---------- Services ----------
   const services = [
-    {
-      title: "On-Page SEO Optimization",
-      image: onPage,
-      desc: "Enhance your site structure, meta tags, and content for top rankings.",
-    },
-    {
-      title: "Off-Page SEO Optimization",
-      image: offPage,
-      desc: "Build authority through backlinks and external reputation.",
-    },
-    {
-      title: "SEO Audit",
-      image: audit,
-      desc: "Get an in-depth look at your site’s SEO performance and technical issues.",
-    },
-    {
-      title: "Technical SEO",
-      image: technical,
-      desc: "Improve crawlability, site speed, and indexing for better results.",
-    },
-    {
-      title: "Local SEO",
-      image: localSeo,
-      desc: "Optimize your presence for local searches and Google Maps visibility.",
-    },
-    {
-      title: "Competitor Analysis",
-      image: competitor,
-      desc: "Understand your competitors’ strengths and craft better strategies.",
-    },
-    {
-      title: "Web Analytics",
-      image: analytics,
-      desc: "Measure, track, and analyze visitor behavior for smarter marketing.",
-    },
-    {
-      title: "Content Creation",
-      image: content,
-      desc: "Create SEO-optimized content that drives engagement and conversions.",
-    },
-  ];
+  {
+    title: "On-Page SEO Optimization",
+    image: onPage,
+    points: [
+      "Keyword research and optimization",
+      "Content structure improvement",
+      "Meta title and description optimization",
+      "Internal linking strategy",
+    ],
+  },
+  {
+    title: "Off-Page SEO Optimization",
+    image: offPage,
+    points: [
+      "High quality backlink building",
+      "Business listings and brand authority",
+      "Social bookmarking and submissions",
+      "Influencer outreach and PR",
+    ],
+  },
+  {
+    title: "SEO Audit",
+    image: audit,
+    points: [
+      "Complete website SEO analysis",
+      "Technical issue identification",
+      "Keyword performance review",
+      "Competitor benchmarking insights",
+    ],
+  },
+  {
+    title: "Technical SEO",
+    image: technical,
+    points: [
+      "Website speed optimization",
+      "Mobile friendly design",
+      "Fix crawl & indexing issues (GSC)",
+      "Structured data & schema setup",
+    ],
+  },
+  {
+    title: "Local SEO",
+    image: localSeo,
+    points: [
+      "Google Business Profile optimization",
+      "Local keyword targeting (Kukatpally, KPHB)",
+      "Improving map rankings",
+      "Local citations and reviews management",
+    ],
+  },
+  {
+    title: "Competitor Analysis",
+    image: competitor,
+    points: [
+      "Competitor keyword research",
+      "Backlink profile analysis",
+      "Content gap identification",
+      "Strategy comparison insights",
+    ],
+  },
+  {
+    title: "Web Analytics",
+    image: analytics,
+    points: [
+      "Google Analytics setup",
+      "User behavior tracking",
+      "Conversion tracking setup",
+      "Performance reporting dashboards",
+    ],
+  },
+  {
+    title: "Content Creation",
+    image: content,
+    points: [
+      "SEO optimized blog writing",
+      "Landing page content creation",
+      "Keyword focused articles",
+      "Content strategy planning",
+    ],
+  },
+];
 
   // ---------- Horizontal Scroll Setup ----------
   const servicesRef = useRef(null);
@@ -152,40 +197,38 @@ const SeoServices = () => {
     
     <>
     {/* ---------- TOP HERO SECTION ---------- */}
-<section className="bg-gradient-to-r from-purple-600 to-indigo-600 text-white py-10 px-6 md:px-12">
-  <div className="max-w-7xl mx-auto flex flex-col md:flex-row items-center justify-between">
-    
-    <h1 className="text-3xl md:text-4xl font-bold">
-      Top SEO Services — <span
+<section className="py-20 px-6 md:px-16 bg-white text-center">
+
+  {/* Heading */}
+  <h1 className="text-3xl md:text-5xl font-bold text-gray-900">
+    Best SEO Agency in Hyderabad{" "}
+    <span
   onClick={() => navigate("/#home2")}
-  className="text-yellow-300 cursor-pointer hover:underline"
+  className="text-yellow-400 cursor-pointer hover:underline"
 >
   Maxzen.Tech
 </span>
+  </h1>
 
+  {/* Paragraph */}
+  <p className="mt-6 text-gray-600 text-lg leading-relaxed max-w-3xl mx-auto">
+    Search Engine Optimization (SEO) is the process of improving your website’s visibility on search engines like Google so that your business appears when customers search for your services. A strong SEO strategy helps increase traffic, generate leads, and build long-term growth for any business. Maxzen.tech is a leading SEO agency in Hyderabad helping businesses rank higher, generate quality leads, and grow organically with proven strategies. Our team of experienced SEO analysts and SEO specialists delivers customized solutions for all industries.
+  </p>
 
-    </h1>
+  {/* Optional Image Below */}
+  {/* <div className="mt-10 flex justify-center">
+    <img
+      src={heroImg}
+      alt="SEO"
+      className="w-full max-w-3xl rounded-2xl shadow-lg"
+    />
+  </div> */}
 
-    <button
-      onClick={() => navigate("/contact")}
-      className="px-6 py-3 bg-white text-purple-700 font-semibold rounded-full hover:bg-yellow-300 hover:text-black transition"
-    >
-      Request a Quote
-    </button>
-
-  </div>
 </section>
 
 
-
-
-
-
-
-
-
-      {/* ---------- MAIN HERO (Image + Text) ---------- */}
-      <section className="py-20 px-6 md:px-16 bg-white flex flex-col md:flex-row items-center justify-center gap-10 md:gap-20">
+{/* ---------- MAIN HERO (Image + Text) ---------- */}
+      <section className="py-20 px-6 md:px-16 bg-white flex flex-col md:flex-row items-center justify-center gap-10 md:gap-20 -mt-24">
         <motion.img
           initial={{ opacity: 0, x: -50 }}
           whileInView={{ opacity: 1, x: 0 }}
@@ -201,14 +244,37 @@ const SeoServices = () => {
           transition={{ duration: 0.8 }}
           className="md:w-1/2 text-center md:text-left"
         >
-          <h2 className="text-4xl md:text-5xl font-extrabold text-gray-900 leading-tight">
-            Grow Your Business with{" "}
-            <span className="text-[#a855f7]">Social Media Marketing</span>
+          <h2 className="text-2xl md:text-3xl font-extrabold text-gray-900 leading-tight">
+           Why Choose <span
+  onClick={() => navigate("/#home2")}
+  className="text-gray-900 cursor-pointer hover:underline"
+>
+  Maxzen.Tech
+</span> Top SEO Company in Hyderabad{" "}
+            {/* <span className="text-[#a855f7]">Social Media Marketing</span> */}
           </h2>
-          <p className="mt-6 text-gray-600 text-lg leading-relaxed max-w-md mx-auto md:mx-0">
-            Boost your brand visibility and attract potential customers with our
-            expert SEO and social media strategies that deliver measurable results.
-          </p>
+        <div className="mt-6 max-w-2xl">
+  
+  {/* Intro Paragraph */}
+  <p className="text-gray-600 text-lg leading-relaxed mb-4">
+    Maxzen.tech stands out as a trusted SEO company in Hyderabad because of our results-driven approach and commitment to business growth.
+  </p>
+
+  {/* Bullet Points */}
+  <ul className="list-disc pl-5 text-gray-700 text-base space-y-2">
+    <li>Experienced SEO analysts and specialists</li>
+    <li>Data-driven SEO strategies</li>
+    <li>Transparent reporting and performance tracking</li>
+    <li>Focus on ROI and lead generation</li>
+    <li>Ethical white-hat SEO techniques</li>
+  </ul>
+
+  {/* Closing Line */}
+  <p className="mt-4 text-gray-600 text-lg leading-relaxed">
+    We focus on long-term rankings and sustainable growth for your business.
+  </p>
+
+</div>
         </motion.div>
       </section>
 
@@ -233,9 +299,14 @@ const SeoServices = () => {
           {/* Card Content */}
           <div className="relative z-[2]">
             {/* Heading */}
-            <h2 className="text-5xl md:text-6xl font-extrabold text-[#e63946] text-center mb-16">
-              What is <span className="text-white italic">SEO?</span>
-            </h2>
+            <h2 className="text-4xl md:text-5xl font-extrabold text-[#e63946] text-center mb-6">
+  SEO Services in Hyderabad by Maxzen.tech
+</h2>
+
+<p className="text-center text-gray-600 text-lg max-w-2xl mx-auto mb-10 leading-relaxed">
+  Maxzen.tech provides complete SEO services in Hyderabad designed to improve rankings and visibility.
+</p>
+            
 
             {/* Bubble Layout */}
             {/* 🔹 Increased gap and added motion animation */}
@@ -297,17 +368,37 @@ const SeoServices = () => {
                 <img src={service.image} className="w-full h-full object-cover" />
               </div>
 
-              <div className="p-6">
-                <h3 className="text-xl font-bold mb-3">{service.title}</h3>
-                <p className="text-gray-600 text-sm">{service.desc}</p>
+             <div className="p-6 flex flex-col h-full justify-between">
+  
+  <div>
+    <h3 className="text-xl font-bold mb-3">{service.title}</h3>
 
-                <button
-                  onClick={() => navigate("/contact")}
-                  className="mt-4 text-red-500 font-semibold"
-                >
-                  Contact Us →
-                </button>
-              </div>
+    {/* Points OR Description */}
+    {service.points ? (
+      <ul className="flex flex-wrap gap-2 mt-2">
+        {service.points.map((point, i) => (
+          <li
+            key={i}
+            className="bg-gray-100 text-gray-700 text-xs px-3 py-1 rounded-full"
+          >
+            {point}
+          </li>
+        ))}
+      </ul>
+    ) : (
+      <p className="text-gray-600 text-sm">{service.desc}</p>
+    )}
+  </div>
+
+  {/* Always bottom aligned */}
+  {/* <button
+    onClick={() => navigate("/contact")}
+    className="mt-6 text-red-500 font-semibold"
+  >
+    Contact Us →
+  </button> */}
+
+</div>
             </motion.div>
           ))}
         </div>
@@ -358,174 +449,166 @@ const SeoServices = () => {
   </div>
 
   {/* Features */}
-  <div className="max-w-6xl mx-auto flex flex-col gap-28 mt-20">
-    {/* Feature 1 */}
-    <div className="flex flex-col md:flex-row items-center gap-12">
-      <div className="relative md:w-1/2 w-full h-[320px] rounded-3xl overflow-hidden shadow-[0_10px_40px_rgba(0,0,0,0.15)] group">
-        <img
-          src={seo9}
-           alt="SEO Strategy"
-          className="object-cover w-full h-full transition-transform duration-700 group-hover:scale-110"
-        />
-        <div className="absolute inset-0 bg-gradient-to-t from-black/40 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-700" />
-      </div>
-
-     <div className="md:w-1/2 w-full">
-  <div className="flex items-center gap-3 mb-4">
-    <p className="text-5xl text-[#e63946]">
-      <AiOutlineGlobal />
-    </p>
-
-    <span className="text-3xl md:text-4xl font-bold text-[#e63946]">
-      Local Expertise with Global Vision
-    </span>
-  </div>
-
-  <p className="text-gray-700 text-lg leading-relaxed mb-6">
-    We understand Hyderabad’s market behavior and combine it with
-    international SEO practices to deliver the perfect strategy for your business.
-  </p>
-</div>
-
-    </div>
-
-    {/* Feature 2 */}
-    <div className="flex flex-col md:flex-row-reverse items-center gap-12">
-      <div className="relative md:w-1/2 w-full h-[320px] rounded-3xl overflow-hidden shadow-[0_10px_40px_rgba(0,0,0,0.15)] group">
-        <img
-          src={seo10}
-          alt="SEO Growth"
-          className="object-cover w-full h-full transition-transform duration-700 group-hover:scale-110"
-        />
-        <div className="absolute inset-0 bg-gradient-to-t from-black/40 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-700" />
-      </div>
-
-      <div className="md:w-1/2 w-full">
-  <div className="flex items-center gap-3 mb-4">
-    <span className="text-5xl text-[#e63946]">
-      <FcComboChart />
-    </span>
-
-    <span className="text-3xl md:text-4xl font-bold text-[#e63946]">
-      ROI-Focused Strategies
-    </span>
-  </div>
-
-  <p className="text-gray-700 text-lg leading-relaxed mb-6">
-    Our SEO campaigns are designed for performance. From keyword targeting 
-    to content optimization — every step drives measurable ROI.
-  </p>
-</div>
-
-    </div>
-
-    {/* Feature 3 */}
-    <div className="flex flex-col md:flex-row items-center gap-12">
-      <div className="relative md:w-1/2 w-full h-[320px] rounded-3xl overflow-hidden shadow-[0_10px_40px_rgba(0,0,0,0.15)] group">
-        <img
-          src={seo11}
-          alt="Transparent SEO"
-          className="object-cover w-full h-full transition-transform duration-700 group-hover:scale-110"
-        />
-        <div className="absolute inset-0 bg-gradient-to-t from-black/40 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-700" />
-      </div>
-
-      <div className="md:w-1/2 w-full">
-  <div className="flex items-center gap-3 mb-4">
-    <span className="text-5xl text-[#e63946]">
-      <FaHandshake />
-    </span>
-
-    <span className="text-3xl md:text-4xl font-bold text-[#e63946]">
-      Transparent & Ethical SEO
-    </span>
-  </div>
-
-  <p className="text-gray-700 text-lg leading-relaxed mb-6">
-    No black-hat tricks, no hidden metrics — just honest, transparent results.
-    You’ll always know what’s happening with your SEO growth.
-  </p>
-</div>
-
-    </div>
-
-    {/* Feature 4 */}
-    <div className="flex flex-col md:flex-row-reverse items-center gap-12">
-      <div className="relative md:w-1/2 w-full h-[320px] rounded-3xl overflow-hidden shadow-[0_10px_40px_rgba(0,0,0,0.15)] group">
-        <img
-          src={seo12}
-          alt="Tailored SEO"
-          className="object-cover w-full h-full transition-transform duration-700 group-hover:scale-110"
-        />
-        <div className="absolute inset-0 bg-gradient-to-t from-black/40 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-700" />
-      </div>
-
-     <div className="md:w-1/2 w-full">
-  <div className="flex items-center gap-3 mb-4">
-    <span className="text-5xl text-red-500">
-      <TbTargetArrow />
-    </span>
-
-    <span className="text-3xl md:text-4xl font-bold text-[#e63946]">
-      Tailored Solutions
-    </span>
-  </div>
-
-  <p className="text-gray-700 text-lg leading-relaxed mb-6">
-    Every business is unique, so we design custom SEO strategies that perfectly 
-    align with your goals, ensuring measurable outcomes that matter.
-  </p>
-</div>
-
-    </div>
-
-    {/* Feature 5 */}
-    <div className="flex flex-col md:flex-row items-center gap-12">
-      <div className="relative md:w-1/2 w-full h-[320px] rounded-3xl overflow-hidden shadow-[0_10px_40px_rgba(0,0,0,0.15)] group">
-        <img
-          src={seo13}
-          alt="Long Term Growth"
-          className="object-cover w-full h-full transition-transform duration-700 group-hover:scale-110"
-        />
-        <div className="absolute inset-0 bg-gradient-to-t from-black/40 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-700" />
-      </div>
-
-      <div className="md:w-1/2 w-full">
-  <div className="flex items-center gap-3 mb-4">
-    <span className="text-5xl text-[#e63946]">
-      <BsRocketTakeoff />
-    </span>
-
-    <span className="text-3xl md:text-4xl font-bold text-[#e63946]">
-      Long-Term Growth
-    </span>
-  </div>
-
-  <p className="text-gray-700 text-lg leading-relaxed mb-6">
-    We focus on building sustainable, white-hat SEO strategies that ensure 
-    lasting growth and keep your brand ahead of competitors.
-  </p>
-</div>
-
-    </div>
-  </div>
-
-  {/* Outro */}
-  <div className="max-w-4xl mx-auto text-center mt-28">
-    <p className="text-gray-700 text-lg leading-relaxed">
-      Choose <span
-  onClick={() => navigate("/#home2")}
-  className="font-semibold text-[#e63946] cursor-pointer hover:underline"
->
-  Maxzen.Tech
-</span> — 
-      where innovation meets expertise, creating SEO strategies that don’t just rank, but truly deliver business growth and visibility.
-    </p>
-  </div>
+  
 
   {/* Background Decor */}
   <div className="absolute -top-20 -left-20 w-[350px] h-[350px] bg-[#fca311]/10 rounded-full blur-3xl"></div>
   <div className="absolute bottom-0 right-0 w-[300px] h-[300px] bg-[#e63946]/10 rounded-full blur-3xl"></div>
+</section>
+
+
+{/* ---------- NEW SEO CONTENT SECTION (Redesigned) ---------- */}
+<section className="py-24 px-4 md:px-10 bg-gradient-to-br from-[#f8fafc] to-[#fff]">
+  {/* ========= IMPORTANCE OF SEO ========= */}
+  <div className="max-w-7xl mx-auto flex flex-col md:flex-row items-center gap-10 mb-24">
+    <div className="md:w-1/2 bg-gray-300/10 border-2 border-orange-400 rounded-3xl p-10 shadow-2xl text-white relative overflow-hidden">
+      <h2 className="text-3xl md:text-5xl font-black mb-6  text-gray-900 tracking-tight drop-shadow-lg">Importance of SEO for Every Business</h2>
+      <p className="text-lg leading-relaxed mb-8 text-gray-700 opacity-90">SEO is essential for every business and industry including local services, ecommerce, education, healthcare, and IT companies.</p>
+      <ul className="space-y-4 text-gray-700 text-base opacity-90">
+        {["Increase Website Traffic", "Attract Target Audience", "Build Brand Trust", "Generate Consistent Leads"].map((item, i) => (
+          <li key={i} className="flex items-center gap-3">
+            <span className="inline-block w-3 h-3 rounded-full bg-white"></span>
+            <span className="font-semibold">{item}</span>
+          </li>
+        ))}
+      </ul>
+      <div className="absolute -bottom-10 -right-10 w-40 h-40 bg-white/10 rounded-full blur-2xl"></div>
+    </div>
+    <div className="md:w-1/2 flex flex-col items-center justify-center">
+      <div className="bg-white border-2 border-[#e63946] rounded-2xl p-8 shadow-lg w-full">
+        <p className="text-gray-700 text-lg text-center">Without SEO, your website may not appear in search results when customers are actively looking for your services.</p>
+      </div>
+    </div>
+  </div>
+
+  {/* ========= HOW SEO WORKS ========= */}
+  <div className="max-w-6xl mx-auto mb-24">
+    <h2 className="text-4xl font-extrabold text-center text-[#1d3557] mb-14 tracking-tight">How SEO Works</h2>
+    <div className="flex flex-col md:flex-row items-center justify-between gap-8">
+    {[
+  { icon: <FiSearch />, text: "User searches (SEO agency in Hyderabad)" },
+  { icon: <BsCpu />, text: "Search engines analyze websites" },
+  { icon: <FaArrowUp />, text: "Optimized sites rank higher" },
+  { icon: <FaUser />, text: "Users visit website" },
+  { icon: <FaBriefcase />, text: "Traffic converts to leads" },
+].map((step, i) => (
+        <div key={i} className="flex flex-col items-center relative">
+<div className="w-20 h-20 flex items-center justify-center rounded-full bg-gradient-to-br from-[#e63946] to-[#ffb4a2] text-white text-3xl mb-4 shadow-xl border-4 border-white">
+  <span className="text-3xl">{step.icon}</span>
+</div>
+          <div className="bg-white px-4 py-3 rounded-xl shadow text-gray-700 text-sm text-center w-44">{step.text}</div>
+          {i !== 4 && (
+            <div className="hidden md:block absolute top-1/2 right-[-32px] w-16 h-1 bg-gradient-to-r from-[#e63946] to-[#ffb4a2] opacity-60"></div>
+          )}
+        </div>
+      ))}
+    </div>
+  </div>
+
+  {/* ========= GROWTH FUNNEL ========= */}
+  <div className="max-w-6xl mx-auto mb-24">
+    <h2 className="text-4xl font-extrabold text-left md:text-center text-[#ff6b6b] mb-10 tracking-tight">How Maxzen.tech Drives Growth</h2>
+    <div className="flex flex-col md:flex-row gap-8 md:gap-4 justify-between">
+      {[
+        { label: "Higher Rankings", color: "bg-[#f1faee] border-[#e63946]" },
+        { label: "More Website Traffic", color: "bg-[#f8edeb] border-[#ffb4a2]" },
+        { label: "Quality Leads", color: "bg-[#e9ecef] border-[#457b9d]" },
+        { label: "Revenue Growth", color: "bg-[#f7f7f7] border-[#ff6b6b]" },
+      ].map((item, i) => (
+        <div key={i} className={`flex-1 border-2 ${item.color} rounded-3xl p-8 shadow-lg flex flex-col items-center hover:scale-105 transition-transform duration-300`}>
+          <span className="text-2xl font-bold mb-2 text-[#1d3557]">{item.label}</span>
+        </div>
+      ))}
+    </div>
+    <div className="mt-8 bg-gradient-to-r from-[#e63946]/10 to-[#ffb4a2]/10 rounded-2xl p-6 shadow-inner">
+      <p className="text-gray-700 text-center text-lg">Maxzen.tech focuses on building a strong online presence that delivers long-term results.</p>
+    </div>
+  </div>
+
+  {/* ========= INDUSTRIES ========= */}
+  <div className="max-w-6xl mx-auto mb-24">
+    <h2 className="text-4xl font-extrabold text-center text-[#457b9d] mb-12 tracking-tight">Industries We Serve</h2>
+    <div className="flex flex-wrap gap-6 justify-center">
+      {[
+        "Real Estate",
+        "Healthcare",
+        "Education & Training",
+        "Ecommerce",
+        "IT & Software",
+        "Local Services",
+      ].map((industry, i) => (
+        <div key={i} className="w-64 h-40 bg-gradient-to-br from-[#f1faee] to-[#f8edeb] border-2 border-[#e63946]/30 rounded-2xl shadow-md flex items-center justify-center hover:bg-[#e63946]/10 hover:scale-105 transition-all duration-300">
+          <h3 className="text-xl font-extrabold text-[#1d3557]">{industry}</h3>
+        </div>
+      ))}
+    </div>
+  </div>
+
+  {/* ========= TRUST SECTION ========= */}
+  <div className="max-w-5xl mx-auto mb-24">
+    <div className="bg-[#1d3557] rounded-3xl p-12 shadow-2xl text-white relative overflow-hidden">
+      <h2 className="text-4xl font-extrabold mb-6 tracking-tight">Trusted SEO Experts at Maxzen.tech</h2>
+      <div className="flex flex-col md:flex-row gap-8">
+        <div className="md:w-2/3">
+          <p className="text-lg leading-relaxed mb-4">We follow experience, expertise, authority, and trust-based SEO strategies. Our team continuously analyzes performance, updates strategies, and ensures your website stays competitive.</p>
+          <p className="text-base opacity-80">We use ethical SEO practices to deliver consistent and long-lasting rankings.</p>
+        </div>
+        <div className="md:w-1/3 flex items-center justify-center">
+<div className="w-32 h-32 rounded-full bg-gradient-to-br from-[#e63946] to-[#ffb4a2] flex items-center justify-center shadow-lg border-4 border-white">
+  <FaTrophy className="text-white text-5xl" />
+</div>
+        </div>
+      </div>
+      <div className="absolute -top-10 -left-10 w-40 h-40 bg-white/10 rounded-full blur-2xl"></div>
+    </div>
+  </div>
+
+  {/* ========= CTA ========= */}
+  <div className="max-w-4xl mx-auto mb-24">
+    <div className="bg-gradient-to-br from-[#ffb4a2] to-[#e63946] text-white p-14 rounded-3xl shadow-2xl flex flex-col items-center">
+      <h2 className="text-3xl font-extrabold mb-4 tracking-tight">Get Started with Maxzen.tech SEO Services</h2>
+      <p className="mb-8 text-lg text-center">Rank higher, increase traffic, and generate quality leads for your business.</p>
+      <div className="flex flex-wrap justify-center gap-6">
+        <button className="bg-white text-[#e63946] px-8 py-3 rounded-full font-bold shadow hover:bg-[#ffe5d9] transition">Free SEO Audit</button>
+        <button className="border-2 border-white px-8 py-3 rounded-full font-bold hover:bg-white hover:text-[#e63946] transition">Book Consultation</button>
+      </div>
+    </div>
+  </div>
+
+  {/* ========= FAQ ========= */}
+  <div className="max-w-6xl mx-auto">
+    <h2 className="text-4xl font-extrabold text-center text-[#e63946] mb-12 tracking-tight">FAQs – SEO Services in Hyderabad</h2>
+    <div className="grid md:grid-cols-2 gap-10">
+      {[
+        {
+          q: "What is the cost of SEO services?",
+          a: "SEO pricing depends on competition, keywords, and goals.",
+        },
+        {
+          q: "How long does SEO take?",
+          a: "Typically 3 to 6 months for noticeable results.",
+        },
+        {
+          q: "Why choose Maxzen.tech?",
+          a: "We provide result-driven strategies and transparent reporting.",
+        },
+        {
+          q: "Do you provide local SEO?",
+          a: "Yes, including Hyderabad and Kukatpally areas.",
+        },
+        {
+          q: "Is SEO important for small businesses?",
+          a: "Yes, it helps generate leads and grow organically.",
+        },
+      ].map((faq, i) => (
+        <div key={i} className="bg-gradient-to-br from-[#f8edeb] to-[#f1faee] border-l-4 border-[#e63946] p-8 rounded-2xl shadow-md hover:shadow-xl transition-all duration-300">
+          <h3 className="font-bold text-[#1d3557] mb-2 text-lg">{faq.q}</h3>
+          <p className="text-gray-700 text-base">{faq.a}</p>
+        </div>
+      ))}
+    </div>
+  </div>
+
 </section>
 <Footer/></>
 

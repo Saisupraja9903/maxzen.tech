@@ -66,7 +66,7 @@ function App() {
         <Route path="/blogs" element={<BlogZigzagPage />} />
         <Route path="/serviceswoo" element={<Serviceswoo />} />
         <Route path="/DigitalMarketing" element={<Servicesdm />} />
-        <Route path="/serviceswd" element={<Serviceswd />} />
+        <Route path="/websitedesignCompanyinHyderabad" element={<Serviceswd />} />
         <Route path="/privacypolicy" element={<Privacypolicy />} />
         <Route path="/termsandconditions" element={<TermsAndConditions />} />
 

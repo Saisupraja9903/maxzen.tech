@@ -1,20 +1,20 @@
 import React from "react";
 import { motion } from "framer-motion";
-import webImg from "../assests/wd1.jpg";
+import webImg from "../assests/wd1.webp";
 
 // 🖼️ Example images for the grid section
-import img1 from "../assests/wd2.jpg";
-import img2 from "../assests/wd3.jpg";
-import img3 from "../assests/wd4.jpg";
-import img4 from "../assests/wd5.jpg";
-import img5 from "../assests/wd6.jpg";
-import img6 from "../assests/wd7.jpg";
-import img7 from "../assests/wd8.png";
-import img8 from "../assests/img16.jpg";
-import img9 from "../assests/wd10.jpg";
-import img10 from "../assests/wd11.webp";
-import img11 from "../assests/wd12.jpg";
-import img12 from "../assests/wd13.webp";
+import img1 from "../assests/wd2.webp";
+import img2 from "../assests/wd3.webp";
+import img3 from "../assests/wd4.webp";
+import img4 from "../assests/wd5.webp";
+import img5 from "../assests/wd6.webp";
+import img6 from "../assests/wd7.webp";
+import img7 from "../assests/wd8.webp";
+import img8 from "../assests/img16.webp";
+// import img9 from "../assests/wd10.webp";
+// import img10 from "../assests/wd11.webp";
+// import img11 from "../assests/wd12.webp";
+// import img12 from "../assests/wd13.webp";
 
 import { useNavigate } from "react-router-dom";
 import Header from "./Header";
@@ -93,8 +93,8 @@ const WebDesignSection = () => {
           transition={{ duration: 0.8 }}
           className="w-full md:w-1/2"
         >
-          <h2 className="text-4xl md:text-5xl font-extrabold text-gray-400 leading-tight">
-            Leading Web Design Company in Hyderabad
+          <h2 className="text-4xl md:text-5xl font-extrabold text-gray-700 leading-tight">
+            Website Design Company Hyderabad
           </h2>
           <p className="mt-4 text-lg md:text-xl text-gray-700">
             Affordable, modern, and responsive web design services that drive
@@ -113,21 +113,24 @@ const WebDesignSection = () => {
           {/* ABOUT BOX */}
           <div className="mt-12 bg-white/80 rounded-2xl p-8 shadow-lg border-l-8 border-gray-400">
             <h3 className="text-2xl font-bold text-gray-400 mb-4">
-              About Us – Why Maxzen Tech?
-            </h3>
+  Why Businesses Choose{" "}
+  <span
+    onClick={() => navigate("/#home2")}
+    className="text-gray-400 cursor-pointer hover:underline"
+  >
+    Maxzen.tech
+  </span>
+</h3>
             <p className="text-gray-700 leading-relaxed">
-              We believe that a website is more than just a digital identity —
-              it’s your online growth engine. As a trusted web design company in
-              Hyderabad, we specialize in delivering affordable yet premium web
-              design solutions tailored to startups, small businesses, and
-              enterprises.
+             We focus on building websites that are easy to navigate fast to load and structured for better visibility in search engines.
             </p>
 
             <ul className="mt-6 space-y-2 text-gray-700 text-left">
-              <li>✅ Creative Designs – Modern & user-friendly</li>
-              <li>✅ Affordable Pricing – Best value for money</li>
+              <li>✅ Experienced team with strong technical knowledge</li>
+              <li>✅ Custom website solutions based on business needs</li>
               <li>✅ SEO-Ready Websites – Optimized for ranking</li>
-              <li>✅ 24/7 Support – Reliable post-launch assistance</li>
+              <li>✅ Mobile optimized and fast loading pages</li>
+              <li>✅Reliable support and maintenance</li>
             </ul>
           </div>
         </motion.div>
@@ -154,6 +157,8 @@ const WebDesignSection = () => {
         </motion.div>
       </div>
 
+      
+
       {/* 🌊 Decorative Wave */}
       <div className="absolute bottom-0 left-0 w-full overflow-hidden leading-none rotate-180">
         <svg
@@ -171,11 +176,17 @@ const WebDesignSection = () => {
       {/* 🔹 WEB DESIGN SERVICES GRID SECTION */}
       <div className="relative z-10 py-24 px-6 md:px-20 bg-gradient-to-b from-white to-gray-400">
         <div className="max-w-6xl mx-auto text-center mb-12">
-          <h2 className="text-4xl font-bold text-gray-400 mb-4">
+          <h2 className="text-4xl font-bold text-gray-500 mb-4">
             Our Web Design Services
           </h2>
           <p className="text-lg text-gray-600">
-            At <span className="font-semibold text-[#0fa4af]">Maxzen.Tech</span>, we provide a wide range of web designing services in Hyderabad:
+            At {" "}
+  <span
+    onClick={() => navigate("/#home2")}
+    className="text-[#0fa4af] cursor-pointer hover:underline"
+  >
+    Maxzen.tech
+  </span>, we provide a wide range of web designing services in Hyderabad:
           </p>
         </div>
 
@@ -212,22 +223,31 @@ const WebDesignSection = () => {
     <div className="grid md:grid-cols-2 gap-12 items-center">
       {/* Text */}
       <div className="space-y-5">
-        <h2 className="text-4xl font-bold text-gray-400">Web Designing</h2>
+        <h2 className="text-4xl font-bold text-gray-500"> Best Website Design Company in Hyderabad</h2>
         <p className="text-gray-700 leading-relaxed">
-          At <span className="font-semibold text-[#0fa4af]">Maxzen.Tech</span>, we craft visually stunning,
-          user-friendly, and high-performance websites that help businesses
-          establish a strong online presence. As a trusted 
+          At <span
+  onClick={() => navigate("/#home2")}
+  className="font-semibold text-[#0fa4af] cursor-pointer hover:underline"
+>
+  Maxzen.Tech
+</span>,
+ has built a reputation as a <b> best website design company in Hyderabad </b>by delivering practical and result oriented website solutions
+
+Instead of focusing only on design we concentrate on usability performance and long term business growth
+
+          {/* establish a strong online presence. As a trusted 
           <span className="font-semibold text-[#0fa4af]"> web design company in Hyderabad</span>, 
-          we understand that a website is more than just an online brochure — it’s a powerful business tool.
+          we understand that a website is more than just an online brochure — it’s a powerful business tool. */}
         </p>
-        <p className="text-gray-700 leading-relaxed">
+        {/* <p className="text-gray-700 leading-relaxed">
           A well-designed site combines creativity with functionality to deliver
           a seamless user experience, fast performance, and high engagement.
           Whether you need a business website, e-commerce platform, or custom
           website development in Hyderabad, our expert team delivers designs
           that align perfectly with your brand identity and business goals.
-        </p>
+        </p> */}
       </div>
+      
 
       {/* Image */}
       <div className="flex justify-center">
@@ -252,62 +272,67 @@ const WebDesignSection = () => {
 
       {/* Text */}
       <div className="space-y-5 order-1 md:order-2">
-        <h3 className="text-3xl font-bold text-gray-900">Web Design Company in Hyderabad</h3>
+        <h3 className="text-3xl font-bold text-gray-500">Web Design Company in Hyderabad</h3>
         <p className="text-gray-700 leading-relaxed">
-          As one of Hyderabad’s top web design companies, we combine innovation and technology 
-          to create websites that captivate audiences and deliver measurable results.
+       If your business needs a strong online presence choosing the <b><u>right website design company Hyderabad </u></b>becomes important Maxzen.tech builds high performance websites that are designed to attract users and convert them into customers
         </p>
         <p className="text-gray-700 leading-relaxed">
-          Our goal is to ensure every website we create reflects the brand’s values while being optimized 
-          for performance, mobile, and SEO — giving your business the online visibility it deserves.
+Every business is different so we do not follow a fixed template approach Our team studies your services target audience and competitors before creating a website that truly represents your brand.
         </p>
       </div>
     </div>
 
     {/* 🧩 WHAT WE OFFER SECTION */}
     <div className="mt-10">
-      <h3 className="text-3xl font-bold text-center text-[#0fa4af] mb-10">What We Offer</h3>
+      <h2 className="text-3xl font-bold text-center text-[#0fa4af] mb-10"> How Our Website Design Services in Hyderabad Support Business Growth</h2>
 
       <ul className="grid sm:grid-cols-2 lg:grid-cols-3 gap-6 text-gray-800 text-lg">
         <li className="bg-white/80 p-6 rounded-2xl shadow-md border-l-4 border-[#0fa4af] hover:shadow-xl transition">
-          ✔ <strong>Custom Website Design</strong> – Unique, modern, and responsive designs tailored to your business needs.
+          ✔ Improves search engine visibility
         </li>
         <li className="bg-white/80 p-6 rounded-2xl shadow-md border-l-4 border-[#0fa4af] hover:shadow-xl transition">
-          ✔ <strong>User-Centered Approach</strong> – Intuitive navigation and seamless user experiences that boost engagement.
+          ✔  Increases visitor engagement
         </li>
         <li className="bg-white/80 p-6 rounded-2xl shadow-md border-l-4 border-[#0fa4af] hover:shadow-xl transition">
-          ✔ <strong>Mobile & SEO Optimization</strong> – Fully responsive designs that look great and rank well.
+          ✔ Builds trust with potential customers
         </li>
         <li className="bg-white/80 p-6 rounded-2xl shadow-md border-l-4 border-[#0fa4af] hover:shadow-xl transition">
-          ✔ <strong>Fast & Secure Websites</strong> – Optimized for speed, security, and user trust.
+          ✔  Supports lead generation
         </li>
         <li className="bg-white/80 p-6 rounded-2xl shadow-md border-l-4 border-[#0fa4af] hover:shadow-xl transition">
-          ✔ <strong>E-Commerce Solutions</strong> – Online stores that maximize conversions and sales.
+          ✔  Creates a strong digital identity
         </li>
       </ul>
 
       <p className="text-center mt-10 text-gray-700 text-lg max-w-3xl mx-auto">
-        A well-designed website is a powerful tool for attracting and converting customers. 
-        Let us create a website that not only looks great but also delivers results!
+      
+A properly developed website can directly impact your business performance
       </p>
     </div>
   </div>
 </section>
 {/* 🌐 HOW WE WORK – ZIGZAG SECTION */}
-<section className="relative py-24 bg-gradient-to-b from-[#e8f7f9] to-white text-gray-800">
+<section className="relative py-4 bg-gradient-to-b from-[#e8f7f9] to-white text-gray-800">
   <div className="max-w-7xl mx-auto px-6 text-center">
-    <h2 className="text-4xl md:text-5xl font-extrabold text-gray-400 mb-6">
-      How We Work
+    <h2 className="text-3xl md:text-4xl font-extrabold text-gray-400 mb-6">
+      Website Design Services in Hyderabad
     </h2>
     <p className="text-gray-700 text-lg md:text-xl max-w-3xl mx-auto mb-16">
-      At <span className="font-semibold text-[#0fa4af]">Maxzen.Tech</span>, we follow a clear and result-driven
-      process to ensure every project is delivered with creativity,
-      functionality, and long-term value. Our goal is to design websites that
-      not only look beautiful but also help your business grow online.
+    At{" "}
+  <span
+    onClick={() => navigate("/#home2")}
+    className="text-[#0fa4af] cursor-pointer hover:underline"
+  >
+    Maxzen.tech
+  </span>,
+    We provide complete<b><i> website design services in Hyderabad including KPHB and Kukatpally</i></b> tailored to different business requirements
+
+Before starting any project we analyze your business and create a clear execution plan to deliver better results
+
     </p>
   </div>
 
-  {/* Step 1 */}
+{/* 
   <div className="max-w-7xl mx-auto px-6 grid md:grid-cols-2 gap-10 items-center mb-20">
     <div className="order-1 md:order-none">
       <img
@@ -323,17 +348,12 @@ const WebDesignSection = () => {
         identity. Every design is crafted with UI/UX best practices to ensure smooth navigation,
         engaging visuals, and a responsive experience across all devices.
       </p>
-      {/* <a
-        href="https://maxzen.tech/"
-        className="inline-block text-[#0fa4af] font-semibold hover:underline"
-      >
-        Learn More →
-      </a> */}
+    
     </div>
-  </div>
+  </div> */}
 
   {/* Step 2 */}
-  <div className="max-w-7xl mx-auto px-6 grid md:grid-cols-2 gap-10 items-center mb-20">
+  {/* <div className="max-w-7xl mx-auto px-6 grid md:grid-cols-2 gap-10 items-center mb-20">
     <div className="order-1 md:order-2">
       <img
         src={img10}
@@ -347,17 +367,12 @@ const WebDesignSection = () => {
         A great website starts with solid planning. We analyze your business goals, target audience, and competitors
         to create a roadmap for success — ensuring that each design decision supports your objectives.
       </p>
-      {/* <a
-        href="https://maxzen.tech/"
-        className="inline-block text-[#0fa4af] font-semibold hover:underline"
-      >
-        Learn More →
-      </a> */}
+     
     </div>
-  </div>
+  </div> */}
 
   {/* Step 3 */}
-  <div className="max-w-7xl mx-auto px-6 grid md:grid-cols-2 gap-10 items-center mb-20">
+  {/* <div className="max-w-7xl mx-auto px-6 grid md:grid-cols-2 gap-10 items-center mb-20">
     <div className="order-1 md:order-none">
       <img
         src={img11}
@@ -371,17 +386,12 @@ const WebDesignSection = () => {
         Once the design and planning are finalized, our developers bring the website to life. We use clean coding practices,
         responsive frameworks, and SEO integration to ensure fast loading, high ranking, and a flawless user experience.
       </p>
-      {/* <a
-        href="https://maxzen.tech/"
-        className="inline-block text-[#0fa4af] font-semibold hover:underline"
-      >
-        Learn More →
-      </a> */}
+      
     </div>
-  </div>
+  </div> */}
 
   {/* Step 4 */}
-  <div className="max-w-7xl mx-auto px-6 grid md:grid-cols-2 gap-10 items-center">
+  {/* <div className="max-w-7xl mx-auto px-6 grid md:grid-cols-2 gap-10 items-center">
     <div className="order-1 md:order-2">
       <img
         src={img12}
@@ -395,18 +405,230 @@ const WebDesignSection = () => {
         Our work doesn’t end after launch. We provide regular updates, security checks, and performance optimization
         to keep your website running smoothly. With 24/7 support, we ensure your business stays online and ahead.
       </p>
-      {/* <a
-        href="https://maxzen.tech/"
-        className="inline-block text-[#0fa4af] font-semibold hover:underline"
-      >
-        Learn More →
-      </a> */}
+    
+    </div>
+  </div> */}
+</section>
+<div className="mt-20 space-y-16">
+
+  {/* 🔥 APPROACH SECTION */}
+  <div>
+    <h3 className="text-2xl font-bold text-center text-[#0fa4af] mb-8">
+      What Makes Our Approach Effective
+    </h3>
+
+    <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
+      {[
+        "Business focused design planning",
+        "Competitor analysis and strategy",
+        "SEO ready structure",
+        "User friendly navigation",
+      ].map((item, i) => (
+        <div key={i} className="bg-white p-5 rounded-xl shadow hover:shadow-lg transition text-center">
+          <p className="text-gray-700 font-medium">{item}</p>
+        </div>
+      ))}
+    </div>
+
+    <div className="text-center mt-6">
+     <button
+  onClick={() => navigate("/contact")}
+  className="px-6 py-2 bg-[#0fa4af] text-white rounded-full hover:scale-105 transition"
+>
+  Get a Quote
+</button>
     </div>
   </div>
-</section>
+
+
+  {/* 💰 AFFORDABLE */}
+  <div className="bg-gradient-to-r from-[#0fa4af]/10 to-white p-8 rounded-2xl shadow">
+    <h2 className="text-2xl font-bold text-gray-500 mb-4">
+      Affordable Website Design Company in KPHB Kukatpally
+    </h2>
+
+   <p className="text-gray-700 mb-3">
+  <span
+    onClick={() => navigate("/#home2")}
+    className="text-[#0fa4af] font-semibold cursor-pointer hover:underline"
+  >
+    Maxzen.tech
+  </span>{" "}
+  provides cost effective website design services for businesses looking for quality work within a reasonable budget.
+</p>
+
+    <p className="text-gray-700 mb-3">
+      We understand the needs of startups and small businesses and ensure timely delivery without compromising on performance or design quality.
+    </p>
+
+    <p className="text-gray-700">
+      Our presence in KPHB and Kukatpally allows us to provide better support and faster communication.
+    </p>
+  </div>
+
+
+  {/* 📈 GROWTH */}
+  <div>
+    {/* <h2 className="text-2xl font-bold text-gray-900 mb-6 text-center">
+      How Our Website Design Services in Hyderabad Support Business Growth
+    </h2> */}
+
+  {/* <div className="grid md:grid-cols-2 gap-6">
+  {[
+    "Improves search engine visibility",
+    "Increases visitor engagement",
+    "Builds trust with potential customers",
+    "Supports lead generation",
+    "Creates a strong digital identity",
+  ].map((item, i) => (
+    <div
+      key={i}
+      className="flex items-center justify-center gap-3 p-5 rounded-xl bg-white shadow text-center"
+    >
+      <span className="text-[#0fa4af] text-xl">✓</span>
+      <p className="text-gray-700">{item}</p>
+    </div>
+  ))}
+</div>
+
+    <div className="text-center mt-6">
+      <button className="px-6 py-2 bg-[#0fa4af] text-white rounded-full"
+      
+  onClick={() => navigate("/contact")}>
+        Start Your Project
+      </button>
+    </div> */}
+  </div>
+
+
+  {/* ⚙️ PROCESS */}
+  <div>
+    <h2 className="text-2xl font-bold text-gray-500 mb-6 text-center">
+      Our Website Development Process
+    </h2>
+
+    <div className="grid md:grid-cols-5 gap-4">
+      {[
+        "Understanding requirements",
+        "Planning design",
+        "Development",
+        "Testing",
+        "Launch & Support",
+      ].map((step, i) => (
+        <div key={i} className="bg-white p-4 rounded-xl shadow text-center">
+          <div className="text-[#0fa4af] font-bold text-xl mb-2">{i + 1}</div>
+          <p className="text-gray-700 text-sm">{step}</p>
+        </div>
+      ))}
+    </div>
+  </div>
+
+
+  {/* 🏢 INDUSTRIES */}
+  <div>
+    <h2 className="text-2xl font-bold text-gray-500 mb-6 text-center">
+      Industries We Work With
+    </h2>
+
+    <div className="flex flex-wrap justify-center gap-4">
+      {[
+        "Startups",
+        "Real Estate",
+        "Healthcare",
+        "Education",
+        "Ecommerce",
+        "Service Businesses",
+      ].map((item, i) => (
+        <span key={i} className="px-4 py-2 bg-[#0fa4af]/10 text-[#0fa4af] rounded-full text-sm">
+          {item}
+        </span>
+      ))}
+    </div>
+  </div>
+  
+
+
+  {/* 🚀 CTA */}
+  <div className="text-center bg-[#0fa4af] text-white p-10 rounded-2xl">
+    <h2 className="text-2xl font-bold mb-4">
+      Start Your Website Project
+    </h2>
+
+    <p className="mb-6">
+      Build a website aligned with your business goals with Maxzen.Tech.
+    </p>
+
+    <div className="flex justify-center gap-4 flex-wrap">
+    <button
+  onClick={() => navigate("/contact")}
+  className="px-6 py-3 bg-white text-[#0fa4af] rounded-full font-semibold"
+>
+  Get Free Consultation
+</button>
+
+<button
+  onClick={() =>
+    window.open(
+      "https://wa.me/919059991807?text=Hi! I want to know more about your website design services.",
+      "_blank"
+    )
+  }
+  className="px-6 py-3 border border-white rounded-full"
+>
+  Chat on WhatsApp
+</button>
+    </div>
+  </div>
+
+
+  {/* ❓ FAQ */}
+<div className="mt-16 pb-24">
+  <h2 className="text-2xl font-bold text-center text-gray-500 mb-8">
+    FAQ
+  </h2>
+
+  {/* FAQ Wrapper */}
+  <div className="space-y-4 max-w-3xl mx-auto px-4">
+    {[
+      [
+        "Which is the best website design company Hyderabad?",
+        "Maxzen.tech provides customized website solutions focused on performance usability and business growth.",
+      ],
+      [
+        "Do you provide services in KPHB and Kukatpally?",
+        "Yes we offer website design services across Hyderabad including KPHB and Kukatpally.",
+      ],
+      [
+        "What type of websites do you build?",
+        "We create static websites WordPress websites ecommerce platforms and custom developed websites.",
+      ],
+      [
+        "What is the pricing for website design?",
+        "Pricing depends on features design and functionality required.",
+      ],
+      [
+        "Why should I choose Maxzen.tech?",
+        "We focus on understanding your business and delivering websites that support long term growth.",
+      ],
+    ].map((faq, i) => (
+      <div
+        key={i}
+        className="bg-white p-5 rounded-xl shadow-md hover:shadow-lg transition duration-300"
+      >
+        <h3 className="font-semibold text-[#0fa4af] text-base md:text-lg">
+          {faq[0]}
+        </h3>
+        <p className="text-gray-700 text-sm mt-2 leading-relaxed">
+          {faq[1]}
+        </p>
+      </div>
+    ))}
+  </div>
+</div>
+</div>
 {/* 🌐 FINAL CTA SECTION – Chat & Contact */}
 <section className="py-16 bg-gradient-to-b from-white to-gray-100 text-center">
-  <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-6">
+  <h2 className="text-3xl md:text-4xl font-bold text-gray-500 mb-6">
     Let’s Build Something Amazing Together
   </h2>
   <p className="text-gray-600 text-lg max-w-2xl mx-auto mb-10">
@@ -415,27 +637,29 @@ const WebDesignSection = () => {
   </p>
 
   {/* Buttons */}
-  <div className="flex flex-wrap justify-center gap-6">
-    <a
-      href="https://wa.me/919059991807"
-      target="_blank"
-      rel="noopener noreferrer"
-      className="px-10 py-4 rounded-full bg-gray-400 text-white font-semibold text-lg hover:bg-[#0d8f99] transition duration-300 shadow-md"
-    >
-      💬 Chat with Us
-    </a>
+ <div className="flex flex-wrap justify-center gap-6">
 
-   <a
-  href="/contact"
+  {/* WhatsApp */}
+ <button
+  type="button"
+  onClick={() =>
+    (window.location.href =
+      "https://wa.me/919059991807?text=Hi! I want to know more about your services.")
+  }
+  className="px-10 py-4 rounded-full bg-gray-400 text-white font-semibold text-lg hover:bg-[#0d8f99] transition duration-300 shadow-md"
+>
+  💬 Chat with Us
+</button>
+
+<button
+  type="button"
+  onClick={() => navigate("/contact")}
   className="px-10 py-4 rounded-full bg-gray-400 text-white font-semibold text-lg hover:bg-[#9cd3dc] transition duration-300 shadow-md"
 >
-  📞 Contact
-</a>
-
-  </div>
+  Contact
+</button>
+</div>
 </section>
-
-
 
       </section>
       

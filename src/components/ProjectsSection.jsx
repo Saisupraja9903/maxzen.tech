@@ -80,7 +80,7 @@ const ProjectsSection = () => {
   // 🔥 Routes for each project
   const projectRoutes = {
     1: "/serviceswoo",
-    2: "/serviceswd",
+    2: "/websitedesignCompanyinHyderabad",
     3: "/services4",
     4: "/Social-Media-Marketing-Agency-in-Hyderabad",
     5: "/services9",

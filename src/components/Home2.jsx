@@ -27,7 +27,7 @@ const HomeCombined = () => {
   ---------------------------------------- */
   const navigate = useNavigate();
   const serviceRoutes = {
-    "Web Designing": "/serviceswd",
+    "Web Designing": "/websitedesignCompanyinHyderabad",
     "SEO Optimization": "/services4",
     "Web Development": "/Webdevelopement",
     "App Development": "/services8",
@@ -210,7 +210,7 @@ const HomeCombined = () => {
             <div className="flex items-center justify-center md:justify-start space-x-3 mt-1 mb-6">
               <img src={team} alt="team" className="w-10 h-10 rounded-full" />
               <p className="font-semibold text-[#d73b3e] text-lg">
-                9.50K+{" "}
+                420{" "}
                 <span className="text-gray-600 font-normal text-sm">
                   Happy Clients
                 </span>

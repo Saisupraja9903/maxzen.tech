@@ -62,7 +62,7 @@ const services = [
     issuer: "Maxzen.Tech",
     description:
       "We design modern, responsive, and user-friendly websites that enhance your brand’s digital presence and engagement.Our team uses the latest UI/UX principles to create layouts that are clean, intuitive, and engaging. From visually appealing designs to easy-to-use structures, every element is thoughtfully planned to enhance user experience and encourage meaningful interactions.",
-      link:"/serviceswd"
+      link:"/websitedesignCompanyinHyderabad"
     },
   {
     img: s3,
@@ -134,7 +134,7 @@ export default function DigitalMarketingServices  () {
 
       <div className="flex flex-col items-center justify-center w-full relative overflow-hidden">
         {/* ---------- FIXED BACKGROUND TEXT ---------- */}
-        <div className="fixed top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 text-[16rem] font-extrabold text-gray-200 opacity-10 select-none z-0 tracking-widest">
+        <div className="fixed top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 text-[4rem] sm:text-[6rem] md:text-[12rem] lg:text-[16rem] font-extrabold text-gray-200 opacity-10 select-none z-0 tracking-widest">
           SERVICES
         </div>
 
@@ -266,7 +266,7 @@ className="mt-4 px-10 py-3 rounded-full bg-gradient-to-r from-[#ff8c1a] to-[#0d1
             The Core Marketing Services
           </h2>
 
-          <div className="flex flex-col items-center text-left mt-10 space-y-52 px-6 sm:px-10">
+          <div className="flex flex-col items-center text-left mt-10 space-y-20 md:space-y-52 px-6 sm:px-10">
             {services.map((item, index) => (
               <AnimatedCard
                 key={index}
@@ -523,16 +523,15 @@ function AnimatedCard({ item, bgColor }) {
   return (
     <div
       ref={ref}
-      className="flex flex-col md:flex-row justify-center items-stretch gap-3 w-full max-w-6xl"
+      className="flex flex-col md:flex-row justify-center items-stretch gap-3 w-full max-w-6xl px-2 sm:px-4"
+      style={{ wordBreak: 'break-word' }}
     >
 
       {/* Image Card (CLICK TO NAVIGATE) */}
       <motion.div
         onClick={() => item.link && navigate(item.link)}
-        className="cursor-pointer w-full md:w-1/2 h-[350px] bg-white shadow-xl rounded-2xl 
-                   overflow-hidden flex justify-center items-center 
-                   hover:shadow-2xl transition-transform duration-500"
-        style={{ rotate, transformPerspective: 1000 }}
+        className="cursor-pointer w-full md:w-1/2 min-h-[250px] sm:min-h-[300px] md:min-h-[350px] bg-white shadow-xl rounded-2xl overflow-hidden flex justify-center items-center hover:shadow-2xl transition-transform duration-500"
+        style={{ rotate, transformPerspective: 1000, wordBreak: 'break-word' }}
         transition={{ type: "spring", stiffness: 80, damping: 20 }}
       >
         <img
@@ -547,7 +546,8 @@ function AnimatedCard({ item, bgColor }) {
         initial={{ opacity: 0, y: 40 }}
         animate={isInView ? { opacity: 1, y: 0 } : { opacity: 0, y: 40 }}
         transition={{ duration: 0.6 }}
-        className={`${bgColor} w-full md:w-1/2 h-[350px] shadow-md rounded-2xl p-8 flex flex-col justify-center hover:shadow-lg transition-all duration-300`}
+        className={`${bgColor} w-full md:w-1/2 min-h-[250px] sm:min-h-[300px] md:min-h-[350px] shadow-md rounded-2xl p-3 sm:p-6 md:p-8 flex flex-col justify-center hover:shadow-lg transition-all duration-300 break-words overflow-auto`}
+        style={{ wordBreak: 'break-word' }}
       >
         <h3 className="text-2xl font-semibold text-gray-800 mb-3">{item.title}</h3>
         <p className="text-sm text-blue-700 font-medium mb-4"><span

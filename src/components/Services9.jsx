@@ -10,7 +10,7 @@ import s5 from "../assests/img20.jpg";
 import { useNavigate } from "react-router-dom";
 import Header from "./Header";
 import Footer from "./Footer";
-import img16 from "../assests/img16.jpg";
+import img16 from "../assests/img16.webp";
 
 
 

@@ -112,21 +112,35 @@
 // export default Header;
 
 import React, { useState } from "react";
-import { FaInstagram, FaFacebookF, FaTwitter, FaBars, FaTimes } from "react-icons/fa";
+import { FaInstagram, FaFacebookF, FaTwitter, FaBars, FaTimes, FaChevronDown, FaChevronUp } from "react-icons/fa";
+import { motion, AnimatePresence } from "framer-motion";
 import { useNavigate, useLocation } from "react-router-dom";
 import logo from "../assests/maxzen logo.webp";
 
 const Header = () => {
   const [menuOpen, setMenuOpen] = useState(false);
+  const [servicesOpen, setServicesOpen] = useState(false);
   const navigate = useNavigate();
   const location = useLocation();
 
   const handleNavigation = (path) => {
     navigate(path);
     setMenuOpen(false);
+    setServicesOpen(false);
   };
 
   const isActive = (path) => location.pathname === path;
+
+  const menuVariants = {
+    hidden: {
+      x: "-100%",
+      transition: { duration: 0.3, ease: "easeInOut" },
+    },
+    visible: {
+      x: 0,
+      transition: { duration: 0.3, ease: "easeInOut" },
+    },
+  };
 
   return (
 <header className="bg-[#F2F5D1] fixed top-0 left-0 w-full z-50 shadow-md">
@@ -147,7 +161,7 @@ const Header = () => {
 
         {/* Desktop Menu */}
         <nav className="hidden md:flex">
-          <ul className="flex gap-10 text-black font-medium">
+          <ul className="flex items-center gap-8 text-black font-medium">
 
             {/* HOME */}
             <li
@@ -264,56 +278,94 @@ const Header = () => {
 
       </div>
       {/* Mobile Menu */}
-{menuOpen && (
-  <div className="md:hidden bg-[#F2F5D1] shadow-lg px-6 py-4">
-    <ul className="flex flex-col gap-4 text-black font-medium">
+      <AnimatePresence>
+        {menuOpen && (
+          <>
+            <motion.div
+              initial={{ opacity: 0 }}
+              animate={{ opacity: 1 }}
+              exit={{ opacity: 0 }}
+              onClick={() => setMenuOpen(false)}
+              className="md:hidden fixed inset-0 bg-black/50 z-30"
+            />
+            <motion.div
+              variants={menuVariants}
+              initial="hidden"
+              animate="visible"
+              exit="hidden"
+              className="md:hidden fixed top-0 left-0 w-3/4 h-full bg-[#F2F5D1] shadow-lg p-6 z-40"
+            >
+              <ul className="flex flex-col gap-4 text-black font-medium mt-16">
+                <li
+                  className="cursor-pointer hover:text-yellow-400"
+                  onClick={() => handleNavigation("/")}>
+                  Home
+                </li>
 
-      <li
-        className="cursor-pointer hover:text-yellow-400"
-        onClick={() => handleNavigation("/")}>
-        Home
-      </li>
+                <li
+                  className="cursor-pointer hover:text-yellow-400"
+                  onClick={() => handleNavigation("/about")}>
+                  About
+                </li>
+                <li className="flex flex-col">
+                  <div className="flex items-center justify-between w-full cursor-pointer hover:text-yellow-400">
+                    <span onClick={() => handleNavigation("/digitalmarketingservices")} className="flex-1">
+                      Services
+                    </span>
+                    <button
+                      onClick={(e) => {
+                        e.stopPropagation();
+                        setServicesOpen(!servicesOpen);
+                      }}
+                      className="p-2"
+                    >
+                      {servicesOpen ? <FaChevronUp size={14} /> : <FaChevronDown size={14} />}
+                    </button>
+                  </div>
+                  {servicesOpen && (
+                    <ul className="flex flex-col gap-4 mt-3 pl-4 text-black text-sm font-medium border-l-2 border-gray-300 ml-1">
+                      <li className="cursor-pointer hover:text-yellow-400 transition-colors" onClick={() => handleNavigation("/DigitalMarketing")}>Digital Marketing</li>
+                      <li className="cursor-pointer hover:text-yellow-400 transition-colors" onClick={() => handleNavigation("/socialmediamarketing")}>Social Media Marketing</li>
+                      <li className="cursor-pointer hover:text-yellow-400 transition-colors" onClick={() => handleNavigation("/serviceswoo")}>Woo-commerce Website</li>
+                      <li className="cursor-pointer hover:text-yellow-400 transition-colors" onClick={() => handleNavigation("/webdevelopement")}>Web Development</li>
+                      <li className="cursor-pointer hover:text-yellow-400 transition-colors" onClick={() => handleNavigation("/services4")}>SEO Services in Hyderabad</li>
+                      <li className="cursor-pointer hover:text-yellow-400 transition-colors" onClick={() => handleNavigation("/services6")}>Logo Designing</li>
+                      <li className="cursor-pointer hover:text-yellow-400 transition-colors" onClick={() => handleNavigation("/services7")}>Cloud Computing</li>
+                      <li className="cursor-pointer hover:text-yellow-400 transition-colors" onClick={() => handleNavigation("/services8")}>App Development</li>
+                      <li className="cursor-pointer hover:text-yellow-400 transition-colors" onClick={() => handleNavigation("/services9")}>Software Development</li>
+                    </ul>
+                  )}
+                </li>
 
-      <li
-        className="cursor-pointer hover:text-yellow-400"
-        onClick={() => handleNavigation("/about")}>
-        About
-      </li>
+                <li
+                  className="cursor-pointer hover:text-yellow-400"
+                  onClick={() => handleNavigation("/team")}>
+                  Team
+                </li>
 
-      <li
-        className="cursor-pointer hover:text-yellow-400"
-        onClick={() => handleNavigation("/digitalmarketingservices")}>
-        Services
-      </li>
+                <li
+                  className="cursor-pointer hover:text-yellow-400"
+                  onClick={() => handleNavigation("/blog")}>
+                  Blog
+                </li>
 
-      <li
-        className="cursor-pointer hover:text-yellow-400"
-        onClick={() => handleNavigation("/team")}>
-        Team
-      </li>
+                <li
+                  className="cursor-pointer hover:text-yellow-400"
+                  onClick={() => handleNavigation("/contact")}>
+                  Contact
+                </li>
+              </ul>
 
-      <li
-        className="cursor-pointer hover:text-yellow-400"
-        onClick={() => handleNavigation("/blog")}>
-        Blog
-      </li>
-
-      <li
-        className="cursor-pointer hover:text-yellow-400"
-        onClick={() => handleNavigation("/contact")}>
-        Contact
-      </li>
-
-    </ul>
-
-    {/* Mobile Social Icons */}
-    <div className="flex gap-5 mt-6 text-xl">
-      <FaInstagram className="cursor-pointer hover:scale-110 transition" />
-      <FaFacebookF className="cursor-pointer hover:scale-110 transition" />
-      <FaTwitter className="cursor-pointer hover:scale-110 transition" />
-    </div>
-  </div>
-)}
+              {/* Mobile Social Icons */}
+              <div className="flex gap-5 mt-6 text-xl">
+                <FaInstagram className="cursor-pointer hover:scale-110 transition" />
+                <FaFacebookF className="cursor-pointer hover:scale-110 transition" />
+                <FaTwitter className="cursor-pointer hover:scale-110 transition" />
+              </div>
+            </motion.div>
+          </>
+        )}
+      </AnimatePresence>
 
 
     </header>

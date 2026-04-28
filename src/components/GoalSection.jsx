@@ -23,7 +23,7 @@ const GoalsSection = () => {
     setCount(start);
   }, stepTime);
 
-  return () => clearInterval(timer);
+  return () => clearInterval(timer); 
 }, []);
 
    useEffect(() => {
@@ -75,11 +75,10 @@ const GoalsSection = () => {
               animate={controls}
               className="text-lg font-semibold"
             >
-             <span className="text-red-500 text-2xl font-bold">
-  {count >= 1000 ? `${Math.floor(count / 1000)}K+` : `${count}+`}
-</span>
-{" "}
-              Projects
+            <span className="text-red-500 text-2xl font-bold">
+  450+
+</span>{" "}
+Projects
             </motion.p>
           </div>
         </div>
