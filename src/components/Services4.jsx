@@ -212,8 +212,18 @@ const SeoServices = () => {
 
   {/* Paragraph */}
   <p className="mt-6 text-gray-600 text-lg leading-relaxed max-w-3xl mx-auto">
-    Search Engine Optimization (SEO) is the process of improving your website’s visibility on search engines like Google so that your business appears when customers search for your services. A strong SEO strategy helps increase traffic, generate leads, and build long-term growth for any business. Maxzen.tech is a leading SEO agency in Hyderabad helping businesses rank higher, generate quality leads, and grow organically with proven strategies. Our team of experienced SEO analysts and SEO specialists delivers customized solutions for all industries.
-  </p>
+<p className="mt-6 text-gray-600 text-lg leading-relaxed max-w-3xl mx-auto">
+  <b>Search Engine Optimization (SEO)</b> is the process of improving your website’s visibility on search engines like Google so that your business appears when customers search for your services. A strong SEO strategy helps increase traffic, generate leads, and build long-term growth for any business.{" "}
+  
+  <span
+    onClick={() => navigate("/#home2")}
+    className="text-black font-semibold cursor-pointer hover:underline"
+  >
+    Maxzen.tech
+  </span>{" "}
+  
+  is a leading SEO agency in Hyderabad helping businesses rank higher, generate quality leads, and grow organically with proven strategies. Our team of experienced SEO analysts and SEO specialists delivers customized solutions for all industries.
+</p>  </p>
 
   {/* Optional Image Below */}
   {/* <div className="mt-10 flex justify-center">
@@ -245,7 +255,7 @@ const SeoServices = () => {
           className="md:w-1/2 text-center md:text-left"
         >
           <h2 className="text-2xl md:text-3xl font-extrabold text-gray-900 leading-tight">
-           Why Choose <span
+           Why Choose {" "}<span
   onClick={() => navigate("/#home2")}
   className="text-gray-900 cursor-pointer hover:underline"
 >
@@ -257,7 +267,12 @@ const SeoServices = () => {
   
   {/* Intro Paragraph */}
   <p className="text-gray-600 text-lg leading-relaxed mb-4">
-    Maxzen.tech stands out as a trusted SEO company in Hyderabad because of our results-driven approach and commitment to business growth.
+   <span
+  onClick={() => navigate("/#home2")}
+  className="text-gray-900 cursor-pointer hover:underline"
+>
+  Maxzen.Tech
+</span> stands out as a trusted SEO company in Hyderabad because of our results-driven approach and commitment to business growth.
   </p>
 
   {/* Bullet Points */}
@@ -300,11 +315,22 @@ const SeoServices = () => {
           <div className="relative z-[2]">
             {/* Heading */}
             <h2 className="text-4xl md:text-5xl font-extrabold text-[#e63946] text-center mb-6">
-  SEO Services in Hyderabad by Maxzen.tech
+  SEO Services in Hyderabad by {" "}<span
+  onClick={() => navigate("/#home2")}
+  className="text-blue-400 cursor-pointer hover:underline"
+>
+  Maxzen.Tech
+</span>
 </h2>
 
 <p className="text-center text-gray-600 text-lg max-w-2xl mx-auto mb-10 leading-relaxed">
-  Maxzen.tech provides complete SEO services in Hyderabad designed to improve rankings and visibility.
+  <span
+    onClick={() => navigate("/#home2")}
+    className="text-gray-900 cursor-pointer hover:underline"
+  >
+    Maxzen.Tech
+  </span>{" "}
+  provides complete <b> SEO services in Hyderabad </b> designed to improve rankings and visibility.
 </p>
             
 
@@ -355,41 +381,39 @@ const SeoServices = () => {
 
         <div
           ref={servicesRef}
-          className="flex gap-12 overflow-x-scroll overflow-y-hidden px-10 scrollbar-hide w-full"
+          className="flex gap-6 sm:gap-8 md:gap-12 overflow-x-auto overflow-y-hidden px-2 sm:px-6 md:px-10 scrollbar-hide w-full snap-x snap-mandatory"
           style={{ scrollBehavior: "smooth" }}
         >
           {services.map((service, i) => (
             <motion.div
               key={i}
               whileHover={{ y: -10 }}
-              className="min-w-[380px] bg-white rounded-2xl shadow-xl border overflow-hidden"
+              className="min-w-[260px] sm:min-w-[320px] md:min-w-[380px] bg-white rounded-2xl shadow-xl border overflow-hidden snap-center"
             >
-              <div className="relative h-52">
-                <img src={service.image} className="w-full h-full object-cover" />
+              <div className="relative h-40 sm:h-48 md:h-52">
+                <img src={service.image} className="w-full h-full object-cover object-center h-auto" alt={service.title} />
               </div>
 
-             <div className="p-6 flex flex-col h-full justify-between">
-  
+             <div className="p-4 sm:p-6 flex flex-col h-full justify-between">
   <div>
-    <h3 className="text-xl font-bold mb-3">{service.title}</h3>
+    <h3 className="text-lg sm:text-xl font-bold mb-2 sm:mb-3">{service.title}</h3>
 
     {/* Points OR Description */}
     {service.points ? (
-      <ul className="flex flex-wrap gap-2 mt-2">
+      <ul className="flex flex-wrap gap-1 sm:gap-2 mt-2">
         {service.points.map((point, i) => (
           <li
             key={i}
-            className="bg-gray-100 text-gray-700 text-xs px-3 py-1 rounded-full"
+            className="bg-gray-100 text-gray-700 text-xs px-2 sm:px-3 py-1 rounded-full"
           >
             {point}
           </li>
         ))}
       </ul>
     ) : (
-      <p className="text-gray-600 text-sm">{service.desc}</p>
+      <p className="text-gray-600 text-xs sm:text-sm">{service.desc}</p>
     )}
   </div>
-
   {/* Always bottom aligned */}
   {/* <button
     onClick={() => navigate("/contact")}
@@ -420,15 +444,16 @@ const SeoServices = () => {
       className="bg-white/80 backdrop-blur-md border border-[#f8e8d8]/60 shadow-[0_8px_40px_rgba(0,0,0,0.06)] rounded-3xl p-8 md:p-12 max-w-5xl mx-auto text-gray-700 text-lg leading-relaxed"
     >
       <p className="mb-4">
-        <span className="font-semibold text-[#e63946]">
-  At{" "}
+        
+  At 
+  {" "}
   <span
     onClick={() => navigate("/#home2")}
-    className="cursor-pointer hover:underline"
+    className= " text-gray-900 cursor-pointer hover:underline"
   >
     Maxzen.Tech
   </span>
-</span>, we don’t just offer SEO — we create strategies that turn clicks into real business growth. Our strength lies in understanding the Hyderabad market and combining it with proven global SEO practices.
+, we don’t just offer SEO — we create strategies that turn clicks into real business growth. Our strength lies in understanding the Hyderabad market and combining it with proven global SEO practices.
       </p>
       <p className="mb-4">
         When it comes to SEO services in Hyderabad, many agencies promise results, but few actually deliver. While other SEO companies often rely on generic strategies, Maxzen Tech stands out as a results-driven SEO agency.
@@ -440,10 +465,10 @@ const SeoServices = () => {
         That’s why businesses choose{" "}
         <span
   onClick={() => navigate("/#home2")}
-  className="font-semibold text-[#e63946] cursor-pointer hover:underline"
+  className="font-semibold text-gray-900 cursor-pointer hover:underline"
 >
   Maxzen.Tech
-</span> as the best SEO agency in Hyderabad — because we don’t just create strategies, we deliver outcomes that help your business grow.
+</span> as the <b><i>best SEO agency in Hyderabad </i></b>— because we don’t just create strategies, we deliver outcomes that help your business grow.
       </p>
     </motion.div>
   </div>
@@ -463,7 +488,7 @@ const SeoServices = () => {
   <div className="max-w-7xl mx-auto flex flex-col md:flex-row items-center gap-10 mb-24">
     <div className="md:w-1/2 bg-gray-300/10 border-2 border-orange-400 rounded-3xl p-10 shadow-2xl text-white relative overflow-hidden">
       <h2 className="text-3xl md:text-5xl font-black mb-6  text-gray-900 tracking-tight drop-shadow-lg">Importance of SEO for Every Business</h2>
-      <p className="text-lg leading-relaxed mb-8 text-gray-700 opacity-90">SEO is essential for every business and industry including local services, ecommerce, education, healthcare, and IT companies.</p>
+      <p className="text-lg leading-relaxed mb-8 text-gray-700 opacity-90 text-left">SEO is essential for every business and industry including local services, ecommerce, education, healthcare, and IT companies.</p>
       <ul className="space-y-4 text-gray-700 text-base opacity-90">
         {["Increase Website Traffic", "Attract Target Audience", "Build Brand Trust", "Generate Consistent Leads"].map((item, i) => (
           <li key={i} className="flex items-center gap-3">
@@ -476,15 +501,20 @@ const SeoServices = () => {
     </div>
     <div className="md:w-1/2 flex flex-col items-center justify-center">
       <div className="bg-white border-2 border-[#e63946] rounded-2xl p-8 shadow-lg w-full">
-        <p className="text-gray-700 text-lg text-center">Without SEO, your website may not appear in search results when customers are actively looking for your services.</p>
+        <p className="text-gray-700 text-lg text-left">SEO helps to increase website traffic attract the right audience build brand trust and generate consistent leads. Without SEO your website may not appear in search results when customers are actively looking for your services..</p>
       </div>
     </div>
   </div>
 
   {/* ========= HOW SEO WORKS ========= */}
   <div className="max-w-6xl mx-auto mb-24">
-    <h2 className="text-4xl font-extrabold text-center text-[#1d3557] mb-14 tracking-tight">How SEO Works</h2>
-    <div className="flex flex-col md:flex-row items-center justify-between gap-8">
+<h2 className="text-4xl font-extrabold text-center text-[#1d3557] mb-6 tracking-tight">
+  How SEO Works
+</h2>
+
+<p className="text-center text-gray-600 text-lg max-w-3xl mx-auto mb-12 leading-relaxed">
+  SEO works by optimizing your website so search engines understand your content and rank it higher.
+</p>    <div className="flex flex-col md:flex-row items-center justify-between gap-8">
     {[
   { icon: <FiSearch />, text: "User searches (SEO agency in Hyderabad)" },
   { icon: <BsCpu />, text: "Search engines analyze websites" },
@@ -508,6 +538,9 @@ const SeoServices = () => {
   {/* ========= GROWTH FUNNEL ========= */}
   <div className="max-w-6xl mx-auto mb-24">
     <h2 className="text-4xl font-extrabold text-left md:text-center text-[#ff6b6b] mb-10 tracking-tight">How Maxzen.tech Drives Growth</h2>
+    <p className="text-center text-gray-600 text-lg max-w-3xl mx-auto mb-12 leading-relaxed">
+When your website ranks higher more people discover your business and trust your brand.
+</p> 
     <div className="flex flex-col md:flex-row gap-8 md:gap-4 justify-between">
       {[
         { label: "Higher Rankings", color: "bg-[#f1faee] border-[#e63946]" },
@@ -527,7 +560,11 @@ const SeoServices = () => {
 
   {/* ========= INDUSTRIES ========= */}
   <div className="max-w-6xl mx-auto mb-24">
-    <h2 className="text-4xl font-extrabold text-center text-[#457b9d] mb-12 tracking-tight">Industries We Serve</h2>
+    <h2 className="text-4xl font-extrabold text-center text-[#457b9d] mb-8 mt-10 tracking-tight">Industries We Serve</h2>
+ <p className="text-center text-gray-600 text-lg max-w-3xl mx-auto mb-12 leading-relaxed">
+
+<b>Maxzen.tech provides SEO solutions for multiple industries including.</b>
+</p> 
     <div className="flex flex-wrap gap-6 justify-center">
       {[
         "Real Estate",
@@ -546,11 +583,11 @@ const SeoServices = () => {
 
   {/* ========= TRUST SECTION ========= */}
   <div className="max-w-5xl mx-auto mb-24">
-    <div className="bg-[#1d3557] rounded-3xl p-12 shadow-2xl text-white relative overflow-hidden">
+    <div className="bg-gray-300/10 border-2 border-[#e63946]rounded-3xl p-12 shadow-2xl text-black relative overflow-hidden">
       <h2 className="text-4xl font-extrabold mb-6 tracking-tight">Trusted SEO Experts at Maxzen.tech</h2>
       <div className="flex flex-col md:flex-row gap-8">
         <div className="md:w-2/3">
-          <p className="text-lg leading-relaxed mb-4">We follow experience, expertise, authority, and trust-based SEO strategies. Our team continuously analyzes performance, updates strategies, and ensures your website stays competitive.</p>
+          <p className="text-lg leading-relaxed mb-4">We follow experience, expertise, authority, and <b>trust-based SEO strategies</b> . Our team continuously analyzes performance, updates strategies, and ensures your website stays competitive.</p>
           <p className="text-base opacity-80">We use ethical SEO practices to deliver consistent and long-lasting rankings.</p>
         </div>
         <div className="md:w-1/3 flex items-center justify-center">
@@ -565,13 +602,28 @@ const SeoServices = () => {
 
   {/* ========= CTA ========= */}
   <div className="max-w-4xl mx-auto mb-24">
-    <div className="bg-gradient-to-br from-[#ffb4a2] to-[#e63946] text-white p-14 rounded-3xl shadow-2xl flex flex-col items-center">
+    <div className="bg-gradient-to-br bg-gray-400 text-black p-14 rounded-3xl shadow-2xl flex flex-col items-center">
       <h2 className="text-3xl font-extrabold mb-4 tracking-tight">Get Started with Maxzen.tech SEO Services</h2>
-      <p className="mb-8 text-lg text-center">Rank higher, increase traffic, and generate quality leads for your business.</p>
+      <p className="mb-8 text-lg text-center">  <span
+    onClick={() => navigate("/#home2")}
+    className="text-gray-900 font-semibold cursor-pointer hover:underline"
+  >
+    Maxzen.tech
+  </span>{" "} helps you rank higher increase traffic and generate quality leads for your business..</p>
       <div className="flex flex-wrap justify-center gap-6">
-        <button className="bg-white text-[#e63946] px-8 py-3 rounded-full font-bold shadow hover:bg-[#ffe5d9] transition">Free SEO Audit</button>
-        <button className="border-2 border-white px-8 py-3 rounded-full font-bold hover:bg-white hover:text-[#e63946] transition">Book Consultation</button>
-      </div>
+<a
+  href="https://wa.me/919059991807"
+  target="_blank"
+  rel="noopener noreferrer"
+  className="bg-white text-[#e63946] px-8 py-3 rounded-full font-bold shadow hover:bg-[#ffe5d9] transition inline-block"
+>
+  Free SEO Audit
+</a><button
+  onClick={() => navigate("/contact")}
+  className="border-2 border-white px-8 py-3 rounded-full font-bold hover:bg-orange-200 hover:text-[#e63946] transition"
+>
+  Book Consultation
+</button>      </div>
     </div>
   </div>
 
@@ -581,24 +633,24 @@ const SeoServices = () => {
     <div className="grid md:grid-cols-2 gap-10">
       {[
         {
-          q: "What is the cost of SEO services?",
-          a: "SEO pricing depends on competition, keywords, and goals.",
+          q: "What is the cost of SEO services in Hyderabad?",
+          a: "SEO pricing depends on competition keywords and business goals. We provide customized SEO plans.",
         },
         {
-          q: "How long does SEO take?",
-          a: "Typically 3 to 6 months for noticeable results.",
+          q: "How long does SEO take to show results?",
+          a: "SEO usually takes three to six months to see noticeable improvements.",
         },
         {
-          q: "Why choose Maxzen.tech?",
-          a: "We provide result-driven strategies and transparent reporting.",
+          q: "Why choose Maxzen.tech for SEO ?",
+          a: "Maxzen.tech provides result driven SEO strategies transparent reporting and long term growth..",
         },
         {
-          q: "Do you provide local SEO?",
-          a: "Yes, including Hyderabad and Kukatpally areas.",
+          q: "Do you provide local SEO services?",
+          a: "Yes we help businesses rank in Hyderabad Kukatpally and nearby areas.",
         },
         {
           q: "Is SEO important for small businesses?",
-          a: "Yes, it helps generate leads and grow organically.",
+          a: "Yes SEO helps small businesses attract customers generate leads and grow organically.",
         },
       ].map((faq, i) => (
         <div key={i} className="bg-gradient-to-br from-[#f8edeb] to-[#f1faee] border-l-4 border-[#e63946] p-8 rounded-2xl shadow-md hover:shadow-xl transition-all duration-300">
@@ -612,8 +664,7 @@ const SeoServices = () => {
 </section>
 <Footer/></>
 
-      {/* Spacer */}
-      {/* <div className="h-[60vh] bg-[#fff3e8]" /> */}
+      
     </>
 
   );

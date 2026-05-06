@@ -33,7 +33,7 @@ const HomeCombined = () => {
     "App Development": "/services8",
     "Social Media Marketing": "/Social-Media-Marketing-Agency-in-Hyderabad",
     "Software Development": "/services9",
-    "Cloud Computing": "/services7",
+    "Cloud Computing": "/cloudcomputingservicesinhyderabad",
   };
 
   /* ----------------------------------------

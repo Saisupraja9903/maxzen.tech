@@ -7,7 +7,7 @@ export const searchItems = [
   { title: "SEO Optimization", path: "/services4" },
   { title: "App Development", path: "/services8" },
   { title: "Software Development", path: "/services9" },
-  { title: "Cloud Computing", path: "/services7" },
+  { title: "Cloud Computing", path: "/cloudcomputingservicesinhyderabad" },
   { title: "WooCommerce Websites", path: "/serviceswoo" },
   { title: "Logo Designing", path: "/services6" },
   { title: "About Us", path: "/about" },

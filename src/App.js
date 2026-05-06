@@ -72,12 +72,12 @@ function App() {
 
         
         <Route path="/webdevelopement" element={<Services3 />} />
-        <Route path="/services4" element={<Services4 />} />
+        <Route path="/seoservicesinhyderabad" element={<Services4 />} />
         <Route path="/socialmediamarketing" element={<Services5 />} />
         <Route path="/services9" element={<Services9 />} />
-        <Route path="/services7" element={<Services7 />} />
+        <Route path="/cloudcomputingservicesinhyderabad" element={<Services7 />} />
         <Route path="/services6" element={<Services6 />} />
-        <Route path="/services8" element={<Services8 />} />
+        <Route path="/mobileappdevelopementservicesinhyderabad" element={<Services8 />} />
         <Route path="/blog1" element={<Blog1 />} />
         <Route path="/blog2" element={<Blog2 />} />
         <Route path="/blog3" element={<Blog3 />} />

@@ -212,7 +212,7 @@ const Header = () => {
     Web Development
   </li>
 
-  <li onClick={() => handleNavigation("/services4")}
+  <li onClick={() => handleNavigation("/seoservicesinhyderabad")}
       className="px-4 py-2 rounded-lg text-black transition hover:bg-gradient-to-r hover:from-[#ff8c1a] hover:to-[#0d1b2a] hover:text-white">
     SEO Services in Hyderabad
   </li>
@@ -222,12 +222,12 @@ const Header = () => {
     Logo Designing
   </li>
 
-  <li onClick={() => handleNavigation("/services7")}
+  <li onClick={() => handleNavigation("/cloudcomputingservicesinhyderabad")}
       className="px-4 py-2 rounded-lg text-black transition hover:bg-gradient-to-r hover:from-[#ff8c1a] hover:to-[#0d1b2a] hover:text-white">
     Cloud Computing
   </li>
 
-  <li onClick={() => handleNavigation("/services8")}
+  <li onClick={() => handleNavigation("/mobileappdevelopementservicesinhyderabad")}
       className="px-4 py-2 rounded-lg text-black transition hover:bg-gradient-to-r hover:from-[#ff8c1a] hover:to-[#0d1b2a] hover:text-white">
     App Development
   </li>
@@ -328,10 +328,10 @@ const Header = () => {
                       <li className="cursor-pointer hover:text-yellow-400 transition-colors" onClick={() => handleNavigation("/socialmediamarketing")}>Social Media Marketing</li>
                       <li className="cursor-pointer hover:text-yellow-400 transition-colors" onClick={() => handleNavigation("/serviceswoo")}>Woo-commerce Website</li>
                       <li className="cursor-pointer hover:text-yellow-400 transition-colors" onClick={() => handleNavigation("/webdevelopement")}>Web Development</li>
-                      <li className="cursor-pointer hover:text-yellow-400 transition-colors" onClick={() => handleNavigation("/services4")}>SEO Services in Hyderabad</li>
+                      <li className="cursor-pointer hover:text-yellow-400 transition-colors" onClick={() => handleNavigation("/seoservicesinhyderabad")}>SEO Services in Hyderabad</li>
                       <li className="cursor-pointer hover:text-yellow-400 transition-colors" onClick={() => handleNavigation("/services6")}>Logo Designing</li>
-                      <li className="cursor-pointer hover:text-yellow-400 transition-colors" onClick={() => handleNavigation("/services7")}>Cloud Computing</li>
-                      <li className="cursor-pointer hover:text-yellow-400 transition-colors" onClick={() => handleNavigation("/services8")}>App Development</li>
+                      <li className="cursor-pointer hover:text-yellow-400 transition-colors" onClick={() => handleNavigation("/cloudcomputingservicesinhyderabad")}>Cloud Computing</li>
+                      <li className="cursor-pointer hover:text-yellow-400 transition-colors" onClick={() => handleNavigation("/mobileappdevelopementservicesinhyderabad")}>App Development</li>
                       <li className="cursor-pointer hover:text-yellow-400 transition-colors" onClick={() => handleNavigation("/services9")}>Software Development</li>
                     </ul>
                   )}

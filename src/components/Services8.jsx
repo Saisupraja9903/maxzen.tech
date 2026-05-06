@@ -124,6 +124,7 @@
 // export default MobileAppHero;
 import React, { useEffect } from "react";
 import { motion } from "framer-motion";
+import { Helmet } from "react-helmet";
 import mainImage from "../assests/appdev4.png";
 import backgroundImage from "../assests/appdev2.png";
 import appdev5 from "../assests/appdev5.png";
@@ -183,7 +184,7 @@ const MobileAppHero = () => {
 
   return () => clearInterval(timer);
 }, []);
-  const goToHome2 = () => {
+const goToHome2 = () => {
   navigate("/");
   setTimeout(() => {
     document.getElementById("home2-start")?.scrollIntoView({
@@ -192,9 +193,118 @@ const MobileAppHero = () => {
   }, 200);
 };
 
+const structuredData = {
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "LocalBusiness",
+      name: "Maxzen.tech",
+      image: "https://maxzen.tech/logo.png",
+      url: "https://maxzen.tech",
+      telephone: "+91 9059991807",
+      address: {
+        "@type": "PostalAddress",
+        addressLocality: "Kukatpally",
+        addressRegion: "Hyderabad",
+        addressCountry: "India",
+      },
+      areaServed: ["Hyderabad", "KPHB", "Kukatpally"],
+      sameAs: [
+        "https://www.facebook.com/",
+        "https://www.instagram.com/",
+        "https://www.linkedin.com/",
+      ],
+    },
+    {
+      "@type": "Service",
+      name: "Mobile App Development Company in Hyderabad",
+      provider: {
+        "@type": "Organization",
+        name: "Maxzen.tech",
+        url: "https://maxzen.tech",
+      },
+      areaServed: {
+        "@type": "Place",
+        name: "Hyderabad, Kukatpally, KPHB",
+      },
+      serviceType: "Mobile App Development",
+      description:
+        "Maxzen.tech is a leading mobile app development company in Hyderabad offering Android, iOS, hybrid, and custom mobile app development services for all industries including healthcare, real estate, education, finance, and e-commerce.",
+      offers: {
+        "@type": "Offer",
+        availability: "https://schema.org/InStock",
+      },
+    },
+    {
+      "@type": "FAQPage",
+      mainEntity: [
+        {
+          "@type": "Question",
+          name: "What is mobile app development?",
+          acceptedAnswer: {
+            "@type": "Answer",
+            text: "Mobile app development is the process of creating applications for Android and iOS devices to improve business operations and user engagement.",
+          },
+        },
+        {
+          "@type": "Question",
+          name: "Which is the best mobile app development company in Hyderabad?",
+          acceptedAnswer: {
+            "@type": "Answer",
+            text: "Maxzen.tech is one of the best mobile app development companies in Hyderabad offering custom, scalable, and secure app solutions.",
+          },
+        },
+        {
+          "@type": "Question",
+          name: "Do you provide mobile app development near me?",
+          acceptedAnswer: {
+            "@type": "Answer",
+            text: "Yes, Maxzen.tech provides mobile app development services in Hyderabad, Kukatpally, and KPHB.",
+          },
+        },
+        {
+          "@type": "Question",
+          name: "What types of mobile apps do you develop?",
+          acceptedAnswer: {
+            "@type": "Answer",
+            text: "We develop Android apps, iOS apps, hybrid apps, and custom mobile applications for various industries including healthcare, real estate, education, finance, and e-commerce.",
+          },
+        },
+        {
+          "@type": "Question",
+          name: "How much does mobile app development cost?",
+          acceptedAnswer: {
+            "@type": "Answer",
+            text: "The cost depends on app features, complexity, platform, and customization requirements.",
+          },
+        },
+      ],
+    },
+  ],
+};
+
 
   return (
-    <><Header/>
+    <>
+    <Helmet>
+      <title>Mobile App Development Company in Hyderabad | Maxzen.Tech</title>
+      <meta
+        name="description"
+        content="Maxzen.Tech is a leading mobile app development company in Hyderabad offering Android, iOS, hybrid, and custom app development services in Kukatpally and KPHB."
+      />
+      <meta
+        name="keywords"
+        content="mobile app development company in hyderabad, android app development hyderabad, ios app developers hyderabad, hybrid app development company, app developers in kukatpally"
+      />
+      <link
+        rel="canonical"
+        href="https://maxzen.tech/mobile-app-development-company-in-hyderabad"
+      />
+      <script type="application/ld+json">
+        {JSON.stringify(structuredData)}
+      </script>
+    </Helmet>
+    <Header/>
     
     <section className="relative w-full overflow-hidden pt-32 pb-24 bg-[#0a0f2b]">
       {/* Background image */}
@@ -224,11 +334,11 @@ const MobileAppHero = () => {
         >
           {/* Headings */}
           <div className="text-white font-extrabold leading-tight">
-            <h1 className="text-5xl md:text-6xl drop-shadow-xl bg-gradient-to-r from-cyan-400 via-blue-500 to-purple-500 text-transparent bg-clip-text">
-              Mobile App
+            <h1 className="text-3xl md:text-5xl drop-shadow-xl bg-gradient-to-r from-cyan-400 via-blue-500 to-purple-500 text-transparent bg-clip-text">
+              Mobile App Development
             </h1>
-            <h1 className="text-5xl md:text-6xl mt-2 drop-shadow-xl bg-gradient-to-r from-purple-400 via-pink-500 to-cyan-500 text-transparent bg-clip-text">
-              Development
+            <h1 className="text-3xl md:text-5xl mt-2 drop-shadow-xl bg-gradient-to-r from-purple-400 via-pink-500 to-cyan-500 text-transparent bg-clip-text">
+           Company in Hyderabad
             </h1>
           </div>
 
